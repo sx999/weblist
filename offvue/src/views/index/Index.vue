@@ -5,7 +5,7 @@
             <!-- image -->
             </div>
             <ul class="nav">
-                <li><span>首页</span></li>
+                <li><span>首页1</span></li>
                 <li><span>公司概况</span></li>
                 <li><span>新闻动态</span></li>
                 <li><span>热门赛事</span></li>
