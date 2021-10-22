@@ -41,6 +41,7 @@ export default({
         align-items: center;
         width: 100%;
         height: 88px !important;
+        padding: 0 !important;
         /* background-color: #FFFFFF; */
     }
     .header .logo-left-img{
