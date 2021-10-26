@@ -4,7 +4,7 @@
         <Banner></Banner>
 
         <!-- 内容start -->
-        <Content></Content>
+        <Center></Center>
         <!-- 内容end -->
 
         <!-- 底部start -->
@@ -15,7 +15,7 @@
 <script>
 //引入banner组件模板
 import Banner from '@/components/HomeBanner.vue'
-import Content from '@/components/HomeContent.vue'
+import Center from '@/components/HomeCenter.vue'
 import Bootom from '@/components/HomeBootom.vue'
 
 export default {
@@ -24,7 +24,7 @@ export default {
            
         }
     },
-    components: {Banner,Content,Bootom},
+    components: {Banner,Center,Bootom},
     created(){
       
     },

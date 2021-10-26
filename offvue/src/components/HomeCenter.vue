@@ -1,5 +1,6 @@
 <template>
-        <div class="content">
+    <!-- 内容start -->
+    <div class="content">
         <div class="content-a">   
             <div class="content-a-1">
                <div>行由心教育公司的使命</div> 
@@ -36,17 +37,21 @@
         </div>
         <div class="content-c">
             <div class="content-c-1">
-                <div class="content-c-1-div1"></div>
+                <div class="content-c-1-div1">
+                    <div class="image">
+                        <img src="@/assets/images/19.jpg" alt="">
+                    </div>
+                    <div class="back">
+                        <p>我们的服务案例</p>
+                        <p>所有案例-></p>
+                    </div>
+                </div>
                 <div class="content-c-1-div2">
                     <div class="fordiv">
                         <!-- <img src="" alt=""> -->
                         <div class="fordiv-img">
                             <div class="across"></div>
                             <div class='vertical'></div>
-                            <!-- <div class="a"></div>
-                            <div class="b"></div>
-                            <div class="c"></div>
-                            <div class="d"></div> -->
                             <div class="image"><img src="@/assets/images/yy.png" alt=""></div>
                         </div>
                         <div class="fordiv-a">
@@ -60,10 +65,6 @@
                          <div class="fordiv-img">
                             <div class="across"></div>
                             <div class='vertical'></div>
-                            <!-- <div class="a"></div>
-                            <div class="b"></div>
-                            <div class="c"></div>
-                            <div class="d"></div> -->
                             <div class="image"><img src="@/assets/images/yy.png" alt=""></div>
                         </div>
                         <div class="fordiv-a">
@@ -149,7 +150,13 @@
                         </div>
                     </div>
                     <div class="content-c-2-div-right">
-                        <div class="header"></div>
+                        <div class="header">
+                            <img src="@/assets/images/26.jpg" alt="">
+                            <div class="back">
+                                <img src="@/assets/images/guanzhu.png" alt="">
+                                <p>关注我们获取更多信息</p>
+                            </div>
+                        </div>
                         <div class='bottom'>
                             <p>duxiukeji@163.com</p>
                             <hr/>
@@ -167,23 +174,71 @@
                 <div class="title">我们的团队成员</div>
                 <div class="threediv">
                     <div class="div">
-                        <div class="divtop"></div>
-                        <div class="divbottom"></div>
+                        <div class="divtop">
+                            <img class="he_slideCaptionDown_img" src="@/assets/images/559.jpg" alt="">
+                            <div class="he_slideCaptionDown_caption">
+                                <img src="@/assets/images/demail.png" alt="">
+                                <p>联系我</p>
+                                <hr>
+                                <p>1111111111111</p>
+                                <p>1111111111111.com</p>
+                                <a class="he_slideCaptionDown_caption_a" href="javascript:void(0);"></a>
+                            </div>
+                        </div>
+                        <div class="divbottom">
+                            <div>
+                                <p>张珊</p>
+                                <p>资深教师</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="div">
-                        <div class="divtop"></div>
-                        <div class="divbottom"></div>
+                        <div class="divtop">
+                            <img class="he_slideCaptionDown_img" src="@/assets/images/560.jpg" alt="">
+                            <div class="he_slideCaptionDown_caption">
+                                <img src="@/assets/images/demail.png" alt="">
+                                <p>联系我</p>
+                                <hr>
+                                <p>1111111111111</p>
+                                <p>1111111111111.com</p>
+                                <a class="he_slideCaptionDown_caption_a" href="javascript:void(0);"></a>
+                            </div>
+                        </div>
+                        <div class="divbottom">
+                            <div>
+                                <p>张珊</p>
+                                <p>资深教师</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="div">
-                        <div class="divtop"></div>
-                        <div class="divbottom"></div>
+                        <div class="divtop">
+                            <img class="he_slideCaptionDown_img" src="@/assets/images/562.jpg" alt="">
+                            <div class="he_slideCaptionDown_caption">
+                                <img src="@/assets/images/demail.png" alt="">
+                                <p>联系我</p>
+                                <hr>
+                                <p>1111111111111</p>
+                                <p>1111111111111.com</p>
+                                <a class="he_slideCaptionDown_caption_a" href="javascript:void(0);"></a>
+                            </div>
+                        </div>
+                        <div class="divbottom">
+                            <div>
+                                <p>张珊</p>
+                                <p>资深教师</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="content-e-e">
-                <div class="title">行业最新资讯</div>
+                <div class="title">行业最新资讯</div> 0
                 <div class="threediv2">
-                    <div class="divleft"></div>
+                    <div class="divleft">
+                        <img class="leftimg" src="@/assets/images/19.jpg" alt="">
+                        <div class="divleft-title">关注青少年健康00000000</div>
+                    </div>
                     <div class="divright">
                         <div class="div1">
                             <div class="time">10/15 2021</div>
@@ -206,35 +261,59 @@
                 <div class="title">联系我们</div>
                 <div class="threediv3">
                     <div class="div2">
-                        <div><img src="@/assets/images/phone.png" alt="" width="46"></div>
-                        <div>联系电话</div>
-                        <div>17638367045</div>
+                        <div class="front">
+                            <div><img src="@/assets/images/phone.png" alt="" width="46"></div>
+                            <div>联系电话</div>
+                            <div>17638367045</div>
+                        </div>
+                        
+                        <div class="back" :style="{'background':'url('+imgs[0].src+')'}">
+
+                        </div>
                     </div>
                     <div class="div2">
-                       <div><img src="@/assets/images/email.png" alt="" width="46"></div>
-                       <div>邮件地址</div>
-                       <div>17638367045@163.com</div>
+                        <div class="front">
+                            <div><img src="@/assets/images/email.png" alt="" width="46"></div>
+                            <div>邮件地址</div>
+                            <div>17638367045@163.com</div>
+                        </div>
+                        <div class="back" :style="{'background':'url('+imgs[1].src+')'}">
+
+                        </div>
                     </div>
                     <div class="div2">
-                       <div><img src="@/assets/images/time.png" alt="" width="46"></div>
-                       <div>工作时间</div>
-                       <div>09：00~17：30</div>
+                        <div class="front">
+                            <div><img src="@/assets/images/time.png" alt="" width="46"></div>
+                            <div>工作时间</div>
+                            <div>09：00~17：30</div>
+                        </div>
+                        <div class="back" :style="{'background':'url('+imgs[2].src+')'}">
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
+    <!-- 内容end -->
 </template>
 <script>
+    import pic11 from '@/assets/images/559.jpg'
+    import pic22 from '@/assets/images/560.jpg'
+    import pic33 from '@/assets/images/562.jpg'
     export default {
         data(){
             return{
-
+                imgs:[
+                    {src:pic11},
+                    {src:pic22},
+                    {src:pic33},
+                ]
             }
         }
     }
 </script>
 
 <style scoped>
-    @import '../assets/css/homeC.css'
+    @import '../assets/css/homeCenter.css'
 </style>
