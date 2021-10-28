@@ -13,6 +13,11 @@ Vue.prototype.axios = axios;    //全局注册，
 //全局css
 import './assets/bootstrap-3.4.1-dist/css/bootstrap.min.css'
 import 'lib-flexible'
+// fade/zoom 等
+import 'element-ui/lib/theme-chalk/base.css';
+// collapse 展开折叠
+import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
+Vue.component(CollapseTransition.name, CollapseTransition)
 
 new Vue({
   router,

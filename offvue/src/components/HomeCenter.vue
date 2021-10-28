@@ -52,12 +52,12 @@
                         <div class="fordiv-img">
                             <div class="across"></div>
                             <div class='vertical'></div>
-                            <div class="image"><img src="@/assets/images/yy.png" alt=""></div>
+                            <div class="image"><img src="@/assets/images/tc.png" alt=""></div>
                         </div>
                         <div class="fordiv-a">
                             <p class="p1">项目名称</p>
                             <p class="p2">项目详谬昂木的撒旦啊倒萨打算.</p>
-                            <p class="p3">阅读更多 <img src="@/assets/images/left-arraws.png" alt="" width="22"></p>
+                            <p class="p3">阅读更多 <img src="@/assets/images/left-arraws.png" alt=""></p>
                         </div>
                     </div>
                     <div class="fordiv">
@@ -65,12 +65,12 @@
                          <div class="fordiv-img">
                             <div class="across"></div>
                             <div class='vertical'></div>
-                            <div class="image"><img src="@/assets/images/yy.png" alt=""></div>
+                            <div class="image"><img src="@/assets/images/tc.png" alt=""></div>
                         </div>
                         <div class="fordiv-a">
                             <p class="p1">项目名称</p>
                             <p class="p2">项目详谬昂木的撒旦啊倒萨打算.</p>
-                            <p class="p3">阅读更多 <img src="@/assets/images/left-arraws.png" alt="" width="22"></p>
+                            <p class="p3">阅读更多 <img src="@/assets/images/left-arraws.png" alt=""></p>
                         </div>
                     </div>
                     <div class="fordiv">
@@ -78,12 +78,12 @@
                          <div class="fordiv-img">
                             <div class="across"></div>
                             <div class='vertical'></div>
-                            <div class="image"><img src="@/assets/images/yy.png" alt=""></div>
+                            <div class="image"><img src="@/assets/images/tc.png" alt=""></div>
                         </div>
                         <div class="fordiv-a">
                             <p class="p1">项目名称</p>
                             <p class="p2">项目详谬昂木的撒旦啊倒萨打算.</p>
-                            <p class="p3">阅读更多 <img src="@/assets/images/left-arraws.png" alt="" width="22"></p>
+                            <p class="p3">阅读更多 <img src="@/assets/images/left-arraws.png" alt=""></p>
                         </div>
                     </div>
                     <div class="fordiv">
@@ -91,16 +91,12 @@
                          <div class="fordiv-img">
                             <div class="across"></div>
                             <div class='vertical'></div>
-                            <!-- <div class="a"></div>
-                            <div class="b"></div>
-                            <div class="c"></div>
-                            <div class="d"></div> -->
-                            <div class="image"><img src="@/assets/images/yy.png" alt=""></div>
+                            <div class="image"><img src="@/assets/images/tc.png" alt=""></div>
                         </div>
                         <div class="fordiv-a">
                             <p class="p1">项目名称</p>
                             <p class="p2">项目详谬昂木的撒旦啊倒萨打算.</p>
-                            <p class="p3">阅读更多 <img src="@/assets/images/left-arraws.png" alt="" width="22"></p>
+                            <p class="p3">阅读更多 <img src="@/assets/images/left-arraws.png" alt=""></p>
                         </div>
                     </div>
                 </div>
@@ -120,7 +116,7 @@
                                 <p class="p2">我们的活动名称</p>
                                 <p class="p3">活动</p>
                             </div>
-                            <div class="three2"><p>阅读更多</p><img src="@/assets/images/left-arraws.png" alt="" width="32px"> </div>
+                            <div class="three2"><p>阅读更多</p><img src="@/assets/images/left-arraws.png" alt=""> </div>
                         </div>
                         <div class="div1">
                             <div class="three">
@@ -133,7 +129,7 @@
                                 <p class="p2">我们的活动名称</p>
                                 <p class="p3">活动</p>
                             </div>
-                            <div class="three2"><p>阅读更多</p><img src="@/assets/images/left-arraws.png" alt="" width="32px"> </div>
+                            <div class="three2"><p>阅读更多</p><img src="@/assets/images/left-arraws.png" alt="" > </div>
                         </div>
                         <div class="div1">
                             <div class="three">
@@ -146,7 +142,7 @@
                                 <p class="p2">我们的活动名称</p>
                                 <p class="p3">活动</p>
                             </div>
-                            <div class="three2"><p>阅读更多</p> <img src="@/assets/images/left-arraws.png" alt="" width="32px"> </div>
+                            <div class="three2"><p>阅读更多</p> <img src="@/assets/images/left-arraws.png" alt=""> </div>
                         </div>
                     </div>
                     <div class="content-c-2-div-right">

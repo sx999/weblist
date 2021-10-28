@@ -11,6 +11,7 @@
    
 	}
   #app{
+     /* width:1920px; */
 		 background-color: #F7F6FB;
      /* background-color: #F8F8F8 !important; */
 	}
