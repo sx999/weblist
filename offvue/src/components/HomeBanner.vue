@@ -1,6 +1,7 @@
 <template>
     <div class="block">
         <el-carousel :height="bannerHeight+'px'">
+            <!-- <el-carousel height="780px"> -->
             <el-carousel-item v-for="(item,index) in imgs" :key="index">
                 <img :src="item.src" alt="">
                 <!-- <img src="item.src:require('@/assets/images/img1.png')," alt=""> -->
@@ -54,15 +55,15 @@ export default {
         width: 100%;
         height:100%;
     }
-    
-    @media (max-width: 1920px){
-         .block{
-             height: 780px;
-         }
-    }
     @media (max-width: 768px){
          .block{
              height: 260px;
          }
     }
+    @media (max-width: 1920px){
+         .block{
+             height: 100%;
+         }
+    }
+  
 </style>

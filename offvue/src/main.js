@@ -12,6 +12,8 @@ import axios from 'axios'
 Vue.prototype.axios = axios;    //全局注册，
 //全局css
 import './assets/bootstrap-3.4.1-dist/css/bootstrap.min.css'
+import 'lib-flexible'
+
 new Vue({
   router,
   store,

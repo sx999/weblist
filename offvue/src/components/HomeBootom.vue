@@ -14,9 +14,9 @@
         </div>
         <div class="bottom-b">
             <div class="bottom-b-left">
-                <a href="" class="mar0"><img src="/image/qq.png" class="mar0" alt=""></a> 
-                <a href=""><img src="/image/wx.png" alt=""></a> 
-                <a href=""><img src="/image/wb.png" alt=""></a>  
+                <a href="" class="mar0"><img src="@/assets/images/qq.png" class="mar0" alt=""></a> 
+                <a href=""><img src="@/assets/images/wx.png" alt=""></a> 
+                <a href=""><img src="@/assets/images/wb.png" alt=""></a>  
             </div>
             <div>最终解释权归行由心教育有限公司所有</div>
         </div>
@@ -33,5 +33,5 @@
     }
 </script>
 <style scoped>
-    @import '../assets/css/homeBottom.css'
+    @import '../assets/css/homeBottom.css';
 </style>

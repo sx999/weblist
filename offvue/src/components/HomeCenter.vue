@@ -8,7 +8,7 @@
             <div class="content-a-2">
                 <div class="div1">
                     <!-- <img src="" alt=""> -->
-                    <div style="width: 64px;height: 64px;background-color: aquamarine;"></div>
+                    <div class="div1-1"></div>
                     <div class="div2">
                         <p>便捷</p>
                         <p>让学习变简单</p>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="div1">
                     <!-- <img src="" alt=""> -->
-                    <div style="width: 64px;height: 64px;background-color: aquamarine;"></div>
+                    <div class="div1-1"></div>
                     <div class="div2">
                         <p>便捷</p>
                         <p>让学习变简单</p>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="div1">
                     <!-- <img src="" alt=""> -->
-                    <div style="width: 64px;height: 64px;background-color: aquamarine;"></div>
+                    <div class="div1-1" style=""></div>
                     <div class="div2">
                         <p>便捷</p>
                         <p>让学习变简单</p>
@@ -33,7 +33,7 @@
             </div>
         </div>  
         <div class="content-b">
-
+            <img src="@/assets/images/content.png" alt="">
         </div>
         <div class="content-c">
             <div class="content-c-1">
@@ -120,7 +120,7 @@
                                 <p class="p2">我们的活动名称</p>
                                 <p class="p3">活动</p>
                             </div>
-                            <div class="three2">阅读更多 <img src="@/assets/images/left-arraws.png" alt="" width="32px"> </div>
+                            <div class="three2"><p>阅读更多</p><img src="@/assets/images/left-arraws.png" alt="" width="32px"> </div>
                         </div>
                         <div class="div1">
                             <div class="three">
@@ -133,7 +133,7 @@
                                 <p class="p2">我们的活动名称</p>
                                 <p class="p3">活动</p>
                             </div>
-                            <div class="three2">阅读更多 <img src="@/assets/images/left-arraws.png" alt="" width="32px"> </div>
+                            <div class="three2"><p>阅读更多</p><img src="@/assets/images/left-arraws.png" alt="" width="32px"> </div>
                         </div>
                         <div class="div1">
                             <div class="three">
@@ -146,7 +146,7 @@
                                 <p class="p2">我们的活动名称</p>
                                 <p class="p3">活动</p>
                             </div>
-                            <div class="three2">阅读更多 <img src="@/assets/images/left-arraws.png" alt="" width="32px"> </div>
+                            <div class="three2"><p>阅读更多</p> <img src="@/assets/images/left-arraws.png" alt="" width="32px"> </div>
                         </div>
                     </div>
                     <div class="content-c-2-div-right">
@@ -167,7 +167,6 @@
             </div>
         </div>
         <div class="content-d">
-
         </div>
         <div class="content-e">
             <div class="content-e-e">
@@ -233,7 +232,7 @@
                 </div>
             </div>
             <div class="content-e-e">
-                <div class="title">行业最新资讯</div> 0
+                <div class="title">行业最新资讯</div>
                 <div class="threediv2">
                     <div class="divleft">
                         <img class="leftimg" src="@/assets/images/19.jpg" alt="">
@@ -315,5 +314,5 @@
 </script>
 
 <style scoped>
-    @import '../assets/css/homeCenter.css'
+    @import '../assets/css/homeCenter.css';
 </style>
