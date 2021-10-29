@@ -175,8 +175,8 @@
                                 <img src="@/assets/images/demail.png" alt="">
                                 <p>联系我</p>
                                 <hr>
-                                <p>1111111111111</p>
-                                <p>1111111111111.com</p>
+                                <p>10086</p>
+                                <p>111111.com</p>
                                 <a class="he_slideCaptionDown_caption_a" href="javascript:void(0);"></a>
                             </div>
                         </div>
@@ -194,8 +194,8 @@
                                 <img src="@/assets/images/demail.png" alt="">
                                 <p>联系我</p>
                                 <hr>
-                                <p>1111111111111</p>
-                                <p>1111111111111.com</p>
+                                <p>10086</p>
+                                <p>111111.com</p>
                                 <a class="he_slideCaptionDown_caption_a" href="javascript:void(0);"></a>
                             </div>
                         </div>
@@ -213,8 +213,8 @@
                                 <img src="@/assets/images/demail.png" alt="">
                                 <p>联系我</p>
                                 <hr>
-                                <p>1111111111111</p>
-                                <p>1111111111111.com</p>
+                                 <p>10086</p>
+                                <p>111111.com</p>
                                 <a class="he_slideCaptionDown_caption_a" href="javascript:void(0);"></a>
                             </div>
                         </div>
@@ -257,7 +257,7 @@
                 <div class="threediv3">
                     <div class="div2">
                         <div class="front">
-                            <div><img src="@/assets/images/phone.png" alt="" width="46"></div>
+                            <div><img src="@/assets/images/phone.png" alt=""></div>
                             <div>联系电话</div>
                             <div>17638367045</div>
                         </div>
@@ -268,7 +268,7 @@
                     </div>
                     <div class="div2">
                         <div class="front">
-                            <div><img src="@/assets/images/email.png" alt="" width="46"></div>
+                            <div><img src="@/assets/images/email.png" alt=""></div>
                             <div>邮件地址</div>
                             <div>17638367045@163.com</div>
                         </div>
@@ -278,7 +278,7 @@
                     </div>
                     <div class="div2">
                         <div class="front">
-                            <div><img src="@/assets/images/time.png" alt="" width="46"></div>
+                            <div><img src="@/assets/images/time.png" alt=""></div>
                             <div>工作时间</div>
                             <div>09：00~17：30</div>
                         </div>

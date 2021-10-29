@@ -1,11 +1,12 @@
 <template>
     <el-container>
-        <el-header id="header">
-            <div class="logo-left-img">
-                </div>
+        <!-- pc -->
+        <el-header id="header" class=" hidden-xs hidden-sm">
+            <div class="logo-left-img"> </div>
+               
             <el-menu 
             :default-active="$route.path" 
-            class="el-menu-demo navt hidden-xs hidden-sm" 
+            class="el-menu-demo navt" 
             mode="horizontal" 
             background-color="#FFFFFF"
             text-color="#000"
@@ -18,33 +19,23 @@
                 <el-menu-item index="1">热门赛事</el-menu-item>
                 <el-menu-item index="1">研学活动</el-menu-item>
                 <el-menu-item index="1">专家顾问</el-menu-item>
+                <el-menu-item index="1">文创商城</el-menu-item>
                 <el-menu-item index="1">关于我们</el-menu-item>
             </el-menu>
-            <!-- 手机端按钮 -->
-            <div class="classButton hidden-md hidden-lg" @click="isBarShow = !isBarShow"><i class="el-icon-s-operation"></i></div>
-            <!-- <div class="cheader">
-                <div class="logo-left-img">
-                </div>
-                <ul class="nav hidden-xs hidden-sm">
-                <li @click="Active(1)"><router-link to="/"><span :class="{'active':currentSort==1}">首页</span></router-link></li>
-                <li @click="Active('2')"><router-link to="/about"><span :class="{'active':currentSort=='2'}">公司概况</span></router-link></li>
-                <li @click="Active('3')"><router-link to="/"><span :class="{'active':currentSort=='3'}">新闻动态</span></router-link></li>
-                <li @click="Active('4')"><router-link to="/"><span :class="{'active':currentSort=='4'}">热门赛事</span></router-link></li>
-                <li @click="Active('5')"><router-link to="/"><span :class="{'active':currentSort=='5'}">研学活动</span></router-link></li>
-                <li @click="Active('6')"><router-link to="/"><span :class="{'active':currentSort=='6'}">专家顾问</span></router-link></li>
-                <li @click="Active('7')"><router-link to="/"><span :class="{'active':currentSort=='7'}">文创商城</span></router-link></li>
-                <li @click="Active('8')"><router-link to="/"><span :class="{'active':currentSort=='8'}">关于我们</span></router-link></li>
-                </ul>
-                <div class="classButton hidden-md hidden-lg" @click="isBarShow = !isBarShow"><i class="el-icon-s-operation"></i></div>
-            </div>   -->
         </el-header>
-        <!-- 展开/收起 -->
-        <div>
+        <!-- h5 -->
+        <header id="header-h5" class=" hidden-md hidden-lg">
+            <!-- logo -->
+            <div class="logo-left-img-h5"> </div>
+            <!-- 按钮 -->
+            <div class="classButton" @click="isBarShow = !isBarShow"><i class="el-icon-s-operation"></i></div>
+            <!-- 展开/收起 -->
+            <div  class="navbar-nav">
             <el-collapse-transition>
-                <div v-show="isBarShow" class="navbar-nav" >
+                <div v-show="isBarShow" >
                     <ul>
-                        <li><router-link to="/"><span>首页</span></router-link></li>
-                        <li><router-link to="/"><span>公司概况</span></router-link></li>
+                        <li><router-link to="/home"><span>首页</span></router-link></li>
+                        <li><router-link to="/about"><span>公司概况</span></router-link></li>
                         <li><router-link to="/"><span>新闻动态</span></router-link></li>
                         <li><router-link to="/"><span>热门赛事</span></router-link></li>
                         <li><router-link to="/"><span>研学活动</span></router-link></li>
@@ -54,32 +45,13 @@
                     </ul>
                 </div>
             </el-collapse-transition>
-        </div>
-         <!-- <transition name="slide-fade"> -->
-            <!-- <div class="navbar"  v-show="isBarShow">
-                  <div style="margin-top: 20px; height: 200px;" >
-                    <el-collapse-transition>
-                        <div class="transition-box">
-                                <ul class="navbar-nav ">
-                                    <li><router-link to="/"><span>首页</span></router-link></li>
-                                    <li><router-link to="/"><span>公司概况</span></router-link></li>
-                                    <li><router-link to="/"><span>新闻动态</span></router-link></li>
-                                    <li><router-link to="/"><span>热门赛事</span></router-link></li>
-                                    <li><router-link to="/"><span>研学活动</span></router-link></li>
-                                    <li><router-link to="/"><span>专家顾问</span></router-link></li>
-                                    <li><router-link to="/"><span>文创商城</span></router-link></li>
-                                    <li><router-link to="/"><span>关于我们</span></router-link></li>
-                                </ul>
-                        </div>
-                         
-                    </el-collapse-transition>
-                 </div>
-              
-            </div> -->
-        <!-- </transition> -->
-        <el-main class="conter">
+            </div>
+        </header>
+
+        <el-main id="conter">
            <router-view/>
         </el-main>
+        
     </el-container>
 </template>
 <script>
@@ -96,34 +68,72 @@ export default({
   created(){},
   mounted(){},
   methods:{
-        Active(index){
-            this.currentSort  =  index;
-        },
+        // Active(index){
+        //     this.currentSort  =  index;
+        // },
   }
 })
 </script>
 
 <style scoped>
-    *{margin: 0; padding: 0;}
-    body{
-        box-sizing: border-box;
-        max-width: 1920px;
-        margin: 0;
-        padding: 0;
-        background-color: #F8F8F8 !important;
-    }
-    a{
-        color: #000000;
-        text-decoration: none;
-        padding: 0 !important;
-    }
-    ul,li{
-        list-style: none;
-    }
-    @media (max-width: 1920px){
+    @media screen and (max-width: 768px){
+        #header-h5{
+            display: flex;
+            justify-content: space-between;
+            /* align-items:center; */
+            width: 100%;
+            background-color: #FFFFFF;
+            height: 1.6rem !important;
+            /* padding:0 24px; */
+            position: relative;
+        }
+        .logo-left-img-h5{
+            width:3rem;
+            height: 1.6rem;
+            background-color: aqua;
+        }
+        .classButton{
+            width: 3rem;
+            height: 1.6rem;
+            color: #36A4F1;
+            font-size:1.2rem;
+            text-align: right;
+        } 
+        .navbar-nav{
+            position: absolute;
+            top:1.6rem;
+            left: 0;
+            z-index: 99;
+            padding: 0 30px;
+            margin: 0 auto;
+            width: 100%;
+            font-size: 0.5rem;  
+            background-color: #36A4F1;
+            color: #FFFFFF;
+        }
+        .navbar-nav ul li{
+            height:1rem;
+            line-height: 1rem;
+            border-bottom: 1px solid hsla(0,0%,100%,0.20);
+        }
+        .navbar-nav ul li:nth-child(8){
+            border: none;
+        }
+        .navbar-nav ul li a{
+            text-decoration: none;
+            color: #FFFFFF !important;
+        }
+        #conter{
+            z-index: 98;
+            margin:0 !important;
+            padding: 0 !important;
+            overflow: none !important;
+        }
+    } 
+    @media screen and  (max-width: 1920px){
         #header{
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             width: 100%;
             background-color: #FFFFFF;
@@ -136,95 +146,17 @@ export default({
             height: 72px;
             background-color: aqua;
         }
-        /* .navbar{
-            display: none;
-        } */
-        .navt{
-         
-        }
         .el-menu.el-menu--horizontal{
             border-bottom:none !important;
         }
-         .conter{
+         #conter{
             margin:0 !important;
             padding: 0 !important;
            overflow:visible !important;
         }
       
     }
-    @media (max-width: 768px){
-        #header{
-            width: 100%;
-            background-color: #FFFFFF;
-            height: 54px !important;
-            padding:0 24px;
-            position: relative;
-        }
-        .logo-left-img{
-            width: 120px;
-            height: 24px;
-            background-color: aqua;
-        }
-        .classButton{
-            color: #36A4F1;
-            font-size: 30px;
-        } 
-        .navbar-nav{
-            position: absolute;
-            top: 54px;
-            left: 0;
-            z-index: 99;
-            padding: 0 15px;
-            margin: 0 auto;
-            width: 100%;
-            font-size: 16px;  
-            background-color: #36A4F1;
-            color: #FFFFFF;
-        }
-        .navbar-nav ul li{
-            height: 40px;
-            line-height: 40px;
-            border-bottom: 1px solid hsla(0,0%,100%,0.20);
-        }
-       .navbar-nav ul li:nth-child(8){
-            border: none;
-        }
-        .navbar-nav ul li a{
-            text-decoration: none;
-            color: #FFFFFF !important;
-        }
-        .conter{
-            z-index: 98;
-            margin:0 !important;
-            padding: 0 !important;
-            overflow: none !important;
-        }
-    }
-    #header .cheader{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-    }
-    #header .cheader .nav{
-        display: flex;
-        align-items: center;
-        width:650px;
-        height: 100%;
-    }
-    #header .cheader .nav li{
-        width: 81.25px;
-        font-size: 16px;
-        text-align: center;
-        cursor: pointer;
-    }
-    .active{
-        color: #459ba1;
-        border-bottom: 3px solid #F2C723;
-    }
-    .nav>li>a:focus, .nav>li>a:hover{
-        background: none;
-    }
+   
+  
     
 </style>
