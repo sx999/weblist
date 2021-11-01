@@ -1,7 +1,7 @@
 <template>
     <el-container>
         <!-- pc -->
-        <el-header id="header" class=" hidden-xs hidden-sm">
+        <el-header id="header" class=" hidden-xs ">
             <div class="logo-left-img"> </div>
                
             <el-menu 
@@ -24,7 +24,7 @@
             </el-menu>
         </el-header>
         <!-- h5 -->
-        <header id="header-h5" class=" hidden-md hidden-lg">
+        <header id="header-h5" class="hidden-lg">
             <!-- logo -->
             <div class="logo-left-img-h5"> </div>
             <!-- 按钮 -->
@@ -34,14 +34,14 @@
             <el-collapse-transition>
                 <div v-show="isBarShow" >
                     <ul>
-                        <li><router-link to="/home"><span>首页</span></router-link></li>
-                        <li><router-link to="/about"><span>公司概况</span></router-link></li>
-                        <li><router-link to="/"><span>新闻动态</span></router-link></li>
-                        <li><router-link to="/"><span>热门赛事</span></router-link></li>
-                        <li><router-link to="/"><span>研学活动</span></router-link></li>
-                        <li><router-link to="/"><span>专家顾问</span></router-link></li>
-                        <li><router-link to="/"><span>文创商城</span></router-link></li>
-                        <li><router-link to="/"><span>关于我们</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/home"><span>首页</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/about"><span>公司概况</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/"><span>新闻动态</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/"><span>热门赛事</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/"><span>研学活动</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/"><span>专家顾问</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/"><span>文创商城</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/"><span>关于我们</span></router-link></li>
                     </ul>
                 </div>
             </el-collapse-transition>
@@ -71,12 +71,41 @@ export default({
         // Active(index){
         //     this.currentSort  =  index;
         // },
+        Onshow(){
+            this.isBarShow = false
+        }
   }
 })
 </script>
 
 <style scoped>
-    @media screen and (max-width: 768px){
+    @media screen and  (max-width: 1920px){
+        #header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: #FFFFFF;
+            height: 88px !important;
+            padding:0 455px 0 448px;
+          
+        }
+        .logo-left-img{
+            width: 175px;
+            height: 72px;
+            background-color: aqua;
+        }
+        .el-menu.el-menu--horizontal{
+            border-bottom:none !important;
+        }
+         #conter{
+            margin:0 !important;
+            padding: 0 !important;
+           overflow:visible !important;
+        }
+      
+    }
+    @media screen and (max-width: 767px){
         #header-h5{
             display: flex;
             justify-content: space-between;
@@ -130,33 +159,28 @@ export default({
             overflow: none !important;
         }
     } 
-    @media screen and  (max-width: 1920px){
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
         #header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            background-color: #FFFFFF;
-            height: 88px !important;
-            padding:0 455px 0 448px;
-          
+            padding: 0 100px;
         }
-        .logo-left-img{
-            width: 175px;
-            height: 72px;
-            background-color: aqua;
+        #header-h5{
+            display: none !important;
+            
         }
-        .el-menu.el-menu--horizontal{
-            border-bottom:none !important;
+    } 
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+        #header{
+            padding: 0 200px;
         }
-         #conter{
-            margin:0 !important;
-            padding: 0 !important;
-           overflow:visible !important;
+        #header-h5{
+            display: none !important;
+            
         }
-      
-    }
-   
+    } 
+    @media only screen and  (min-width: 1201px) and (max-width: 1440px){
+        #header{
+            padding: 0 300px;
+        }
+    } 
   
-    
 </style>
