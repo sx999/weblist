@@ -1,7 +1,6 @@
 <template>
      <div>
-        <h1>关于我们</h1>
-        <router-link to="/about/aboutdetail">详情页</router-link>
+        <h1>关于我们-详情页</h1>
     </div>
 </template>
 <script>

@@ -4,6 +4,11 @@ import VueRouter from 'vue-router'
 import Index from '../views/index/Index.vue'
 import Home from '../views/index/Home.vue'
 import About from '../views/index/About.vue'
+import Events from '../views/index/Events.vue'
+import Journalism from '../views/index/Journalism.vue'
+import ExpertAdvisor from '../views/index/ExpertAdvisor.vue'
+// 子路由
+import AboutDetail from '../views/index/AboutDetail.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -19,7 +24,10 @@ const routes = [
     children:[
       {path:"home",component:Home},
       {path:"",redirect:"home"},    //没有输入值时 重定向到home 页面
-      {path:"about",component:About}
+      {path:"about",component:About,children:[{path:"aboutdetail",component:AboutDetail}]},
+      {path:"event",component:Events},
+      {path:"journalism",component:Journalism},
+      {path:"expertadvisor",component:ExpertAdvisor},
     ]
   },
   {

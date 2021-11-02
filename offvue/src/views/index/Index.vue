@@ -3,7 +3,6 @@
         <!-- pc -->
         <el-header id="header" class=" hidden-xs ">
             <div class="logo-left-img"> </div>
-               
             <el-menu 
             :default-active="$route.path" 
             class="el-menu-demo navt" 
@@ -14,13 +13,12 @@
             :router="true"
             >
                 <el-menu-item index="/home">首页</el-menu-item>
-                <el-menu-item index="/about">公司概况</el-menu-item>
-                <el-menu-item index="1">新闻动态</el-menu-item>
-                <el-menu-item index="1">热门赛事</el-menu-item>
-                <el-menu-item index="1">研学活动</el-menu-item>
-                <el-menu-item index="1">专家顾问</el-menu-item>
+                <el-menu-item index="1">公司概况</el-menu-item>
+                <el-menu-item index="/journalism">新闻动态</el-menu-item>
+                <el-menu-item index="/event">赛事活动</el-menu-item>
+                <el-menu-item index="/expertadvisor">专家顾问</el-menu-item>
                 <el-menu-item index="1">文创商城</el-menu-item>
-                <el-menu-item index="1">关于我们</el-menu-item>
+                <el-menu-item index="/about">关于我们</el-menu-item>
             </el-menu>
         </el-header>
         <!-- h5 -->
@@ -35,13 +33,12 @@
                 <div v-show="isBarShow" >
                     <ul>
                         <li @click="Onshow"><router-link to="/home"><span>首页</span></router-link></li>
-                        <li @click="Onshow"><router-link to="/about"><span>公司概况</span></router-link></li>
+                        <li @click="Onshow"><router-link to=""><span>公司概况</span></router-link></li>
                         <li @click="Onshow"><router-link to="/"><span>新闻动态</span></router-link></li>
-                        <li @click="Onshow"><router-link to="/"><span>热门赛事</span></router-link></li>
                         <li @click="Onshow"><router-link to="/"><span>研学活动</span></router-link></li>
                         <li @click="Onshow"><router-link to="/"><span>专家顾问</span></router-link></li>
                         <li @click="Onshow"><router-link to="/"><span>文创商城</span></router-link></li>
-                        <li @click="Onshow"><router-link to="/"><span>关于我们</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/about"><span>关于我们</span></router-link></li>
                     </ul>
                 </div>
             </el-collapse-transition>
@@ -51,11 +48,17 @@
         <el-main id="conter">
            <router-view/>
         </el-main>
-        
+
+        <el-footer id="fotter">
+            <!-- 底部start -->
+            <Bootom></Bootom>
+            <!-- 底部end -->
+        </el-footer>
     </el-container>
 </template>
 <script>
 import axios from 'axios'
+import Bootom from '@/components/HomeBootom.vue'
 export default({
   data(){
       return{
@@ -64,7 +67,7 @@ export default({
           height: ""
       }
   },
-  components:{},
+  components:{Bootom},
   created(){},
   mounted(){},
   methods:{
@@ -98,10 +101,16 @@ export default({
         .el-menu.el-menu--horizontal{
             border-bottom:none !important;
         }
-         #conter{
+        #conter{
             margin:0 !important;
             padding: 0 !important;
            overflow:visible !important;
+        }
+        #fotter{
+            width: 100%;
+            height: 100% !important;
+            margin: 0;
+            padding: 0;
         }
       
     }

@@ -10,6 +10,7 @@
 		padding: 0;
 	}
   #app{
+     font-family: PingFang SC-Bold, PingFang SC;
      /* width:1920px; */
 		 background-color: #F8F8F8 !important;
      /* background-color: #F8F8F8 !important; */

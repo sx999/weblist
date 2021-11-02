@@ -13,7 +13,6 @@
                         <div class="yello-d">了解更多</div>
                     </div>
                 </div>
-               
             </el-carousel-item>
         </el-carousel>
   </div>
