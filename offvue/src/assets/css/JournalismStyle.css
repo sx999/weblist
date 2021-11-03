@@ -1,26 +1,4 @@
-.Journalism-box{
-    width: 100%;
-    height: 686px;
-    position: relative;
-}
-.Journalism-box img{
-    width: 100%;
-    height: 100%;
-}
-.Journalism-box p{
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin:auto;
-    /* z-index: 99; */
-    width: 288px;
-    height: 101px;
-    font-size: 72px;
-    font-weight: bold;
-    color: #FFFFFF;
-}
+
 .Journalism-content{
     width: 100%;
     height: 100%;
@@ -67,8 +45,8 @@
     z-index: 99;
     top: 10px;
     left: 0;
-    width: 24px;
-    height: 24px;
+    width: 23px;
+    height: 23px;
 }
 .data-header-r input{
     position: absolute;
@@ -100,7 +78,15 @@
     height: 262px;
     border: #777777 1px solid;
 }
+.data-content .data-content-l img{
+    width: 100%;
+    height: 100%;
+}
 .data-content .data-content-r{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 29px;
     width: 538px;
     height: 262px;
     border: #251e1e 1px solid;
@@ -117,9 +103,61 @@
 .data-content .data-content-r-2{
     display: flex;  
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
 } 
 .data-content .data-content-r-2 .span2{
     font-weight: bold;
     color: #7C7C7C;
     font-size: 14px;
 } 
+.data-content .data-content-r .p1{
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    margin: 0;
+} 
+.data-content .data-content-r  .div1{
+    width: 100%;
+    height: 66px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #555555;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; 
+    overflow: hidden;
+}
+.data-content .data-content-r .div2{
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    border: 1px solid #DFDFDF;
+}
+.data-content .data-content-r .div2:hover{
+    background-color: #F2C723;  
+    color: #333333;
+}
+.data-bottom{
+    
+    width: 100%;
+}
+.data-bottom p{
+    margin:0  auto;
+    width: 222px;
+    height: 44px;
+    cursor: pointer;
+    line-height: 44px;
+    text-align: center;
+    border: 1px solid #DFDFDF;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+

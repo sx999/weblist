@@ -9,6 +9,8 @@ import Journalism from '../views/index/Journalism.vue'
 import ExpertAdvisor from '../views/index/ExpertAdvisor.vue'
 // 子路由
 import AboutDetail from '../views/index/AboutDetail.vue'
+import JournalismClass from '../views/index/JournalismClass.vue'
+import JournalismDetail  from '../views/index/JournalismDetail.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -24,12 +26,25 @@ const routes = [
     children:[
       {path:"home",component:Home},
       {path:"",redirect:"home"},    //没有输入值时 重定向到home 页面
-      {path:"about",component:About,children:[{path:"aboutdetail",component:AboutDetail}]},
+      {path:"about",component:About,children:[
+        {path:"aboutdetail",name:"AboutDetail",component:AboutDetail}
+      ]},
       {path:"event",component:Events},
-      {path:"journalism",component:Journalism},
+      {path:"journalism",component:Journalism,children:[
+        {path:"",redirect:"journalismclass"},
+        {path:"journalismclass",name:"JournalismClass",component:JournalismClass},
+        {path:"journalismdetail",name:"JournalismDetail",component:JournalismDetail}
+      ]},
       {path:"expertadvisor",component:ExpertAdvisor},
     ]
   },
+  // {
+  //   path:"/journalism",
+  //   component:Journalism,
+  //   children:[
+  //     {path:"journalismdetail",name:"JournalismDetail",component:JournalismDetail}
+  //   ]
+  // },
   {
     path: '/about',
     name: 'About',

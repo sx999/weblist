@@ -4,7 +4,7 @@
         <el-header id="header" class=" hidden-xs ">
             <div class="logo-left-img"> </div>
             <el-menu 
-            :default-active="$route.path" 
+            :default-active="'/' +this.$route.path.split('/')[1]"
             class="el-menu-demo navt" 
             mode="horizontal" 
             background-color="#FFFFFF"
