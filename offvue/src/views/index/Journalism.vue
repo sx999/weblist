@@ -25,7 +25,7 @@
                                 <div class="data-content-r-1">
                                     <span class="span1">25/</span>
                                     <div class="data-content-r-2">
-                                        <span class="span2">10月</span>s
+                                        <span class="span2">10月</span>
                                         <span class="span2">2020年</span>
                                     </div>
                                 </div>
