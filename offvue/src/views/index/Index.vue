@@ -15,7 +15,7 @@
                 <el-menu-item index="/home">首页</el-menu-item>
                 <el-menu-item index="1">公司概况</el-menu-item>
                 <el-menu-item index="/journalism">新闻动态</el-menu-item>
-                <el-menu-item index="/event">赛事活动</el-menu-item>
+                <el-menu-item index="/events">赛事活动</el-menu-item>
                 <el-menu-item index="/expertadvisor">专家顾问</el-menu-item>
                 <el-menu-item index="1">文创商城</el-menu-item>
                 <el-menu-item index="/about">关于我们</el-menu-item>

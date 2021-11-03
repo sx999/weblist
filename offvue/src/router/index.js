@@ -11,6 +11,8 @@ import ExpertAdvisor from '../views/index/ExpertAdvisor.vue'
 import AboutDetail from '../views/index/AboutDetail.vue'
 import JournalismClass from '../views/index/JournalismClass.vue'
 import JournalismDetail  from '../views/index/JournalismDetail.vue'
+import EventsClass from '../views/index/EventsClass.vue'
+import EventsDetail from '../views/index/EventsDetail.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -29,7 +31,11 @@ const routes = [
       {path:"about",component:About,children:[
         {path:"aboutdetail",name:"AboutDetail",component:AboutDetail}
       ]},
-      {path:"event",component:Events},
+      {path:"events",component:Events,children:[
+        {path:"",redirect:"eventsclass"},
+        {path:"eventsclass",name:"EventsClass",component:EventsClass},
+        {path:"eventsdetail",name:"EventsDetail",component:EventsDetail}
+      ]},
       {path:"journalism",component:Journalism,children:[
         {path:"",redirect:"journalismclass"},
         {path:"journalismclass",name:"JournalismClass",component:JournalismClass},

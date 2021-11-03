@@ -1,8 +1,10 @@
-img{
+.ExpertAdvisort-box  img,
+.ExpertAdvisor-content img{
     width: 100%;
     height: 100%;
 }
-p{
+.ExpertAdvisort-box p,
+.ExpertAdvisor-content p{
     margin: 0 !important;
 }
 .ExpertAdvisort-box{
@@ -10,10 +12,6 @@ p{
     width: 100%;
     height: 686px;
     font-family: PingFang SC-Medium, PingFang SC;
-}
-.ExpertAdvisort-box img{
-    width: 100%;
-    height: 100%;
 }
 .ExpertAdvisort-box .posit{
     position: absolute;
