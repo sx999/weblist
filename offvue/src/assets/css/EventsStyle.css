@@ -167,7 +167,7 @@
     cursor: pointer;
 }
 .data-list .list-b .list-b-r p{
-    width: 48px;
+    width: 50px;
     margin: 0;
     font-size: 12px;
     font-family: PingFang SC-Bold, PingFang SC;
@@ -181,7 +181,7 @@
 .data-bottom{
     width: 100%;
 }
-.data-bottom{
+.data-bottom p{
     margin:0  auto ;
     margin-top: 60px;
     width: 222px;

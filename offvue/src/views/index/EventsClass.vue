@@ -30,7 +30,7 @@
                                     <p class="p2">我们的赛事名称</p>
                                     <p class="p3">赛事</p>
                                 </div>
-                                <div class="list-b-r">
+                                <div class="list-b-r" @click="GoDetail()">
                                     <p>阅读更多</p>
                                     <img src="../../assets/images/left-arraws.png" alt="">
                                 </div>
@@ -114,12 +114,14 @@
     export default {
     data(){
       return{
-         
+         id:"0"
       }
     },
-    created(){
-   
-
+    created(){ },
+    methods:{
+        GoDetail(){
+              this.$router.push({path:'/events/eventsdetail',query:{id:this.id}})
+        }
     }
 
   }
