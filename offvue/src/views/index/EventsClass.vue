@@ -14,6 +14,95 @@
                             <input type="text" placeholder="关键词">
                         </div>
                     </div>
+                    <div class="data-center">
+                        <div class="data-list">
+                            <div class="list-h">
+                                <img src="../../assets/images/26.jpg" alt="">
+                            </div>
+                            <div class="list-b">
+                                <div class="list-b-l">
+                                    <div class="across"></div>
+                                    <div class="vertical"></div>
+                                    <div class="list-b-l-date">15/12</div>
+                                </div>
+                                <div class="list-b-c">
+                                    <p class="p1">我们的赛事名称</p>
+                                    <p class="p2">我们的赛事名称</p>
+                                    <p class="p3">赛事</p>
+                                </div>
+                                <div class="list-b-r">
+                                    <p>阅读更多</p>
+                                    <img src="../../assets/images/left-arraws.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-list">
+                            <div class="list-h">
+                                <img src="../../assets/images/26.jpg" alt="">
+                            </div>
+                            <div class="list-b">
+                                <div class="list-b-l">
+                                    <div class="across"></div>
+                                    <div class="vertical"></div>
+                                    <div class="list-b-l-date">15/12</div>
+                                </div>
+                                <div class="list-b-c">
+                                    <p class="p1">我们的赛事名称</p>
+                                    <p class="p2">我们的赛事名称</p>
+                                    <p class="p3">赛事</p>
+                                </div>
+                                <div class="list-b-r">
+                                    <p>阅读更多</p>
+                                    <img src="../../assets/images/left-arraws.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-list">
+                            <div class="list-h">
+                                <img src="../../assets/images/26.jpg" alt="">
+                            </div>
+                            <div class="list-b">
+                                <div class="list-b-l">
+                                    <div class="across"></div>
+                                    <div class="vertical"></div>
+                                    <div class="list-b-l-date">15/12</div>
+                                </div>
+                                <div class="list-b-c">
+                                    <p class="p1">我们的赛事名称</p>
+                                    <p class="p2">我们的赛事名称</p>
+                                    <p class="p3">赛事</p>
+                                </div>
+                                <div class="list-b-r">
+                                    <p>阅读更多</p>
+                                    <img src="../../assets/images/left-arraws.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-list">
+                            <div class="list-h">
+                                <img src="../../assets/images/26.jpg" alt="">
+                            </div>
+                            <div class="list-b">
+                                <div class="list-b-l">
+                                    <div class="across"></div>
+                                    <div class="vertical"></div>
+                                    <div class="list-b-l-date">15/12</div>
+                                </div>
+                                <div class="list-b-c">
+                                    <p class="p1">我们的赛事名称</p>
+                                    <p class="p2">我们的赛事名称</p>
+                                    <p class="p3">赛事</p>
+                                </div>
+                                <div class="list-b-r">
+                                    <p>阅读更多</p>
+                                    <img src="../../assets/images/left-arraws.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-bottom">
+                        <p>加载更多</p>
+                    </div>
                 </div>
                 
             </div>
