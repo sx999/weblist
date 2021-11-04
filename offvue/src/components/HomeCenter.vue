@@ -309,6 +309,6 @@
     }
 </script>
 
-<style scoped>
+<style scoped='scoped'>
     @import '../assets/css/homeCenter.css';
 </style>

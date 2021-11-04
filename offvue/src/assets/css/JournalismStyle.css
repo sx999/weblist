@@ -76,7 +76,6 @@
 .data-content .data-content-l{
     width: 422px;
     height: 262px;
-    border: #777777 1px solid;
 }
 .data-content .data-content-l img{
     width: 100%;
@@ -89,7 +88,6 @@
     margin-right: 29px;
     width: 538px;
     height: 262px;
-    border: #251e1e 1px solid;
 }
 .data-content .data-content-r-1{
     display: flex;  

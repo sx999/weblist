@@ -8,6 +8,7 @@ import Events from '../views/index/Events.vue'
 import Journalism from '../views/index/Journalism.vue'
 import ExpertAdvisor from '../views/index/ExpertAdvisor.vue'
 // 子路由
+import AboutData from '../views/index/AboutData.vue'
 import AboutDetail from '../views/index/AboutDetail.vue'
 import JournalismClass from '../views/index/JournalismClass.vue'
 import JournalismDetail  from '../views/index/JournalismDetail.vue'
@@ -29,6 +30,8 @@ const routes = [
       {path:"home",component:Home},
       {path:"",redirect:"home"},    //没有输入值时 重定向到home 页面
       {path:"about",component:About,children:[
+        {path:"",redirect:"aboutdata"},
+        {path:"aboutdata",name:"AboutData",component:AboutData},
         {path:"aboutdetail",name:"AboutDetail",component:AboutDetail}
       ]},
       {path:"events",component:Events,children:[
