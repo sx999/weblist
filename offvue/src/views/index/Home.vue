@@ -23,7 +23,7 @@ export default {
       
     },
     mounted(){
-
+            console.log(this.$api_router.login); // 打印出登录接口的路径
     },
     methods:{
 
