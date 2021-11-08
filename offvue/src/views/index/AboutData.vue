@@ -15,7 +15,7 @@
                         <p class="cursor" @click="GoDetail()">查看更多 -></p>
                 </div>
                 <div class="data1-r">
-                    <img src="../../assets/images/3.png" alt="">
+                    <img src="@/assets/images/3.png" alt="">
                 </div>
             </div>
             <div class="data2">
@@ -24,7 +24,7 @@
                 <div class="threediv">
                     <div class="div">
                         <div class="divtop">
-                            <img class="he_slideCaptionDown_img" src="@/assets/images/559.jpg" alt="">
+                            <img class="he_slideCaptionDown_img" src="@/assets/images/560.jpg" alt="">
                             <div class="he_slideCaptionDown_caption">
                                 <img src="@/assets/images/demail.png" alt="">
                                 <p>联系我</p>

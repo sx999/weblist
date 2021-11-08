@@ -1,8 +1,8 @@
 module.exports = {
-    // publicPath: process.env.NODE_ENV === 'production' ? '/production-sub-path' : './', 
-    publicPath:'./',
-    // assetsDir: 'static',
-    // outputDir: 'dist',
+    // publicPath: process.env.NODE_ENV === 'production' ? '../' : './', 
+    publicPath:'',
+    // // assetsDir: 'static',
+    // // outputDir: 'dist',
     devServer: {
         proxy: {
             '/api': {

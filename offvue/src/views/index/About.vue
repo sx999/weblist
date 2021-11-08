@@ -2,7 +2,7 @@
      <div>
            <!-- 头部轮播 -->
         <div class="About-box">
-            <img src="../../assets/images/2.jpg" alt="">
+            <img src="../../assets/images/2.jpg" alt="00">
             <div class="posit">   
                 <p class="posit-p1">行由心教育</p>
                 <p class="posit-p2">中小学语言文化教育领跑者</p>
