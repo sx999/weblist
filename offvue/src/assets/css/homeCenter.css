@@ -10,7 +10,16 @@
     .content-a .content-a-1{
         font-size: 30px;
         font-weight: 600;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        /* text-align: center; */
+    }
+    .content-a .content-a-1 div{
+        display: flex;
+    }
+    .content-a .content-a-1  div p{ 
+        margin: 0;
+        border-bottom: 5px solid #D63328;
     }
     .content-a .content-a-2{
         margin-top: 48px;
@@ -30,8 +39,16 @@
     .content-a .content-a-2 .div1 .div1-1{
         width: 64px;
         height: 64px;
-        background-color: aquamarine;
+
     }
+    .content-a .content-a-2 .div1 .div1-1 span{
+        color: #D63328;
+        font-size: 50px;
+    }
+    /* .content-a .content-a-2 .div1 .div1-1 img{
+        width: 100%;
+        height: 100%;
+    } */
     .content-a .content-a-2 .div1 .div2 p{
         font-size: 28px;
         margin: 0;
@@ -40,12 +57,22 @@
         font-size: 16px;
         color: #777777;
     }
+    .content-a .content-a-2 .div1:hover{
+        background-color: #D63328;
+        color: #FFFFFF;
+    }
+    .content-a .content-a-2 .div1:hover span{
+        color: #FFFFFF;
+    }
+    .content-a .content-a-2 .div1:hover .div2 p:nth-child(1){
+        color: #FFFFFF;
+    }
     .content-a .content-a-2 .div1 .div2{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .content-b{
+    /* .content-b{
         width: 100%;
         height: 568px;
         background-color: #1f0a0a;
@@ -53,16 +80,27 @@
     .content-b img{
         width: 100%;
         height: 100%;
-    }
+    } */
    
     @media screen and (max-width: 1920px) {
         .content-c{
-            padding: 70px 448px;
+            padding: 0px 448px;
             width: 100%;
             /* height: 628px; */
             background-color: #F8F8F8;
         }
-        .content-c .content-c-1{
+        .content-c .content-c-1 .title{
+            font-size: 30px;
+            font-family: PingFang SC-Bold, PingFang SC;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .content-c .content-c-1 .title P {
+            margin: 0;
+            border-bottom: 5px solid #D63328;
+        }
+        .content-c .content-c-1 .content-c-1-div{
             width: 100%;
             height: 560px;
             display: flex;
@@ -89,7 +127,7 @@
             bottom: 0;
             width: 100%;
             height: 94px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -97,16 +135,18 @@
            
         }
         .content-c .content-c-1 .content-c-1-div1 .back p{
-            font-size: 28px;
+            font-size: 18px;
             font-family: PingFang SC-Bold, PingFang SC;
             font-weight: bold;
             color: #FFFFFF;
             margin: 0;
+            opacity: .9;
         }
         .content-c .content-c-1 .content-c-1-div1:hover .back{
             transition: all 0.6s ease-in-out;
             align-items: flex-start;
             padding-left: 20px;
+            
         }
         
         .content-c .content-c-1 .content-c-1-div1 .back p:nth-child(2){
@@ -129,6 +169,7 @@
             height: 177px;
             background: #FFFFFF;
             box-shadow: 0px 4px 4px 1px rgba(243, 243, 243, 0.25);
+            cursor: pointer;
         }
         .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-img{
             width: 58px;
@@ -161,25 +202,23 @@
             right: 0;
             margin: auto;
             z-index: 999;
-            /* text-align: center; */
-            
-            /* background-color: #f9f9f9; */
+            background-color: #FFFFFF;
+            text-align: center;
+            line-height: 26px;
         }
-        /* .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-img:hover .image{
-            width: 50px;
-            height: 100px;
-            -webkit-transition: all 2s ease-in-out;
-            -moz-transition: all 0.4s ease-in-out;
-            -o-transition: all 0.4s ease-in-out;
-            -ms-transition: all 0.4s ease-in-out;
-            transition: all 1.5s ease-in-out;
-        } */
-        .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-img .image img{
-            width: 100%;
+        .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-img .image span{
+            font-size: 26px;
             z-index: 99;
-            background-color: #ffffff;
-            color: #f7afaf;
-            /* vertical-align: middle; */
+            color: #777777;
+        }
+        .content-c .content-c-1 .content-c-1-div2 .fordiv:hover .across,
+        .content-c .content-c-1 .content-c-1-div2 .fordiv:hover .vertical{
+            background-color: #D63328;
+        }
+        .content-c .content-c-1 .content-c-1-div2 .fordiv:hover .fordiv-img .image span,
+        .content-c .content-c-1 .content-c-1-div2 .fordiv:hover .fordiv-a .p3,
+        .content-c .content-c-1 .content-c-1-div2 .fordiv:hover .fordiv-a .p3 span{
+            color: #D63328;
         }
         .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-a{
             display: flex;
@@ -189,48 +228,52 @@
             justify-content: space-between;
         }
         .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-a p{
-            max-height: 100%;
+            font-family: PingFang SC-Bold, PingFang SC;
+            margin: 0;
+            /* max-height: 100%; */
         }
         .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-a .p1{
             /* width: 80px;
             height: 28px; */
             font-size: 20px;
-            font-family: PingFang SC-Bold, PingFang SC;
             font-weight: bold;
             color: #000000; 
-            margin: 0;
         }
         .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-a .p2{
             /* width: 176px;
             height: 44px; */
             font-size: 16px;
-            font-family: PingFang SC-Medium, PingFang SC;
             font-weight: 500;
             color: #777777;
             word-wrap:break-word; 
-            margin: 0;
         }
         .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-a .p3{
             font-size: 16px;
-            font-family: PingFang SC-Regular, PingFang SC;
-            font-weight: 400;
+            font-weight: bold;
             color: #000000;
-            margin: 0;
         }
-        .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-a .p3 img{
-            width: 22px;
+        .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-a .p3 span{
+            margin-left: 12px;
+            color:#777777;
         }
-        .content-c .content-c-2{
+        /* .content-c .content-c-2{
             height: 560px;
-        }
+        } */
         .content-c-2 .title{
             margin-bottom: 50px;
             width: 100%;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+           
+            /* text-align: center; */
             font-size: 30px;
             font-family: PingFang SC-Bold, PingFang SC;
             font-weight: bold;
             color: #000000;
+        }
+        .content-c-2 .title p{
+            border-bottom: 5px solid #D63328;
+            margin: 0;
         }
         .content-c-2 .content-c-2-div{
             width: 100%;
@@ -258,7 +301,7 @@
             /* margin: 0 16px; */
         }
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1 .three .image{
-            width: 47px;
+            width: 46px;
             height: 26px;
             position: absolute;
             top: 0;
@@ -268,13 +311,12 @@
             margin: auto;
             z-index: 999;
             text-align: center;
-            background-color: #f9f9f9;
-        }
-        .content-c-2 .content-c-2-div .content-c-2-div-left .div1 .three .image img{
-            width: 47px;
-            height: 26px;
-            vertical-align: middle;
+            line-height: 26px;
             background-color: #FFFFFF;
+        }
+        .content-c-2 .content-c-2-div .content-c-2-div-left .div1 .three .image span{
+            font-size: 16px;
+            color: #777777;
         }
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1 .three1{
             width: 366px;
@@ -288,7 +330,6 @@
         }
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1 .three1 .p2{
             width: 176px;
-          
             font-size: 16px;
             font-family: PingFang SC-Medium, PingFang SC;
             font-weight: 500;
@@ -296,21 +337,28 @@
             word-wrap:break-word; 
         }
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1 .three1 .p3{
-            width: 36px;
+            width: 46px;
             height: 20px;
             text-align: center;
             line-height: 20px;
-            border-radius: 10px 10px 10px 10px;
-            background-color: #F2C723 ;
+            border-radius: 0px 10px 0px 10px;
+            background-color: #777777;
             font-size: 12px;
             font-family: PingFang SC-Regular, PingFang SC;
             font-weight: 400;
-            color: #000000;
+            color: #FFFFFF;
         }
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1 .three1 .p3 img{
             width: 22px;
             height: 22px;
         }
+        .content-c-2 .content-c-2-div .content-c-2-div-left .div1:hover .p1,
+        .content-c-2 .content-c-2-div .content-c-2-div-left .div1:hover .three2{
+            color: #D63328;
+        }
+        .content-c-2 .content-c-2-div .content-c-2-div-left .div1:hover .p3{
+            background-color: #D63328;
+        }   
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1 .three2{
             color: #000000;
             padding: 0 36px;
@@ -363,7 +411,7 @@
             font-family: PingFang SC-Medium, PingFang SC;
             font-weight: 500;
             color: #FFFFFF;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.1);
         }
         .content-c-2 .content-c-2-div .content-c-2-div-right .header .back img{
             width: 68px;
@@ -398,15 +446,15 @@
             height: 56px;
             line-height: 56px; 
             text-align: center;
-            background-color: #F2C723;
+            background-color: #D63328;
             font-size: 16px;
             font-family: PingFang SC-Bold, PingFang SC;
             font-weight: bold;
-            color: #333333;
+            color: #FFFFFF;
         }
-        .content-c-2 .content-c-2-div .content-c-2-div-right .bottom div:hover{
+        /* .content-c-2 .content-c-2-div .content-c-2-div-right .bottom div:hover{
             background-color: rgba(97, 74, 74, 0.5);
-        }
+        } */
         
     .content-e{
         width: 100%;
@@ -422,11 +470,15 @@
     .content-e-e .title{
         margin-top: 70px;
         width: 100%;
-        text-align: center;
+        display: flex;
+        justify-content: center;
         font-size: 30px;
         font-family: PingFang SC-Bold, PingFang SC;
         font-weight: bold;
-        color: #000000;
+        color: #333333;
+    }
+    .content-e-e .title p{
+       border-bottom: 5px solid #D63328;
     }
     .content-e-e .threediv{
         margin-top: 50px;
@@ -447,7 +499,6 @@
     .divtop{
         width: 100%;
         height: 345px;
-    
         padding: 0;
         margin: 0;
         position: relative;
@@ -1026,6 +1077,7 @@
 
 
 .content-d{
+    margin-top: 70px;
     width: 100%;
     height: 542px;
     background-color: #f7afaf;

@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4395676",
+      "name": "单箭头",
+      "font_class": "single_arrow",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "9189023",
+      "name": "专家课堂-激活",
+      "font_class": "zhuanjiaketang-jihuo",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "9515203",
+      "name": "空中课堂normal",
+      "font_class": "kongzhongketangnormal",
+      "unicode": "e51d",
+      "unicode_decimal": 58653
+    },
+    {
+      "icon_id": "10465903",
+      "name": "gis图层",
+      "font_class": "gistuceng",
+      "unicode": "e7b5",
+      "unicode_decimal": 59317
+    },
+    {
+      "icon_id": "22232290",
+      "name": "学校",
+      "font_class": "xuexiao",
+      "unicode": "f718",
+      "unicode_decimal": 63256
+    }
+  ]
+}
