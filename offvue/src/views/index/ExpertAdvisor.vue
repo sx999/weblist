@@ -11,9 +11,7 @@
         </div>
         <!-- 内容 -->
         <div class="ExpertAdvisor-content">
-            <div class="title">
-                <p>专家顾问</p>
-            </div>
+            <div class="title">专<p>家团</p>队</div> 
             <div class="ExpertAdvisor-list">
                 <div class="list-l">
                     <p class="p1">姓名</p>

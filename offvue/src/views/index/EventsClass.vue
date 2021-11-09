@@ -18,7 +18,7 @@
                     </div>
                     <!-- 赛事内容 start-->
                     <div class="data-center" v-show="show">
-                        <div class="data-list">
+                        <div class="data-list" v-for="(item,index) in list1" :key="index">
                             <div class="list-h">
                                 <img src="../../assets/images/26.jpg" alt="">
                             </div>
@@ -29,38 +29,17 @@
                                     <div class="list-b-l-date">15/12</div>
                                 </div>
                                 <div class="list-b-c">
-                                    <p class="p1">我们的赛事名称</p>
-                                    <p class="p2">我们的赛事名称</p>
-                                    <p class="p3">赛事</p>
+                                    <p class="p1">{{item.name}}</p>
+                                    <p class="p2">{{item.detail}}</p>
+                                    <p class="p3 bor-r">{{item.n}}</p>
                                 </div>
-                                <div class="list-b-r" @click="GoDetail()">
+                                <div class="list-b-r" @click="GoDetail(item.id)">
                                     <p>阅读更多</p>
                                     <img src="../../assets/images/left-arraws.png" alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="data-list">
-                            <div class="list-h">
-                                <img src="../../assets/images/26.jpg" alt="">
-                            </div>
-                            <div class="list-b">
-                                <div class="list-b-l">
-                                    <div class="across"></div>
-                                    <div class="vertical"></div>
-                                    <div class="list-b-l-date">15/12</div>
-                                </div>
-                                <div class="list-b-c">
-                                    <p class="p1">我们的赛事名称</p>
-                                    <p class="p2">我们的赛事名称</p>
-                                    <p class="p3">赛事</p>
-                                </div>
-                                <div class="list-b-r">
-                                    <p>阅读更多</p>
-                                    <img src="../../assets/images/left-arraws.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="data-list">
+                        <!-- <div class="data-list">
                             <div class="list-h">
                                 <img src="../../assets/images/26.jpg" alt="">
                             </div>
@@ -102,11 +81,32 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="data-list">
+                            <div class="list-h">
+                                <img src="../../assets/images/26.jpg" alt="">
+                            </div>
+                            <div class="list-b">
+                                <div class="list-b-l">
+                                    <div class="across"></div>
+                                    <div class="vertical"></div>
+                                    <div class="list-b-l-date">15/12</div>
+                                </div>
+                                <div class="list-b-c">
+                                    <p class="p1">我们的赛事名称</p>
+                                    <p class="p2">我们的赛事名称</p>
+                                    <p class="p3">赛事</p>
+                                </div>
+                                <div class="list-b-r">
+                                    <p>阅读更多</p>
+                                    <img src="../../assets/images/left-arraws.png" alt="">
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                     <!-- 赛事内容 end-->
                     <!-- 活动内容start -->
                      <div class="data-center" v-show="!show">
-                        <div class="data-list">
+                        <div class="data-list" v-for="(item,index) in list2" :key="index"> 
                             <div class="list-h">
                                 <img src="../../assets/images/19.jpg" alt="">
                             </div>
@@ -117,38 +117,17 @@
                                     <div class="list-b-l-date">15/12</div>
                                 </div>
                                 <div class="list-b-c">
-                                    <p class="p1">我们的活动名称</p>
-                                    <p class="p2">我们的活动名称</p>
-                                    <p class="p3">活动</p>
+                                    <p class="p1">{{item.name}}</p>
+                                    <p class="p2">{{item.detail}}</p>
+                                    <p class="p3">{{item.n}}</p>
                                 </div>
-                                <div class="list-b-r" @click="GoDetail()">
+                                <div class="list-b-r" @click="GoDetail(item.id)">
                                     <p>阅读更多</p>
                                     <img src="../../assets/images/left-arraws.png" alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="data-list">
-                            <div class="list-h">
-                                <img src="../../assets/images/19.jpg" alt="">
-                            </div>
-                            <div class="list-b">
-                                <div class="list-b-l">
-                                    <div class="across"></div>
-                                    <div class="vertical"></div>
-                                    <div class="list-b-l-date">15/12</div>
-                                </div>
-                                <div class="list-b-c">
-                                    <p class="p1">我们的活动名称</p>
-                                    <p class="p2">我们的活动名称</p>
-                                    <p class="p3">活动</p>
-                                </div>
-                                <div class="list-b-r">
-                                    <p>阅读更多</p>
-                                    <img src="../../assets/images/left-arraws.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="data-list">
+                        <!-- <div class="data-list">
                             <div class="list-h">
                                 <img src="../../assets/images/19.jpg" alt="">
                             </div>
@@ -190,6 +169,27 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="data-list">
+                            <div class="list-h">
+                                <img src="../../assets/images/19.jpg" alt="">
+                            </div>
+                            <div class="list-b">
+                                <div class="list-b-l">
+                                    <div class="across"></div>
+                                    <div class="vertical"></div>
+                                    <div class="list-b-l-date">15/12</div>
+                                </div>
+                                <div class="list-b-c">
+                                    <p class="p1">我们的活动名称</p>
+                                    <p class="p2">我们的活动名称</p>
+                                    <p class="p3">活动</p>
+                                </div>
+                                <div class="list-b-r">
+                                    <p>阅读更多</p>
+                                    <img src="../../assets/images/left-arraws.png" alt="">
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                       <!-- 活动内容end-->
                     <div class="data-bottom">
@@ -205,8 +205,20 @@
     export default {
     data(){
       return{
-         id:"0",
-         show:true
+        //  id:"0",
+         show:true,
+         list1:[
+             {name:"赛事名称1",detail:"赛事详情1",n:"赛事",id:"1"},
+             {name:"赛事名称2",detail:"赛事详情2",n:"赛事",id:"2"},
+             {name:"赛事名称3",detail:"赛事详情3",n:"赛事",id:"3"},
+             {name:"赛事名称3",detail:"赛事详情3",n:"赛事",id:"4"},
+         ],
+         list2:[
+             {name:"活动名称1",detail:"活动详情1",n:"活动",id:"01"},
+             {name:"活动名称2",detail:"活动详情2",n:"活动",id:"02"},
+             {name:"活动名称3",detail:"活动详情3",n:"活动",id:"03"},
+             {name:"活动名称3",detail:"活动详情3",n:"活动",id:"04"},
+         ],
       }
     },
     created(){ 
@@ -220,8 +232,8 @@
 
     },
     methods:{
-        GoDetail(){
-              this.$router.push({path:'/events/eventsdetail',query:{id:this.id}})
+        GoDetail(id){
+              this.$router.push({path:'/events/eventsdetail',query:{id:id}})
         },
         Block(){
             this.show = !this.show

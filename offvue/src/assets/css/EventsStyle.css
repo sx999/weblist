@@ -148,9 +148,9 @@
     color: #393939;
 }
 .data-list .list-b .list-b-c .p3{
-    width: 36px;
+    width: 46px;
     height: 20px;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 0px 10px 0px 10px;
     text-align: center;
     line-height: 20px;
     font-size: 12px;
@@ -158,6 +158,10 @@
     color: #333333;
     background-color: #F2C723;
    
+}
+.data-list .list-b .list-b-c .bor-r{
+    color: #ffffff;
+    background-color:#D63328;
 }
 .data-list .list-b .list-b-r{
     padding-left:30px;

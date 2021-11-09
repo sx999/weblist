@@ -39,6 +39,13 @@
       "font_class": "xuexiao",
       "unicode": "f718",
       "unicode_decimal": 63256
+    },
+    {
+      "icon_id": "22978018",
+      "name": "闹钟",
+      "font_class": "naozhong",
+      "unicode": "e89d",
+      "unicode_decimal": 59549
     }
   ]
 }

@@ -2,12 +2,11 @@
      <div>
            <!-- 头部轮播 -->
         <div class="About-box">
-            <img src="../../assets/images/2.jpg" alt="00">
+            <img src="../../assets/images/image52.png" alt="00">
             <div class="posit">   
                 <p class="posit-p1">行由心教育</p>
-                <p class="posit-p2">中小学语言文化教育领跑者</p>
+                <p class="posit-p2">非学科教育领跑者</p>
             </div>
-            
         </div>
 
          <router-view/>
@@ -44,9 +43,9 @@
     }
     .About-box .posit{
         position: absolute;
-        left: 0;
+        left: 40%;
         top: 0;
-        right:28%;
+        right:0;
         bottom: 0;
         margin:auto;
         width: 500px;

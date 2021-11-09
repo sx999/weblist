@@ -34,7 +34,7 @@
                                     专业智慧教育解决方案与集成服务的供应商
                                 </div>
                                 <div class="div2" @click="goDetail()">
-                                        阅读全文
+                                        阅读全文 
                                 </div>
                             </div>
                         </div>

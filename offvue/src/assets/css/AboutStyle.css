@@ -13,11 +13,16 @@
     margin: auto;
 }
 .About-content .title{
+    display: flex;
+    justify-content: center;
     margin-top: 70px !important;
-    text-align: center;
+    /* text-align: center; */
     font-size: 30px;
     font-weight: bold;
     color: #333333;
+}
+.About-content .title p{
+    border-bottom: 5px solid #D63328;
 }
 .data1{
     margin-top: 50px;
@@ -38,11 +43,12 @@
 .data1-l p{
     margin: 0;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: bold;
     color: #333333;
 }
 .data1-l p:nth-child(2){
     color: #5B5B5B;
+    font-weight: 500;
     white-space:normal;
     word-break:break-all;
     word-wrap:break-word; 
@@ -51,6 +57,13 @@
     font-size: 16px;
     font-weight: bold;
     color: #333333;
+}
+.data1-l p:nth-child(3) span{
+    margin-left: 10px;
+    font-size: 15px;
+}
+.data1-l p:nth-child(3):hover{
+    color: #D63328;
 }
 .data1-r{
     width: 442px;
@@ -349,18 +362,21 @@
     -webkit-line-clamp: 3; 
     overflow: hidden;
 }
-.data-content .data-content-r .div2{
-    width: 70px;
+.data-content .data-content-r .div3{
+    display: flex;
+    /* width: 100px; */
     height: 30px;
     cursor: pointer;
     text-align: center;
     line-height: 30px;
     font-size: 14px;
     font-weight: bold;
-    color: #333333;
-    border: 1px solid #DFDFDF;
 }
-.data-content .data-content-r .div2:hover{
-    background-color: #F2C723;  
-    color: #333333;
+.data-content .data-content-r .div3 span{
+    margin-left: 10px;
+    font-size: 15px;
+}
+.data-content .data-content-r .div3:hover{
+
+    color: #D63328;
 }

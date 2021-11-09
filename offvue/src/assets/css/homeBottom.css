@@ -1,5 +1,81 @@
 
-@media screen and (max-width: 1920px){
+#bottom{
+    margin-top: 70px;
+    width: 100%;
+    height: 280px !important;
+    background-color: #FFFFFF;
+}
+#bottom .mar0{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    width: 1024px;
+    height: 100%;
+    margin: auto;
+}
+.bottom-l{
+    width: 880px;
+    height: 100%;
+}
+.bottom-l .bottom-l-t{
+    display:flex;
+    width: 594px;
+    height: 60px;
+}
+.bottom-l .bottom-l-t p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 74.25px;
+    height: 100%;
+    margin: 0;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #555555;
+}
+.bottom-l .bottom-l-t p:nth-child(Odd){
+    border-bottom: 2px  solid #D63328; 
+}
+.bottom-l .bottom-l-b{  
+    display: flex;
+    width: 100%;
+}
+.bottom-l .bottom-l-b ul{  
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    font-size: 14px;
+    font-family: PingFang SC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #555555;
+}
+.bottom-l .bottom-l-b ul:nth-child(4){  
+ 
+    width: 300px;
+}
+.bottom-l .bottom-l-b ul li{  
+   margin-bottom: 18px;
+}
+.red{
+    color: #D63328;
+}
+#bottom .mar0 .bottom-r .img{
+    width: 115px;
+    height: 110px;
+    background-color:aquamarine;
+}
+ #bottom .mar0 .bottom-r p{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+    font-family: PingFang SC-Bold, PingFang SC;
+    font-weight: bold;
+    color: #D63328;
+}
+/* @media screen and (max-width: 1920px){
     #bottom{
         padding:48px 448px 22px 448px;
         margin-top: 60px;
@@ -18,8 +94,6 @@
     #bottom .bottom-t .bottom-t-l{
         display: flex;
         width: 600px;
-        /* height: 228px; */
-        /* border: #d35454 1px solid; */
     }
     #bottom .bottom-t .bottom-t-l ul{
         margin-left: 80px;
@@ -44,11 +118,7 @@
     }
     #bottom .bottom-t .bottom-t-r{ 
         display: flex;
-        /* justify-content: sp; */
         width: 424px;
-        /* height: 228px; */
-        /* text-align: right; */
-        /* border: #f8f5f5 1px solid; */
     }
     #bottom .bottom-t .bottom-t-r .w260{
         width:260px;
@@ -112,7 +182,6 @@
         justify-content: space-between;
     }
     #bottom .bottom-t .bottom-t-l ul{
-        /* width: 20%; */
         height: 100%;
         margin-left: 40px;
 
@@ -148,4 +217,4 @@
         margin-left: 36px;
     }
     
-}
+} */

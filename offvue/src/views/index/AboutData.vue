@@ -1,7 +1,7 @@
 <template>
     <div class="About-content">
         <div class="mar-auto">
-            <p class="title">公司简介</p>
+            <div class="title">公<p>司简</p>介</div>
             <div class="data1">
                 <div class="data1-l">
                         <p>关于行由心教育</p>
@@ -12,7 +12,9 @@
                             导、德育教育等服务平台，包括无障碍门智能管理系
                             统、教务管理系统系统、智能教室、同步课堂、宿舍
                             管理系统、云数据分析等教育类科技产品。</p>
-                        <p class="cursor" @click="GoDetail()">查看更多 -></p>
+                        <p class="cursor" @click="GoDetail()">查看更多 
+                            <span class="iconfont icon-single_arrow"></span>
+                        </p>
                 </div>
                 <div class="data1-r">
                     <img src="@/assets/images/3.png" alt="">
@@ -103,8 +105,8 @@
                                 《国家教育信息化建设2.0》等国家相关政策，自主研 发并提供安全校园、
                                 专业智慧教育解决方案与集成服务的供应商
                             </div>
-                            <div class="div2" @click="goDetail()">
-                                    阅读全文
+                            <div class="div3" @click="goDetail()">
+                                    阅读全文 <span class="iconfont icon-single_arrow"></span>
                             </div>
                         </div>
                     </div>
@@ -126,8 +128,8 @@
                                 《国家教育信息化建设2.0》等国家相关政策，自主研 发并提供安全校园、
                                 专业智慧教育解决方案与集成服务的供应商
                             </div>
-                            <div class="div2">
-                                阅读全文
+                            <div class="div3">
+                                     阅读全文 <span class="iconfont icon-single_arrow"></span>
                             </div>
                         </div>
                     </div>
@@ -149,8 +151,8 @@
                                 《国家教育信息化建设2.0》等国家相关政策，自主研 发并提供安全校园、
                                 专业智慧教育解决方案与集成服务的供应商
                             </div>
-                            <div class="div2">
-                                阅读全文
+                            <div class="div3">
+                                     阅读全文 <span class="iconfont icon-single_arrow"></span>
                             </div>
                         </div>
                     </div>
@@ -162,7 +164,7 @@
                 <div class="threediv3">
                     <div class="div2">
                         <div class="front">
-                            <div><img src="@/assets/images/phone.png" alt=""></div>
+                            <div><img src="@/assets/images/phone1.png" alt=""></div>
                             <div>联系电话</div>
                             <div>17638367045</div>
                         </div>
@@ -173,7 +175,7 @@
                     </div>
                     <div class="div2">
                         <div class="front">
-                            <div><img src="@/assets/images/email.png" alt=""></div>
+                            <div><img src="@/assets/images/email1.png" alt=""></div>
                             <div>邮件地址</div>
                             <div>17638367045@163.com</div>
                         </div>
@@ -183,7 +185,7 @@
                     </div>
                     <div class="div2">
                         <div class="front">
-                            <div><img src="@/assets/images/time.png" alt=""></div>
+                            <div><img src="@/assets/images/time1.png" alt=""></div>
                             <div>工作时间</div>
                             <div>09：00~17：30</div>
                         </div>

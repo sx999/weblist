@@ -3,7 +3,21 @@
        <div class="box">
             <h4>参数:{{this.id}}</h4>
             <div class="title">赛事活动名称活动名称名称名称名称</div>
-            <p class="date">2021.11.4</p>
+            <div class="detail">
+                <div class="date">
+                    <span>主办方:</span>
+                    <span class="red">行由心教育</span>
+                </div>
+                <div class="date">
+                    <span>地点:</span>
+                    <span class="red">郑州市航海西路小学</span>
+                </div>
+                <div class="date">
+                    <span>时间:</span>  
+                    <span>2021.11.4</span>  
+                </div>
+            </div>
+            
             <hr>
             <div class="text">
                 河南独秀科技有限公司是教育国家教育部颁发的《信息化“十三五”规划》、
@@ -71,10 +85,18 @@
       font-weight: 500;
       color: #333333;
   }
+  .box .detail{
+      display: flex;
+  }
   .box .date{
+      display: flex;
+      flex-direction: column;
       font-size: 20px;
       font-weight: 500;
       color: #777777;
+  }
+  .box .date:nth-child(2),.box .date:nth-child(3){
+      margin-left: 50px;
   }
   .box hr{
       width: 100%;

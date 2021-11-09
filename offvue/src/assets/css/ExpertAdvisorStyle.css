@@ -40,13 +40,18 @@
     font-family: PingFang SC-Medium, PingFang SC;
 }
 .ExpertAdvisor-content .title{
+    display: flex;
+    justify-content: center;
     margin-top: 70px;
     width: 100%;
     height: 42px;
-    text-align: center;
+    /* text-align: center; */
     font-size: 30px;
     font-weight: bold;
     color: #333333;
+}
+.ExpertAdvisor-content .title p{
+   border-bottom: 5px solid #D63328;
 }
 .ExpertAdvisor-list{
     margin:0 auto;
