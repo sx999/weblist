@@ -2,7 +2,7 @@
     <div>
         <!-- 头部导航 -->
         <div class="Journalism-box">
-            <img src="../../assets/images/img3.jpg" alt="">
+            <img src="../../assets/images/image7.png" alt="">
             <p>行业新闻</p>
         </div>
         

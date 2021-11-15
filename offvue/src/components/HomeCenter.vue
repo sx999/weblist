@@ -165,6 +165,14 @@
             </div>
         </div>
         <div class="content-d">
+            <!-- <img src="@/assets/images/mp4back.png" alt=""> -->
+            <div class="title">在线视频服务</div>
+            <div class="video">
+                <video src="../assets/images/fuwu.mp4" ref="movie"></video>、
+                <i v-show="isplay" class="el-icon-video-play" @click="handlePlay()"></i>
+                <i v-show="!isplay" class="el-icon-video-pause" @click="handlePause()"></i>
+            </div>
+            
         </div>
         <div class="content-e">
             <div class="content-e-e">
@@ -316,11 +324,28 @@
                     {title:"活动名称1",titleD:"我们的活动地点我们的活动地点1"},
                     {title:"活动名称2",titleD:"我们的活动地点我们的活动地点2"},
                     {title:"活动名称3",titleD:"我们的活动地点我们的活动地点3"},
-                ]
+                ],
+                loading:false,
+                isplay:true,
             }
         },
+        mounted(){
+            this.$refs.movie.addEventListener('play',this.handlePlay)
+            this.$refs.movie.addEventListener('pause',this.handlePause)
+        },
         methods:{
-         
+            // textHidden,
+            //音频控件
+            handlePlay(){
+                console.log("播放")
+                this.$refs.movie.play()
+                this.isplay = false;
+            },
+            handlePause(){
+                 console.log("暂停")
+                this.$refs.movie.pause()
+                this.isplay = true;
+            }
         }
     }
 </script>

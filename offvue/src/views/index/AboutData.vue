@@ -4,17 +4,17 @@
             <div class="title">公<p>司简</p>介</div>
             <div class="data1">
                 <div class="data1-l">
-                        <p>关于行由心教育</p>
-                        <p>让学校成为最阳光、最安全的地方是我们的最终目标
-                            和努力方向。公司主营业务分为：教育信息化、智能 
-                            化云平台、大数据治理与运维服务。自主云研究安全 
-                            校园管理平台，是一个集务管理、班级管理、在线辅 
-                            导、德育教育等服务平台，包括无障碍门智能管理系
-                            统、教务管理系统系统、智能教室、同步课堂、宿舍
-                            管理系统、云数据分析等教育类科技产品。</p>
-                        <p class="cursor" @click="GoDetail()">查看更多 
-                            <span class="iconfont icon-single_arrow"></span>
-                        </p>
+                    <p>关于行由心教育</p>
+                    <p>让学校成为最阳光、最安全的地方是我们的最终目标
+                        和努力方向。公司主营业务分为：教育信息化、智能 
+                        化云平台、大数据治理与运维服务。自主云研究安全 
+                        校园管理平台，是一个集务管理、班级管理、在线辅 
+                        导、德育教育等服务平台，包括无障碍门智能管理系
+                        统、教务管理系统系统、智能教室、同步课堂、宿舍
+                        管理系统、云数据分析等教育类科技产品。</p>
+                    <p class="cursor" @click="GoDetail()">查看更多 
+                        <span class="iconfont icon-single_arrow"></span>
+                    </p>
                 </div>
                 <div class="data1-r">
                     <img src="@/assets/images/3.png" alt="">
@@ -26,7 +26,7 @@
                 <div class="threediv">
                     <div class="div">
                         <div class="divtop">
-                            <img class="he_slideCaptionDown_img" src="@/assets/images/560.jpg" alt="">
+                            <img class="he_slideCaptionDown_img" src="@/assets/images/Rectangle73.png" alt="">
                             <div class="he_slideCaptionDown_caption">
                                 <img src="@/assets/images/demail.png" alt="">
                                 <p>联系我</p>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="div">
                         <div class="divtop">
-                            <img class="he_slideCaptionDown_img" src="@/assets/images/560.jpg" alt="">
+                            <img class="he_slideCaptionDown_img" src="@/assets/images/Rectangle74.png" alt="">
                             <div class="he_slideCaptionDown_caption">
                                 <img src="@/assets/images/demail.png" alt="">
                                 <p>联系我</p>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="div">
                         <div class="divtop">
-                            <img class="he_slideCaptionDown_img" src="@/assets/images/562.jpg" alt="">
+                            <img class="he_slideCaptionDown_img" src="@/assets/images/Rectangle75.png" alt="">
                             <div class="he_slideCaptionDown_caption">
                                 <img src="@/assets/images/demail.png" alt="">
                                 <p>联系我</p>

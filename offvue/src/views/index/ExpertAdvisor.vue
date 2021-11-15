@@ -2,7 +2,7 @@
     <div>
          <!-- 头部轮播 -->
         <div class="ExpertAdvisort-box">
-            <img src="../../assets/images/img3.jpg" alt="">
+            <img src="../../assets/images/expert.png" alt="">
             <div class="posit">   
                 <p class="posit-p1">专家顾问</p>
                 <p class="posit-p2">专业教育学家提供服务支持</p>

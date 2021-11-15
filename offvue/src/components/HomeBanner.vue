@@ -1,6 +1,6 @@
 <template>
-    <div class="block">
-        <el-carousel :height="bannerHeight+'px'">
+    <div class="banner">
+        <el-carousel :height="bannerHeight+'px'" arrow="always">
             <!-- <el-carousel height="780px"> -->
             <el-carousel-item v-for="(item,index) in imgs" :key="index">
                 <div class="pic_item">
@@ -12,7 +12,8 @@
                         <p>{{item.text2}}</p>
                         <div class="yello-d">
                             <span>了解更多</span> 
-                            <img src="../assets/images/arrows.png" alt="">
+                            <span class="iconfont icon-tuxing"></span>
+                            <!-- <img src="../assets/images/arrows.png" alt=""> -->
                         </div>
                     </div>
                 </div>
@@ -21,9 +22,9 @@
   </div>
 </template>
 <script>
-import pic1 from '@/assets/images/img1.jpg'
-import pic2 from '@/assets/images/img2.jpg'
-import pic3 from '@/assets/images/img3.jpg'
+import pic1 from '@/assets/images/banner1.png'
+import pic2 from '@/assets/images/banner2.png'
+import pic3 from '@/assets/images/banner3.png'
 export default {
     data(){
         return{
@@ -32,13 +33,12 @@ export default {
               {src:pic2,text1:'行由心教育2',text2:'以科技助力教育'},
               {src:pic3,text1:'行由心教育3',text2:'以科技助力教育'},
             ],
-           bannerHeight:"",
+            bannerHeight:"",
         }
     },
     created(){
       
     },
-   
     mounted(){
         var h= window.screen.height
         var w = window.screen.width
@@ -50,10 +50,8 @@ export default {
         }
     },
     methods:{
-
-    }
-
-    
+       
+    },
 }
 </script>
 <style scoped>
@@ -71,19 +69,26 @@ export default {
         border-radius: 50% !important;
     } */
     /* img{
-        display: inline-block;
+        display: inline-banner;
         width: 100%;
         height:100%;
     } */
     @media (max-width: 768px){
-         .block{
+         .banner{
              height: 260px;
          }
     }
-    @media (max-width: 1920px){
-         .block{
+    /* @media (max-width: 1920px){ */
+         .banner{
              height: 100%;
          }
+         .banner .el-carousel__arrow{
+             color: #000 !important;
+             background-color:#FFFFFF !important;
+         }
+         /* .banner .el-carousel__arrow i{
+             background-color:#000 !important;
+         } */
          .small {
            position: absolute;
         }
@@ -126,7 +131,7 @@ export default {
             margin:0;
         }
          .pic_item .posit-element .yello-d{
-             padding: 0 10px;
+            padding: 0 10px;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -134,7 +139,7 @@ export default {
             width: 122px;
             height: 48px;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 600;
             color: #FFFFFF;
             background-color: #D63328 ;
          }
@@ -142,7 +147,10 @@ export default {
               width: 18px;
               height: 18px;
           }
+          .pic_item .posit-element .yello-d span:nth-child(2){
+              font-size: 20px;
+          }
          
-    }
-  
+    /* } */
+    
 </style>

@@ -2,7 +2,7 @@
     <div>
         <!-- 头部轮播 -->
         <div class="Events-box">
-            <img src="../../assets/images/img3.jpg" alt="">
+            <img src="../../assets/images/eventimg.png" alt="">
             <div class="posit">   
                 <p class="posit-p1">赛事活动</p>
                 <p class="posit-p2">Tile标题:语言文化艺术节</p>

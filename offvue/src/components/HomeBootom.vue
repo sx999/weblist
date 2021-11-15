@@ -114,7 +114,5 @@
     }
 </script>
 <style scoped>
-  
-
     @import '../assets/css/homeBottom.css';
 </style>

@@ -1,10 +1,21 @@
 <template>
   <div id="app">
-    <router-view/>
+      <router-view/>
   </div>
 </template>
-
-<style>
+<script>
+export default {
+  data(){
+    return{
+    
+    }
+  },
+  watch:{
+    
+  }
+}
+</script>
+<style >
  *{
 		margin: 0;
 		padding: 0;

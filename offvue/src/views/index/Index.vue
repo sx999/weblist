@@ -1,15 +1,15 @@
 <template>
     <el-container>
         <!-- pc -->
-        <el-header id="header" class=" hidden-xs ">
+        <el-header id="header" class="hidden-xs" :class="{'is_fixed' : isFixed}">
             <div class="logo-left-img"> </div>
             <el-menu 
             :default-active="'/' +this.$route.path.split('/')[1]"
-            class="el-menu-demo navt" 
+            class="el-menu-demo navt"
+            :class="{'is_back' : isFixed}"
             mode="horizontal" 
-            background-color="#FFFFFF"
             text-color="#000"
-            active-text-color="#ffd04b"
+            active-text-color="#D63328"
             :router="true"
             >
                 <el-menu-item index="/home">首页</el-menu-item>
@@ -54,6 +54,9 @@
             <Bootom></Bootom>
             <!-- 底部end -->
         </el-footer>
+        <div class="scollTop" id="imgscoll" v-show="isShowimg === true">
+            <img src="@/assets/images/inTop.png" alt @click="goTop">
+        </div>
     </el-container>
 </template>
 <script>
@@ -64,20 +67,73 @@ export default({
       return{
           currentSort:1, //默认首页状态
           isBarShow:false,
-          height: ""
+          height: "",
+          isFixed:false,
+          offsetTop:0,
+          isShowimg:fasle,
       }
   },
   components:{Bootom},
   created(){},
-  mounted(){},
+  mounted(){
+       window.addEventListener('scroll',this.initHeight);
+        this.$nextTick( () => {
+            this.offsetTop = document.querySelector('#header').offsetTop;
+        })
+        window.addEventListener('scroll', this.handleScroll)
+  },
   methods:{
         // Active(index){
         //     this.currentSort  =  index;
         // },
         Onshow(){
             this.isBarShow = false
-        }
-  }
+        },
+        initHeight () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+            this.isFixed = scrollTop > this.offsetTop ? true : false;
+        },
+        goTop(){
+               // 回到顶部
+            document.body.scrollTop = document.documentElement.scrollTop = 0
+            this.isShowimg = false
+        },
+         handleScroll(e) {
+            // 滚动操作监听
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+            // console.log(scrollTop)
+            let offsetTop = 0
+            try {
+                offsetTop = document.querySelector('.main').offsetTop
+            } catch (e) {
+                offsetTop = 0
+            }
+            if (scrollTop > offsetTop) {
+            // this.searchBarFixed = true
+            // this.scrollStatus = {
+            //   display: 'block',
+            //   background: '#fff',
+            //   h: this.statusBarHeight.h
+            // }
+            if (scrollTop > 500) {
+            this.isShowimg = true
+            } else {
+            this.isShowimg = false
+            }
+            } else {
+                // this.searchBarFixed = false
+                this.isShowimg = false
+            // this.scrollStatus = {
+            //   display: 'none',
+            //   background: 'transparent',
+            //   h: 0
+            // }
+      }
+    }
+  },
+  destroyed(){
+      window.removeEventListener('scroll', this.handleScroll)
+  },
 })
 </script>
 
@@ -91,12 +147,11 @@ export default({
             background-color: #FFFFFF;
             height: 88px !important;
             padding:0 455px 0 448px;
-          
         }
         .logo-left-img{
             width: 175px;
             height: 72px;
-            background-color: aqua;
+            background-color: rgb(255, 187, 0);
         }
         .el-menu.el-menu--horizontal{
             border-bottom:none !important;
@@ -191,5 +246,32 @@ export default({
             padding: 0 300px;
         }
     } 
-  
+    .is_fixed{
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        border-bottom:1px solid rgba(200, 200, 200, 0.3);
+        /* background-color: rgba(0, 0, 0, 0.7) !important; */
+    }
+    .is_back{
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+    .el-menu .el-menu-item:hover{
+        color: #D63328 !important;
+        /* background: #6db6ff !important; */
+        border-bottom: 2px solid #D63328 !important;
+    }
+    .el-menu .el-submenu__title:hover{
+        /* color: #f58f98 !important; */
+        background: #6db6ff !important;
+    }
+    .scollTop {
+        position: fixed;
+        bottom: 200px;
+        right:50px;
+    }
+   .scollTop img{
+        width: 50px;
+        height: 50px; 
+    }
 </style>
