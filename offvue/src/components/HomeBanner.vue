@@ -12,7 +12,7 @@
                         <p>{{item.text2}}</p>
                         <div class="yello-d">
                             <span>了解更多</span> 
-                            <span class="iconfont icon-tuxing"></span>
+                            <!-- <span class="iconfont icon-tuxing"></span> -->
                             <!-- <img src="../assets/images/arrows.png" alt=""> -->
                         </div>
                     </div>
@@ -118,7 +118,7 @@ export default {
             flex-direction: column;
             align-items: center;
             color: #FFFFFF;
-            font-family: PingFang SC-Bold, PingFang SC;
+            /* font-family: PingFang SC-Bold, PingFang SC; */
         }
         .pic_item .posit-element p:nth-child(1){
             font-size: 64px;
@@ -141,15 +141,15 @@ export default {
             font-size: 18px;
             font-weight: 600;
             color: #FFFFFF;
-            background-color: #D63328 ;
+            background-color: #EA862A;
          }
           .pic_item .posit-element .yello-d img{
               width: 18px;
               height: 18px;
           }
-          .pic_item .posit-element .yello-d span:nth-child(2){
+          /* .pic_item .posit-element .yello-d span:nth-child(2){
               font-size: 20px;
-          }
+          } */
          
     /* } */
     

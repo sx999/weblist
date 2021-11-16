@@ -1,7 +1,7 @@
 .About-content{
     width: 100%;
     height: 100%;
-    font-family: PingFang SC-Medium, PingFang SC;
+    /* font-family: PingFang SC-Medium, PingFang SC; */
 }
 .About-content img{
     width: 100%;
@@ -86,7 +86,7 @@
     width: 100%;
     text-align: center;
     font-size: 30px;
-    font-family: PingFang SC-Bold, PingFang SC;
+    /* font-family: PingFang SC-Bold, PingFang SC; */
     font-weight: bold;
     color: #000000;
 }
@@ -210,13 +210,13 @@
 .content-e-e .threediv .divbottom div p{
     margin: 0 !important;
     font-size: 12px;
-    font-family: PingFang SC-Medium, PingFang SC;
+    /* font-family: PingFang SC-Medium, PingFang SC; */
     font-weight: 500;
     color: #787878;  
 }
 .content-e-e .threediv .divbottom div p:nth-child(1){
     font-size: 14px;
-    font-family: PingFang SC-Medium, PingFang SC;
+    /* font-family: PingFang SC-Medium, PingFang SC; */
     font-weight: 500;
     color: #333333;
 }
@@ -230,7 +230,7 @@
     width: 296px;
     height: 320px;
     font-size: 16px;
-    font-family: PingFang SC-Bold, PingFang SC;
+    /* font-family: PingFang SC-Bold, PingFang SC; */
     font-weight: bold;
     color: #000000;
     cursor: pointer;

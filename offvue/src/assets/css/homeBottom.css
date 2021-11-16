@@ -36,7 +36,7 @@
     color: #555555;
 }
 .bottom-l .bottom-l-t p:nth-child(Odd){
-    border-bottom: 2px  solid #D63328; 
+    border-bottom: 2px  solid #EA862A; 
 }
 .bottom-l .bottom-l-b{  
     display: flex;
@@ -48,7 +48,7 @@
     flex-direction: column;
     width: 150px;
     font-size: 14px;
-    font-family: PingFang SC-Medium, PingFang SC;
+    /* font-family: PingFang SC-Medium, PingFang SC; */
     font-weight: 500;
     color: #555555;
 }
@@ -60,7 +60,7 @@
    margin-bottom: 18px;
 }
 .red{
-    color: #D63328;
+    color: #EA862A;
 }
 #bottom .mar0 .bottom-r .img{
     width: 115px;
@@ -71,9 +71,9 @@
     text-align: center;
     margin-top: 5px;
     font-size: 16px;
-    font-family: PingFang SC-Bold, PingFang SC;
+    /* font-family: PingFang SC-Bold, PingFang SC; */
     font-weight: bold;
-    color: #D63328;
+    color: #EA862A;
 }
 /* @media screen and (max-width: 1920px){
     #bottom{

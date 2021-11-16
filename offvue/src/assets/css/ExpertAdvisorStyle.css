@@ -11,7 +11,7 @@
     position: relative;
     width: 100%;
     height: 686px;
-    font-family: PingFang SC-Medium, PingFang SC;
+    /* font-family: PingFang SC-Medium, PingFang SC; */
 }
 .ExpertAdvisort-box .posit{
     position: absolute;
@@ -37,7 +37,7 @@
 .ExpertAdvisor-content{
     width: 100%;
     height: 100%;
-    font-family: PingFang SC-Medium, PingFang SC;
+    /* font-family: PingFang SC-Medium, PingFang SC; */
 }
 .ExpertAdvisor-content .title{
     display: flex;

@@ -1,14 +1,14 @@
 <template>
     <div>
         <!-- 头部轮播 -->
-        <div class="Events-box">
+        <div class="Recruitment-box">
             <img src="../../assets/images/eventimg.png" alt="">
             <div class="posit">   
-                <p class="posit-p1">热门赛事</p>
-                <p class="posit-p2">Tile标题:语言文化艺术节</p>
+                <p class="posit-p1">招贤纳士</p>
+                <p class="posit-p2">Tile标题:招贤纳士</p>
             </div>
         </div>
-         <router-view/>
+        <h1>内容</h1>
     </div>
 </template>
 <script>
@@ -21,20 +21,20 @@ export default {
 }
 </script>
 <style scoped>
-    .Events-box img{
+    .Recruitment-box img{
         width: 100%;
         height: 100%;
     }
-    .Events-box p{
+    .Recruitment-box p{
         margin: 0 !important;
     }
-    .Events-box{
+    .Recruitment-box{
         position: relative;
         width: 100%;
         height: 686px;
         /* font-family: PingFang SC-Medium, PingFang SC; */
     }
-    .Events-box .posit{
+    .Recruitment-box .posit{
         position: absolute;
         left: 0;
         top: 0;
@@ -53,7 +53,7 @@ export default {
         color: #333333;
         
     }
-    .Events-box .posit .posit-p2{
+    .Recruitment-box .posit .posit-p2{
         font-size: 36px;
     }
 </style>

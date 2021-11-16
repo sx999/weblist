@@ -1,13 +1,15 @@
 <template>
     <div>
         <!-- 头部轮播 -->
-        <div class="Events-box">
+        <div class="Activity-box">
             <img src="../../assets/images/eventimg.png" alt="">
             <div class="posit">   
-                <p class="posit-p1">热门赛事</p>
+                <p class="posit-p1">研学活动</p>
                 <p class="posit-p2">Tile标题:语言文化艺术节</p>
             </div>
+            
         </div>
+        
          <router-view/>
     </div>
 </template>
@@ -21,20 +23,20 @@ export default {
 }
 </script>
 <style scoped>
-    .Events-box img{
+    .Activity-box img{
         width: 100%;
         height: 100%;
     }
-    .Events-box p{
+    .Activity-box p{
         margin: 0 !important;
     }
-    .Events-box{
+    .Activity-box{
         position: relative;
         width: 100%;
         height: 686px;
         /* font-family: PingFang SC-Medium, PingFang SC; */
     }
-    .Events-box .posit{
+    .Activity-box .posit{
         position: absolute;
         left: 0;
         top: 0;
@@ -53,7 +55,7 @@ export default {
         color: #333333;
         
     }
-    .Events-box .posit .posit-p2{
+    .Activity-box .posit .posit-p2{
         font-size: 36px;
     }
 </style>

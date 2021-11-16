@@ -2,23 +2,28 @@
     <el-container>
         <!-- pc -->
         <el-header id="header" class="hidden-xs" :class="{'is_fixed' : isFixed}">
-            <div class="logo-left-img"> </div>
+            <div class="logo-left-img">
+                <img src="@/assets/images/logo.png" alt="">
+            </div>
             <el-menu 
             :default-active="'/' +this.$route.path.split('/')[1]"
             class="el-menu-demo navt"
             :class="{'is_back' : isFixed}"
             mode="horizontal" 
-            text-color="#000"
-            active-text-color="#D63328"
+            text-color="#333333"
+            active-text-color="#E8910D "
             :router="true"
             >
                 <el-menu-item index="/home">首页</el-menu-item>
-                <el-menu-item index="1">公司概况</el-menu-item>
-                <el-menu-item index="/journalism">新闻动态</el-menu-item>
-                <el-menu-item index="/events">赛事活动</el-menu-item>
-                <el-menu-item index="/expertadvisor">专家顾问</el-menu-item>
-                <el-menu-item index="1">文创商城</el-menu-item>
-                <el-menu-item index="/about">关于我们</el-menu-item>
+                <el-menu-item index="/about">公司概况</el-menu-item>
+                <el-menu-item index="/journalism">行业新闻</el-menu-item>
+                <el-menu-item index="/events">热门赛事</el-menu-item>
+                <el-menu-item index="/activity">科研活动</el-menu-item>
+                <el-menu-item index="/contact">联系我们</el-menu-item>
+                <el-menu-item index="/recruitment">招贤纳士</el-menu-item>
+                <!-- <el-menu-item index="/expertadvisor">专家顾问</el-menu-item> -->
+                <!-- <el-menu-item index="/111">文创商城</el-menu-item> -->
+                
             </el-menu>
         </el-header>
         <!-- h5 -->
@@ -33,11 +38,10 @@
                 <div v-show="isBarShow" >
                     <ul>
                         <li @click="Onshow"><router-link to="/home"><span>首页</span></router-link></li>
-                        <li @click="Onshow"><router-link to=""><span>公司概况</span></router-link></li>
-                        <li @click="Onshow"><router-link to="/"><span>新闻动态</span></router-link></li>
-                        <li @click="Onshow"><router-link to="/"><span>研学活动</span></router-link></li>
-                        <li @click="Onshow"><router-link to="/"><span>专家顾问</span></router-link></li>
-                        <li @click="Onshow"><router-link to="/"><span>文创商城</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/journalism"><span>新闻动态</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/events"><span>赛事活动</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/expertadvisor"><span>专家顾问</span></router-link></li>
+                        <li @click="Onshow"><router-link to="/111"><span>文创商城</span></router-link></li>
                         <li @click="Onshow"><router-link to="/about"><span>关于我们</span></router-link></li>
                     </ul>
                 </div>
@@ -54,8 +58,8 @@
             <Bootom></Bootom>
             <!-- 底部end -->
         </el-footer>
-        <div class="scollTop" id="imgscoll" v-show="isShowimg === true">
-            <img src="@/assets/images/inTop.png" alt @click="goTop">
+        <div class="scollTop" id="imgscoll" v-show="isShowimg">
+            <img src="@/assets/images/inTop.png" alt="" @click="goTop">
         </div>
     </el-container>
 </template>
@@ -70,7 +74,7 @@ export default({
           height: "",
           isFixed:false,
           offsetTop:0,
-          isShowimg:fasle,
+          isShowimg:false,
       }
   },
   components:{Bootom},
@@ -82,23 +86,27 @@ export default({
         })
         window.addEventListener('scroll', this.handleScroll)
   },
+  destroyed() {
+    document.removeEventListener('scroll', this.handleScroll)
+    document.body.scrollTop = document.documentElement.scrollTop = 0
+  },
   methods:{
-        // Active(index){
-        //     this.currentSort  =  index;
-        // },
         Onshow(){
             this.isBarShow = false
         },
+        //吸顶
         initHeight () {
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
             this.isFixed = scrollTop > this.offsetTop ? true : false;
         },
+         // 回到顶部
         goTop(){
-               // 回到顶部
+           
             document.body.scrollTop = document.documentElement.scrollTop = 0
             this.isShowimg = false
         },
-         handleScroll(e) {
+        //滚动监听
+        handleScroll(e) {
             // 滚动操作监听
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
             // console.log(scrollTop)
@@ -109,27 +117,15 @@ export default({
                 offsetTop = 0
             }
             if (scrollTop > offsetTop) {
-            // this.searchBarFixed = true
-            // this.scrollStatus = {
-            //   display: 'block',
-            //   background: '#fff',
-            //   h: this.statusBarHeight.h
-            // }
-            if (scrollTop > 500) {
+            if (scrollTop > 800) {
             this.isShowimg = true
             } else {
             this.isShowimg = false
             }
             } else {
-                // this.searchBarFixed = false
                 this.isShowimg = false
-            // this.scrollStatus = {
-            //   display: 'none',
-            //   background: 'transparent',
-            //   h: 0
-            // }
-      }
-    }
+            }
+        }
   },
   destroyed(){
       window.removeEventListener('scroll', this.handleScroll)
@@ -151,15 +147,16 @@ export default({
         .logo-left-img{
             width: 175px;
             height: 72px;
-            background-color: rgb(255, 187, 0);
+            /* background-color: rgb(255, 187, 0); */
         }
         .el-menu.el-menu--horizontal{
+            font-size: 16px !important;
             border-bottom:none !important;
         }
         #conter{
             margin:0 !important;
             padding: 0 !important;
-           overflow:visible !important;
+            overflow:visible !important;
         }
         #fotter{
             width: 100%;
@@ -257,21 +254,32 @@ export default({
         background-color: rgba(0, 0, 0, 0) !important;
     }
     .el-menu .el-menu-item:hover{
-        color: #D63328 !important;
+        color: #E8910D  !important;
         /* background: #6db6ff !important; */
-        border-bottom: 2px solid #D63328 !important;
+        border-bottom: 2px solid #E8910D  !important;
     }
     .el-menu .el-submenu__title:hover{
         /* color: #f58f98 !important; */
         background: #6db6ff !important;
     }
+    /* 回顶style */
     .scollTop {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 60px;
         position: fixed;
-        bottom: 200px;
-        right:50px;
+        bottom: 80px;
+        right:100px;
+        background-color:#ffffff;
+        box-shadow: 8px 8px 3px rgba(200, 200, 200, 0.3);
     }
-   .scollTop img{
-        width: 50px;
-        height: 50px; 
+    .scollTop img{
+        width: 30px;
+        height: 30px; 
+    }
+    .scollTop:hover{
+        background-color:rgba(230, 230, 230, 0.3);
     }
 </style>

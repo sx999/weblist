@@ -39,7 +39,7 @@
         position: relative;
         width: 100%;
         height: 686px;
-        font-family: PingFang SC-Medium, PingFang SC;
+        /* font-family: PingFang SC-Medium, PingFang SC; */
     }
     .About-box .posit{
         position: absolute;

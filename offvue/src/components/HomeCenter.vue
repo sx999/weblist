@@ -52,54 +52,18 @@
                         </div>
                     </div>
                     <div class="content-c-1-div2">
-                        <div class="fordiv" v-for="(item,index) in contentC1" :key="index">
+                        <div class="fordiv" v-for="(item,index) in dataList1" :key="index">
                             <div class="fordiv-img">
                                 <div class="across"></div>
                                 <div class='vertical'></div>
                                 <div class="image"><span class="iconfont icon-gistuceng"></span></div>
                             </div>
                             <div class="fordiv-a">
-                                <p class="p1">{{item.title}}</p>
-                                <p class="p2">{{item.titleD}}</p>
+                                <p class="p1">{{item.itemsName}}</p>
+                                <p class="p2">{{item.itemsContent}}</p>
                                 <p class="p3">阅读更多 <span class="iconfont icon-single_arrow"></span></p>
                             </div>
                         </div>
-                        <!-- <div class="fordiv">
-                            <div class="fordiv-img">
-                                <div class="across"></div>
-                                <div class='vertical'></div>
-                                <div class="image"><img src="@/assets/images/tc.png" alt=""></div>
-                            </div>
-                            <div class="fordiv-a">
-                                <p class="p1">项目名称</p>
-                                <p class="p2">项目详谬昂木的撒旦啊倒萨打算.</p>
-                                <p class="p3">阅读更多 <img src="../assets/images/arrows.png" alt=""></p>
-                            </div>
-                        </div>
-                        <div class="fordiv">
-                            <div class="fordiv-img">
-                                <div class="across"></div>
-                                <div class='vertical'></div>
-                                <div class="image"><img src="@/assets/images/tc.png" alt=""></div>
-                            </div>
-                            <div class="fordiv-a">
-                                <p class="p1">项目名称</p>
-                                <p class="p2">项目详谬昂木的撒旦啊倒萨打算.</p>
-                                <p class="p3">阅读更多 <img src="@/assets/images/arrows.png" alt=""></p>
-                            </div>
-                        </div>
-                        <div class="fordiv">
-                            <div class="fordiv-img">
-                                <div class="across"></div>
-                                <div class='vertical'></div>
-                                <div class="image"><img src="@/assets/images/tc.png" alt=""></div>
-                            </div>
-                            <div class="fordiv-a">
-                                <p class="p1">项目名称</p>
-                                <p class="p2">项目详谬昂木的撒旦啊倒萨打算.</p>
-                                <p class="p3">阅读更多 <img src="@/assets/images/arrows.png" alt=""></p>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -107,45 +71,20 @@
                 <div class="title">赛<p>事活</p>动</div>
                 <div class="content-c-2-div">
                     <div class="content-c-2-div-left">
-                        <div class="div1" v-for="(item,index) in contentC2" :key="index">
+                        <div class="div1" v-for="(item,index) in dataList2" :key="index">
                             <div class="three">
                                 <div class="across"></div>
                                 <div class='vertical'></div>
                                 <div class="image"><span>15/12</span></div>
                             </div>
                             <div class="three1">
-                                <p class="p1">{{item.title}}</p>
-                                <p class="p2">{{item.titleD}}</p>
-                                <p class="p3">活动</p>
+                                <p class="p1">{{item.competitionName}}</p>
+                                <p class="p2">{{item.competitionSynopsis}}</p>
+                                <p class="p3" v-if="item.sort == 0">赛事</p>
+                                <p class="p3" v-if="item.sort == 1">活动</p>
                             </div>
                             <div class="three2"><p>阅读更多</p><span class="iconfont icon-single_arrow"></span></div>
                         </div>
-                        <!-- <div class="div1">
-                            <div class="three">
-                                <div class="across"></div>
-                                <div class='vertical'></div>
-                                <div class="image"><img src="@/assets/images/yy.png" alt=""></div>
-                            </div>
-                            <div class="three1">
-                                <p class="p1">我们的活动名称</p>
-                                <p class="p2">我们的活动名称</p>
-                                <p class="p3">活动</p>
-                            </div>
-                            <div class="three2"><p>阅读更多</p><img src="@/assets/images/arrows.png" alt="" > </div>
-                        </div>
-                        <div class="div1">
-                            <div class="three">
-                                <div class="across"></div>
-                                <div class='vertical'></div>
-                                <div class="image"><img src="@/assets/images/yy.png" alt=""></div>
-                            </div>
-                            <div class="three1">
-                                <p class="p1">我们的活动名称</p>
-                                <p class="p2">我们的活动名称</p>
-                                <p class="p3">活动</p>
-                            </div>
-                            <div class="three2"><p>阅读更多</p> <img src="@/assets/images/arrows.png" alt=""> </div>
-                        </div> -->
                     </div>
                     <div class="content-c-2-div-right">
                         <div class="header">
@@ -175,68 +114,30 @@
             
         </div>
         <div class="content-e">
-            <div class="content-e-e">
+            <!-- <div class="content-e-e">
                 <div class="title">专<p>家顾</p>问</div>
                 <div class="threediv">
-                    <div class="div">
+                    <div class="div" v-for="(item,index) in dataList3" :key="index">
                         <div class="divtop">
-                            <img class="he_slideCaptionDown_img" src="@/assets/images/559.jpg" alt="">
+                            <img class="he_slideCaptionDown_img" :src="item.expertPic" alt="">
                             <div class="he_slideCaptionDown_caption">
                                 <img src="@/assets/images/demail.png" alt="">
                                 <p>联系我</p>
                                 <hr>
-                                <p>10086</p>
-                                <p>111111.com</p>
+                                <p>{{item.expertPhone}}</p>
+                                <p>{{item.expertMailbox}}</p>
                                 <a class="he_slideCaptionDown_caption_a" href="javascript:void(0);"></a>
                             </div>
                         </div>
                         <div class="divbottom">
                             <div>
-                                <p>张珊</p>
-                                <p>资深教师</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="div">
-                        <div class="divtop">
-                            <img class="he_slideCaptionDown_img" src="@/assets/images/560.jpg" alt="">
-                            <div class="he_slideCaptionDown_caption">
-                                <img src="@/assets/images/demail.png" alt="">
-                                <p>联系我</p>
-                                <hr>
-                                <p>10086</p>
-                                <p>111111.com</p>
-                                <a class="he_slideCaptionDown_caption_a" href="javascript:void(0);"></a>
-                            </div>
-                        </div>
-                        <div class="divbottom">
-                            <div>
-                                <p>张珊</p>
-                                <p>资深教师</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="div">
-                        <div class="divtop">
-                            <img class="he_slideCaptionDown_img" src="@/assets/images/562.jpg" alt="">
-                            <div class="he_slideCaptionDown_caption">
-                                <img src="@/assets/images/demail.png" alt="">
-                                <p>联系我</p>
-                                <hr>
-                                 <p>10086</p>
-                                <p>111111.com</p>
-                                <a class="he_slideCaptionDown_caption_a" href="javascript:void(0);"></a>
-                            </div>
-                        </div>
-                        <div class="divbottom">
-                            <div>
-                                <p>张珊</p>
-                                <p>资深教师</p>
+                                <p>{{item.expertName}}</p>
+                                <p>{{item.expertTitle}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="content-e-e">
                 <div class="title">行<p>业新</p>闻</div>
                 <div class="threediv2">
@@ -245,18 +146,13 @@
                         <div class="divleft-title">关注青少年健康00000000</div>
                     </div>
                     <div class="divright">
-                        <div class="div1">
-                            <div class="time">10/15 2021</div>
-                            <div class="img"></div>
-                            <div class="bold">“双减”政策靴子落地</div>
-                            <div class="bold5">7月24日，“双减”政策靴子落地；9月1日，新修订的《民办教育促进法实施条例》也将施行。新政</div>
-                            <div class="font16">阅读全文</div>
-                        </div>
-                        <div class="div1">
-                            <div class="time">10/15 2021</div>
-                            <div class="img"></div> 
-                            <div class="bold">“双减”政策靴子落地</div>
-                            <div class="bold5">7月24日，“双减”政策靴子落地；9月1日，新修订的《民办教育促进法实施条例》也将施行。新政</div>
+                        <div class="div1" v-for="(item,index) in  dataList4" :key="index" @click="GoPage(item.id)">
+                            <div class="time">{{item.updateTime}}</div>
+                            <div class="img">
+                                <img :src="item.consultPic" alt="">
+                            </div>
+                            <div class="bold">{{item.consultTopic}}</div>
+                            <div class="bold5">{{item.consultSynopsis}}</div>
                             <div class="font16">阅读全文</div>
                         </div>
                     </div>
@@ -271,9 +167,7 @@
                             <div>联系电话</div>
                             <div>17638367045</div>
                         </div>
-                        
                         <div class="back" :style="{'background':'url('+imgs[0].src+')'}">
-
                         </div>
                     </div>
                     <div class="div2">
@@ -293,7 +187,6 @@
                             <div>09：00~17：30</div>
                         </div>
                         <div class="back" :style="{'background':'url('+imgs[2].src+')'}">
-
                         </div>
                     </div>
                 </div>
@@ -314,26 +207,103 @@
                     {src:pic22},
                     {src:pic33},
                 ],
-                contentC1:[
-                    {title:"项目名称1",titleD:"项目介绍详情项目介绍详情1"},
-                    {title:"项目名称2",titleD:"项目介绍详情项目介绍详情2"},
-                    {title:"项目名称3",titleD:"项目介绍详情项目介绍详情3"},
-                    {title:"项目名称4",titleD:"项目介绍详情项目介绍详情4"},
-                ],
-                contentC2:[
-                    {title:"活动名称1",titleD:"我们的活动地点我们的活动地点1"},
-                    {title:"活动名称2",titleD:"我们的活动地点我们的活动地点2"},
-                    {title:"活动名称3",titleD:"我们的活动地点我们的活动地点3"},
-                ],
+                //项目
+                contentC1:[],
+                //赛事活动
+                contentC2:[],
+                //专家顾问
+                contentE1:[],
+                //新闻资讯
+                contentE2:[],
+                //联系方式
+                contentE3:[],
                 loading:false,
                 isplay:true,
             }
         },
         mounted(){
+            this.Queryall()  //查询全部活动
+            //音频控件获取ref
             this.$refs.movie.addEventListener('play',this.handlePlay)
             this.$refs.movie.addEventListener('pause',this.handlePause)
         },
+        computed:{
+             dataList1:function(){
+                return this.contentC1.slice(0,4)
+             },
+             dataList2:function(){
+                return this.contentC2.slice(0,3)
+             },
+             dataList3:function(){
+                return this.contentE1.slice(0,3)
+             },
+             dataList4:function(){
+                return this.contentE2.slice(0,2)
+             },
+             dataList5:function(){
+                return this.contentE3.slice(0,3)
+             }
+        },
         methods:{
+            // 时间格式化
+            Dateformatting(){
+                for(var i=0;i<this.contentE2.length;i++){
+                    this.contentE2[i].updateTime = this.moment(this.contentE2[i].updateTime).format("YYYY-MM-DD")
+                }
+            },
+            //开局查询
+            Queryall(){
+                this.axios.post(this.$api_router.project+'findAll')
+                .then(res=>{
+                        // console.log(res)
+                        if(res.data.code == 200){
+                                this.contentC1 =  res.data.data
+                        }else{
+                            return false
+                        }
+                })
+                this.axios.post(this.$api_router.events+'findAll')
+                .then(res=>{
+                        // console.log(res)
+                        if(res.data.code == 200){
+                                this.contentC2 =  res.data.data
+                        }else{
+                            return false
+                        }
+                 })
+                this.axios.post(this.$api_router.expert+'findAll')
+                .then(res=>{
+                        // console.log(res)
+                        if(res.data.code == 200){
+                                this.contentE1 =  res.data.data
+                        }else{
+                            return false
+                        }
+                 })
+                this.axios.post(this.$api_router.tradeNews+'findAll')
+                .then(res=>{
+                        if(res.data.code == 200){
+                                this.contentE2 =  res.data.data
+                                this.Dateformatting()
+                        }else{
+                            return false
+                        }
+                })
+                this.axios.post(this.$api_router.contact+'findAll')
+                .then(res=>{
+                        if(res.data.code == 200){
+                                this.contentE3 =  res.data.data
+                                this.Dateformatting()
+                        }else{
+                            return false
+                        }
+                })
+
+            },
+            //新闻精确跳转
+            GoPage(id){
+                 this.$router.push({path:'/journalism/journalismdetail',query:{id:id}})
+            },
             // textHidden,
             //音频控件
             handlePlay(){
