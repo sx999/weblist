@@ -3,7 +3,7 @@
         <!-- pc -->
         <el-header id="header" class="hidden-xs" :class="{'is_fixed' : isFixed}">
             <div class="logo-left-img">
-                <img src="@/assets/images/logo.png" alt="">
+                <img  src="@/assets/images/logo.png" alt="">
             </div>
             <el-menu 
             :default-active="'/' +this.$route.path.split('/')[1]"
@@ -149,6 +149,10 @@ export default({
             height: 72px;
             /* background-color: rgb(255, 187, 0); */
         }
+         .logo-left-img img{
+             width: 100%;
+             height: 100%;
+         }
         .el-menu.el-menu--horizontal{
             font-size: 16px !important;
             border-bottom:none !important;

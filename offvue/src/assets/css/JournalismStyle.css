@@ -47,6 +47,7 @@
     left: 0;
     width: 23px;
     height: 23px;
+    cursor: pointer;
 }
 .data-header-r input{
     position: absolute;
@@ -152,7 +153,6 @@
     color: #FFF;
 }
 .data-bottom{
-    
     width: 100%;
 }
 .data-bottom p{
@@ -166,5 +166,8 @@
     font-size: 14px;
     font-weight: bold;
     color: #333333;
+}
+.data-bottom p span{
+   font-size: 18px;
 }
 

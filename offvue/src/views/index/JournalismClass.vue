@@ -7,11 +7,11 @@
                 <div class="data">
                     <div class="data-header">
                         <div class="data-header-l">
-                            <span>国内</span><span style="margin-left:20px">国外</span>
+                            <span>新闻</span>
                         </div>
                         <div class="data-header-r">
-                            <img src="../../assets/images/search.png" alt=""> 
-                            <input type="text" placeholder="关键词">
+                            <img src="../../assets/images/search.png" alt="无法显示" @click="Search()"> 
+                            <input type="text" placeholder="关键词" v-model="keyword">
                         </div>
                     </div>
                     <!-- 列表数据 -->
@@ -37,8 +37,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="data-bottom" @click="Addpage()">
-                        <p>加载更多</p>
+                    <div class="data-bottom" @click="Addpage()" v-show="show">
+                        <p ><span v-show="loading" class="el-icon-loading"></span> 加载更多</p>
+                    </div>
+                    <div class="data-bottom" v-show="!show">
+                        <p>暂无更多了</p>
                     </div>
                 </div>
             </div>
@@ -51,7 +54,11 @@ export default {
      data(){
         return{
             listData:[],
-            page:1
+            page:1,
+            maxdata:"",
+            keyword:"", //关键词
+            loading:false,
+            show:true,
         }
     },
     created(){
@@ -59,7 +66,6 @@ export default {
     },
     mounted(){
         this.Queryall()
-        
     },
     computed:{
         //      Cutlist:function(){
@@ -74,12 +80,13 @@ export default {
             }
         },
         Queryall(){
-            this.axios.post(this.$api_router.tradeNews+'list?currentPage='+this.page+'&limit=6')
+            this.axios.post(this.$api_router.tradeNews+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6')
             .then(res=>{
                 console.log(res)
                 if(res.data.code == 200){
-						this.listData =  res.data.data.page.dataList	
-                        this. Dateformatting()
+						this.listData =  res.data.data.page.dataList
+                        this.maxdata = res.data.data.page.totalRecord
+                        this.Dateformatting()
                 }else{
                     return false
                 }
@@ -91,21 +98,51 @@ export default {
         },
         //加载更多
         Addpage(){
-            this.page++
-            this.axios.post(this.$api_router.tradeNews+'list?currentPage='+this.page+'&limit=6')
-            .then(res=>{
-                console.log(res)
-                if(res.data.code == 200){
-						var list1 =  res.data.data.page.dataList
-                        console.log(list1)
-                        for(var i=0;i<list1.length;i++){
-                            this.listData.push(list1[i])
+            if(this.page == this.maxpage){
+                
+            }else{
+                this.page++
+            }
+           
+            this.loading = true
+            console.log(this.listData)
+            if(this.maxdata == this.listData.length){
+                this.show = false
+            }else{
+                 this.axios.post(this.$api_router.tradeNews+'list?currentPage='+this.page+'&limit=6')
+                .then(res=>{
+                    console.log(res)
+                    if(res.data.code == 200){
+                        var list1 =  res.data.data.page.dataList
+                        this.listData.push(...list1)
+                        this.loading = false
+                    }else{
+                        return false
+                    }
+                })
+            }
+        },
+        //精确查询
+        Search(){
+            this.page = 1
+            this.axios.post(this.$api_router.tradeNews+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6')
+                .then(res=>{
+                    console.log(res)
+                    if(res.data.code == 200){
+                        // var list1 =  res.data.data.page.dataList
+                        // this.listData.push(...list1)
+                        this.listData = res.data.data.page.dataList
+                        this.maxdata = res.data.data.page.totalRecord
+                        if(this.maxdata == this.listData.length){
+                            this.show = false
+                        }else{
+                            this.show = true
                         }
-                        
-                        console.log(this.listData)
-                }else{
-                    return false
-                }
+                        this.maxpage = res.data.data.page.totalPage
+                        this.Dateformatting()
+                    }else{
+                        return false
+                    }
             })
         }
     }
