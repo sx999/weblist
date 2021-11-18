@@ -17,10 +17,10 @@
                     </p>
                 </div>
                 <div class="data1-r">
-                    <img src="@/assets/images/3.png" alt="">
+                    <!-- <img src="@/assets/images/3.png" alt=""> -->
                 </div>
             </div>
-            <div class="data2">
+            <!-- <div class="data2">
                  <div class="content-e-e">
                 <div class="title">我们的团队成员</div>
                 <div class="threediv">
@@ -195,22 +195,22 @@
                     </div>
                 </div>
                 </div>
-            </div>
+            </div> -->
         </div> 
     </div>  
 </template>
 <script>
- import pic11 from '@/assets/images/559.jpg'
-import pic22 from '@/assets/images/560.jpg'
-import pic33 from '@/assets/images/562.jpg'
+//  import pic11 from '@/assets/images/559.jpg'
+// import pic22 from '@/assets/images/560.jpg'
+// import pic33 from '@/assets/images/562.jpg'
 export default {
     data(){
         return{
-            imgs:[
-                {src:pic11},
-                {src:pic22},
-                {src:pic33},
-            ],
+            // imgs:[
+            //     {src:pic11},
+            //     {src:pic22},
+            //     {src:pic33},
+            // ],
             id:"123"
         }
     },

@@ -54,7 +54,7 @@
             .then(res=>{
                 console.log(res)
                 this.list = res.data.data
-                this.list.updateTime = this.moment(this.list.updateTime).format("YYYY-MM-DD")
+                this.list.updateTime = this.moment(this.list.updateTime).format("YYYY年MM月DD日")
                 // this.Dateformatting()
             })
         }

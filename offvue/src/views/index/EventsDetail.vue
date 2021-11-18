@@ -23,7 +23,7 @@
               <div class="bottom-img">
                   <img :src="this.list.competitionPic" alt="">
               </div>
-              <p>扫码参加活动</p>
+              <p>扫码参加赛事</p>
             </div>
             <div class="bottom-text">
               <p>已加载全部内容</p>
@@ -52,7 +52,7 @@
                 .then(res=>{
                     console.log(res)
                     this.list = res.data.data
-                    this.list.updateTime = this.moment(this.list.updateTime).format("YYYY-MM-DD")
+                    this.list.updateTime = this.moment(this.list.updateTime).format("YYYY年MM月DD日")
                     // this.Dateformatting()
                 })
             }

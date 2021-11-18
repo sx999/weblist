@@ -364,6 +364,7 @@
         }
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1:hover .p1,
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1:hover .three2{
+            cursor: pointer;
             color: #EA862A ;
         }
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1:hover .p3{

@@ -76,18 +76,21 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
 .data-center .data-list{
+    position: relative;
     margin-top: 40px;
     width: 492px;
-    /* height: 407px; */
+    height: 407px;
 }
 .data-list .list-h{
     width: 100%;
-    height: 275px;
-   
+    height: 100%;
 }
 .data-list .list-b{
+    position: absolute;
+    bottom: 0;
     padding: 20px 10px;
     display: flex;
     justify-content: space-between;
@@ -142,7 +145,7 @@
     color: #333333;
 }
 .data-list .list-b .list-b-c .p1{
-    margin: 0;
+    /* margin: 0; */
 }
 .data-list .list-b .list-b-c .p2{
     font-size: 16px;
@@ -150,7 +153,7 @@
     color: #393939;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 1; 
     overflow: hidden;
     /* margin: 0; */
 }

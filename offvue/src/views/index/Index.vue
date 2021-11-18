@@ -18,7 +18,7 @@
                 <el-menu-item index="/about">公司概况</el-menu-item>
                 <el-menu-item index="/journalism">行业新闻</el-menu-item>
                 <el-menu-item index="/events">热门赛事</el-menu-item>
-                <el-menu-item index="/activity">科研活动</el-menu-item>
+                <el-menu-item index="/activity">研学活动</el-menu-item>
                 <el-menu-item index="/contact">联系我们</el-menu-item>
                 <el-menu-item index="/recruitment">招贤纳士</el-menu-item>
                 <!-- <el-menu-item index="/expertadvisor">专家顾问</el-menu-item> -->
@@ -257,10 +257,13 @@ export default({
     .is_back{
         background-color: rgba(0, 0, 0, 0) !important;
     }
+    .el-menu--horizontal>.el-menu-item.is-active{
+         border-bottom: 3px solid #E8910D !important;
+    }
     .el-menu .el-menu-item:hover{
         color: #E8910D  !important;
         /* background: #6db6ff !important; */
-        border-bottom: 2px solid #E8910D  !important;
+        border-bottom: 3px solid #E8910D  !important;
     }
     .el-menu .el-submenu__title:hover{
         /* color: #f58f98 !important; */

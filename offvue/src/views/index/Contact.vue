@@ -2,9 +2,9 @@
     <div>
         <!-- 头部轮播 -->
         <div class="Contact-box">
-            <img src="../../assets/images/eventimg.png" alt="">
+            <img :src="this.BannerData.rotationUrl" alt="联系我们">
             <div class="posit">   
-                <p class="posit-p1">联系我们</p>
+                <!-- <p class="posit-p1">联系我们</p> -->
             </div>
         </div>
         <div class="Contact-box-content">
@@ -25,8 +25,24 @@
 export default {
     data(){
         return{
-
+            BannerData:[]
         }
+    },
+    created(){
+        this.Queryall()
+    },
+    methods:{
+      Queryall(){
+            this.axios.post(this.$api_router.banner+'list?currentPage=1&limit=1&sort=6')
+            .then(res=>{
+                console.log(res)
+                if(res.data.code == 200){
+                        this.BannerData =  res.data.data.page.dataList[0]
+                }else{
+                    return false
+                }
+            })
+        },
     }
 }
 </script>
@@ -34,7 +50,7 @@ export default {
     .Contact-box{
         position: relative;
         width: 100%;
-        height: 686px;
+        height: 580px;
         /* font-family: PingFang SC-Medium, PingFang SC; */
     }
     .Contact-box img{

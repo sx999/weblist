@@ -36,7 +36,7 @@ const routes = [
       {path:"home",component:Home},
       {path:"",redirect:"home"},    //没有输入值时 重定向到home 页面
       {path:"about",component:About,children:[
-        {path:"",redirect:"aboutdata"},
+        {path:"",redirect:"aboutdetail"},
         {path:"aboutdata",name:"AboutData",component:AboutData},
         {path:"aboutdetail",name:"AboutDetail",component:AboutDetail}
       ]},

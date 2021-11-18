@@ -2,8 +2,8 @@
     <div>
         <!-- 头部导航 -->
         <div class="Journalism-box">
-            <img src="../../assets/images/image7.png" alt="">
-            <p>行业新闻</p>
+            <img :src="this.BannerData.rotationUrl" alt="00">
+            <p>{{this.BannerData.rotationName}}</p>
         </div>
         
          <router-view/>
@@ -13,14 +13,24 @@
 export default {
      data(){
         return{
-           
+           BannerData:[]
         }
     },
     created(){
-
+        this.Queryall()
     },
     methods:{
-      
+      Queryall(){
+            this.axios.post(this.$api_router.banner+'list?currentPage=1&limit=1&sort=3')
+            .then(res=>{
+                console.log(res)
+                if(res.data.code == 200){
+                        this.BannerData =  res.data.data.page.dataList[0]
+                }else{
+                    return false
+                }
+            })
+        },
     }
 }
 </script>

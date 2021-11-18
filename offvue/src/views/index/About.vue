@@ -2,11 +2,11 @@
      <div>
            <!-- 头部轮播 -->
         <div class="About-box">
-            <img src="../../assets/images/image52.png" alt="00">
-            <div class="posit">   
+            <img :src="this.BannerData.rotationUrl" alt="00">
+            <!-- <div class="posit">   
                 <p class="posit-p1">行由心教育</p>
                 <p class="posit-p2">非学科教育领跑者</p>
-            </div>
+            </div> -->
         </div>
 
          <router-view/>
@@ -16,12 +16,25 @@
     export default {
     data(){
       return{
-        
+        BannerData:[]
       }
     },
     created(){
-   
+        this.Queryall()
 
+    },
+    methods:{
+         Queryall(){
+            this.axios.post(this.$api_router.banner+'list?currentPage=1&limit=1&sort=2')
+            .then(res=>{
+                console.log(res)
+                if(res.data.code == 200){
+                        this.BannerData =  res.data.data.page.dataList[0]
+                }else{
+                    return false
+                }
+            })
+        },
     }
 
   }
@@ -38,7 +51,7 @@
     .About-box{
         position: relative;
         width: 100%;
-        height: 686px;
+        height: 538px;
         /* font-family: PingFang SC-Medium, PingFang SC; */
     }
     .About-box .posit{

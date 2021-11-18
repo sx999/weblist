@@ -76,7 +76,7 @@ export default {
         // 时间格式化
         Dateformatting(){
             for(var i=0;i<this.listData.length;i++){
-                this.listData[i].updateTime = this.moment(this.listData[i].updateTime).format("YYYY-MM-DD")
+                this.listData[i].updateTime = this.moment(this.listData[i].updateTime).format("YYYY年MM月DD日")
             }
         },
         Queryall(){

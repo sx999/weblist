@@ -2,10 +2,10 @@
     <div>
         <!-- 头部轮播 -->
         <div class="Activity-box">
-            <img src="../../assets/images/eventimg.png" alt="">
+            <img :src="this.BannerData.rotationUrl" alt="研学活动">
             <div class="posit">   
                 <p class="posit-p1">研学活动</p>
-                <p class="posit-p2">Tile标题:语言文化艺术节</p>
+                <p class="posit-p2">{{this.BannerData.rotationName}}</p>
             </div>
             
         </div>
@@ -17,8 +17,24 @@
 export default {
     data(){
         return{
-
+            BannerData:[]
         }
+    },
+    created(){
+        this.Queryall()
+    },
+    methods:{
+      Queryall(){
+            this.axios.post(this.$api_router.banner+'list?currentPage=1&limit=1&sort=5')
+            .then(res=>{
+                console.log(res)
+                if(res.data.code == 200){
+                        this.BannerData =  res.data.data.page.dataList[0]
+                }else{
+                    return false
+                }
+            })
+        },
     }
 }
 </script>

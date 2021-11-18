@@ -1,5 +1,6 @@
 .Recruitment-box {
     width: 100%;
+    height: 580px;
 }
 .Recruitment-box img{
     width: 100%;
@@ -123,12 +124,16 @@
     font-size: 18px;
     color: #333333;
 }
-.Recruitment-box-content .promote .bottom .title-p{ 
-    margin-bottom: 10px;
+.Recruitment-box-content .promote .bottom .mar-t10{ 
+    margin-top: 20px;
 }
-.Recruitment-box-content .promote .bottom .mar-l10{
-    margin-left:10px;
+.Recruitment-box-content .promote .bottom .marp-l18 p{ 
+    margin-left:18px;
 }
+.Recruitment-box-content .promote .bottom .marp-l18 p:nth-child(1){ 
+    margin-left:0;
+}
+
 .Recruitment-box-content2{
     margin: 0 auto;
     margin-top: 60px;
@@ -199,4 +204,5 @@
     font-size: 18px;
     background-color: #EA862A;
     color: #FFFFFF;
+    cursor: pointer;
 }

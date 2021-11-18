@@ -2,14 +2,14 @@
     <div class="banner">
         <el-carousel :height="bannerHeight+'px'" arrow="always">
             <!-- <el-carousel height="780px"> -->
-            <el-carousel-item v-for="(item,index) in imgs" :key="index">
+            <el-carousel-item v-for="(item,index) in BannerData" :key="index">
                 <div class="pic_item">
-                     <img class="small" :src="item.src" alt="">
+                     <img class="small" :src="item.rotationUrl" alt="">
                 <!-- <img src="item.src:require('@/assets/images/img1.png')," alt=""> -->
                 <!-- {{item.src}} -->
                     <div class="posit-element">
-                        <p>{{item.text1}}</p>
-                        <p>{{item.text2}}</p>
+                        <p>行由心教育</p>
+                        <p>{{item.rotationName}}</p>
                         <div class="yello-d">
                             <span>了解更多</span> 
                             <!-- <span class="iconfont icon-tuxing"></span> -->
@@ -22,17 +22,10 @@
   </div>
 </template>
 <script>
-import pic1 from '@/assets/images/banner1.png'
-import pic2 from '@/assets/images/banner2.png'
-import pic3 from '@/assets/images/banner3.png'
 export default {
     data(){
         return{
-            imgs:[
-              {src:pic1,text1:'行由心教育1',text2:'以科技助力教育'},
-              {src:pic2,text1:'行由心教育2',text2:'以科技助力教育'},
-              {src:pic3,text1:'行由心教育3',text2:'以科技助力教育'},
-            ],
+            BannerData:[],
             bannerHeight:"",
         }
     },
@@ -40,17 +33,31 @@ export default {
       
     },
     mounted(){
+        this.Queryall()
         var h= window.screen.height
         var w = window.screen.width
         console.log(h,w)
         if(h<992){
             this.bannerHeight=260
         }else if(w >=992){
-            this.bannerHeight = 780
+            this.bannerHeight = 580
         }
     },
+    computed:{
+      
+    },
     methods:{
-       
+        Queryall(){
+            this.axios.post(this.$api_router.banner+'list?currentPage=1&limit=3&sort=1')
+            .then(res=>{
+                console.log(res)
+                if(res.data.code == 200){
+                        this.BannerData =  res.data.data.page.dataList
+                }else{
+                    return false
+                }
+            })
+        },
     },
 }
 </script>
@@ -117,7 +124,9 @@ export default {
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: #FFFFFF;
+            /* color: #FFFFFF; */
+            /* color: #000; */
+            color: #EA862A;
             /* font-family: PingFang SC-Bold, PingFang SC; */
         }
         .pic_item .posit-element p:nth-child(1){

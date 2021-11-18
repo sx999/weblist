@@ -12,8 +12,8 @@
                             <!-- <span class='active' @click="Block"></span> -->
                         </div>
                         <div class="data-header-r">
-                            <img src="../../assets/images/search.png" alt=""> 
-                            <input type="text" placeholder="关键词">
+                            <img src="../../assets/images/search.png" alt="无法显示" @click="Search()"> 
+                            <input type="text" placeholder="关键词"  >
                         </div>
                     </div>
                     <!-- 赛事内容 start-->
@@ -26,7 +26,7 @@
                                 <div class="list-b-l">
                                     <div class="across"></div>
                                     <div class="vertical"></div>
-                                    <div class="list-b-l-date">15/12</div>
+                                    <div class="list-b-l-date">{{item.updateTime}}</div>
                                 </div>
                                 <div class="list-b-c">
                                     <p class="p1">{{item.competitionName}}</p>
@@ -41,8 +41,11 @@
                         </div>
                     </div>
                     <!-- 赛事内容 end-->
-                    <div class="data-bottom">
-                        <p>加载更多</p>
+                    <div class="data-bottom" @click="Addpage()" v-show="show">
+                        <p><span v-show="loading" class="el-icon-loading"></span>加载更多</p>
+                    </div>
+                    <div class="data-bottom" v-show="!show">
+                        <p>暂无更多了</p>
                     </div>
                 </div>
             </div>
@@ -55,6 +58,11 @@
     data(){
       return{
         listData:[],
+        page:1,
+        maxdata:"",
+        keyword:"", //关键词
+        loading:false,
+        show:true,
       }
     },
     created(){ 
@@ -78,25 +86,73 @@
          // 时间格式化
         Dateformatting(){
             for(var i=0;i<this.listData.length;i++){
-                this.listData[i].updateTime = this.moment(this.listData[i].updateTime).format("YYYY-MM-DD")
+                this.listData[i].updateTime = this.moment(this.listData[i].updateTime).format("MM/DD")
             }
         },
         Queryall(){
-            this.axios.post(this.$api_router.events+'findAll')
+            this.axios.post(this.$api_router.events+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=0')
             .then(res=>{
                 console.log(res)
                 if(res.data.code == 200){
-                        this.listData =  res.data.data
+                        this.listData =  res.data.data.page.dataList
+                        this.maxdata = res.data.data.page.totalRecord
+                        this.Dateformatting()
                 }else{
                     return false
                 }
             })
-            
+        },
+        //加载更多
+        Addpage(){
+            if(this.page == this.maxpage){
+                
+            }else{
+                this.page++
+            }
+           
+            this.loading = true
+            console.log(this.listData)
+            if(this.maxdata == this.listData.length){
+                this.show = false
+            }else{
+                 this.axios.post(this.$api_router.events+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=0')
+                .then(res=>{
+                    console.log(res)
+                    if(res.data.code == 200){
+                        var list1 =  res.data.data.page.dataList
+                        this.listData.push(...list1)
+                        this.loading = false
+                        this.Dateformatting()
+                    }else{
+                        return false
+                    }
+                })
+            }
         },
         GoDetail(id){
               this.$router.push({path:'/events/eventsdetail',query:{id:id}})
         },
-       
+       //精确查询
+        Search(){
+            this.page = 1
+            this.axios.post(this.$api_router.events+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=0')
+                .then(res=>{
+                    console.log(res)
+                    if(res.data.code == 200){
+                        this.listData = res.data.data.page.dataList
+                        this.maxdata = res.data.data.page.totalRecord
+                        if(this.maxdata == this.listData.length){
+                            this.show = false
+                        }else{
+                            this.show = true
+                        }
+                        this.maxpage = res.data.data.page.totalPage
+                        this.Dateformatting()
+                    }else{
+                        return false
+                    }
+            })
+        }
     }
 
   }
