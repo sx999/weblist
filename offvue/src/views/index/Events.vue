@@ -32,7 +32,6 @@ export default {
         position: relative;
         width: 100%;
         height: 686px;
-        /* font-family: PingFang SC-Medium, PingFang SC; */
     }
     .Events-box .posit{
         position: absolute;
@@ -51,7 +50,6 @@ export default {
         font-weight: bold;
         color: #FFFFFF;
         color: #333333;
-        
     }
     .Events-box .posit .posit-p2{
         font-size: 36px;

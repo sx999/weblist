@@ -1,36 +1,15 @@
 <template>
     <div>
         <div class="box">
-            <h4>id:{{this.id}}</h4>
-            <div class="title">行由心教育行由心教育行由心教育行由心教育行由心教育 行由心教育</div>
-            <p class="date"><span class="iconfont icon-naozhong"></span> 2021.10.26</p>
+            <div class="title">{{this.list.consultTopic}}</div>
+            <p class="date"><span class="iconfont icon-naozhong"></span>{{this.list.updateTime}}</p>
             <hr>
             <div class="text">
-                <p>河南独秀科技有限公司是教育国家教育部颁发的《信息化“十三五”规划》、
-                《国家信息化建设2.0》等国家相关政策，自主研究并提供安全校园、
-                专业智能教育解决方案与集成服务的供应商。</p> 
-                <p>
-                让学校成为'最阳光'、'最安全'的地方”是我们的最终目标和努力方向。公司主营业务分为：教育信息化、
-                智能化云平台、大数据治理与运维服务。自主云研究“一山智能·APP”安全校园管理平台
-                ，是一个集务管理、班级管理、在线辅导、德育教育等服务平台，包括无障碍门智能管理系统
-                、教务管理系统系统、智能教室、同步课堂、宿舍管理系统、云数据分析等教育类科技产品。</p> 
-                <p>
-                让学校成为'最阳光'、'最安全'的地方”是我们的最终目标和努力方向。公司主营业务分为
-                 ：教育信息化、智能化云平台、大数据治理与运维服务。自主云研究“一山智能·APP”安全校园管理平台，
-                 是一个集务管理、班级管理、在线辅导、德育教育等服务平台，包括无障碍门智能管理系统、
-                 教务管理系统系统、智能教室、同步课堂、宿舍管理系统、云数据分析等教育类科技产品。</p>
-                <p>
-                让学校成为'最阳光'、'最安全'的地方”是我们的最终目标和努力方向。公司主营业务分为：
-                教育信息化、智能化云平台、大数据治理与运维服务。</p>
-                <p> 
-                自主云研究“一山智能·APP”安全校园管理平台，是一个集务管理、班级管理、在线辅导、
-                德育教育等服务平台，包括无障碍门智能管理系统、教务管理系统系统、智能教室、同步课堂、
-                宿舍管理系统、云数据分析等教育类科技产品。
-                </p>
-                  
+                <p v-html="this.list.consultSynopsis"></p>
             </div>
             <div class="image">   
-                <img src="../../assets/images/unsplash_YRMWVcdymI.png" alt="">
+                <!-- <img src="../../assets/images/unsplash_YRMWVcdymI.png" alt=""> -->
+                <img :src="this.list.consultPic" alt="">
             </div>
         </div>
         
@@ -40,7 +19,8 @@
 export default {
     data(){
         return{
-            id:""
+            id:"",
+            list:[]
         }
     },
     created(){
@@ -49,10 +29,19 @@ export default {
         console.log(id)
     },
     mounted(){
-
+        this.Queryall()
     },
     methods:{
-
+        Queryall(){
+            this.axios.post(this.$api_router.tradeNews+'findAllId?id='+this.id)
+            .then(res=>{
+                console.log(res)
+                this.list = res.data.data
+                this.list.updateTime = this.moment(this.list.updateTime).format("YYYY-MM-DD")
+                // this.Dateformatting()
+            })
+        }
+          
     }
 }
 </script>
@@ -78,7 +67,7 @@ export default {
      .box .date span{
         margin-right: 10px;
         font-size:22px;
-        color:#D63328;
+        color:#EA862A;
        
     }
     .box hr{
@@ -93,6 +82,11 @@ export default {
         color: #5B5B5B;
     }
     .box .image{
+        width: 100%;
         margin-top: 50px;
     }
+    /* .box .image img{
+        width: 100%;
+       
+    } */
 </style>

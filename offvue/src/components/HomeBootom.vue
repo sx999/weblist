@@ -4,39 +4,40 @@
         <div class="mar0">
             <div class="bottom-l">
                 <div class="bottom-l-t">
+                    <p>公司概况</p>
+                    <p></p>
                     <p>新闻动态</p>
                     <p></p>
                     <p>赛事活动</p>
                     <p></p>
-                    <p>公司概况</p>
-                    <p></p>
-                    <p>公司详情</p>
+                    <p>联系我们</p>
                     <p></p>
                 </div>
                 <div class="bottom-l-b">
                     <ul>
+                        <li>公司简介</li>
+                        <li>联系我们</li>
+                        <li>招贤纳士</li>
+                    </ul>
+                    <ul>
                         <li>国内新闻</li>
                         <li>国外新闻</li>
-                        <li>公司动态</li>
                     </ul>
                     <ul>
-                        <li>最新赛事</li>
-                        <li>最新活动</li>
+                        <li>热门赛事</li>
+                        <li>研学活动</li>
                     </ul>
                     <ul>
-                        <li>公司简介</li>
-                        <li>公司动态</li>
-                        <li>联系我们</li>
-                    </ul>
-                    <ul>
-                        <li class="red">400-768-9900</li>
-                        <li>邮箱：17639626908@163.com</li>
-                        <li>地址：河南省郑州市华强云瓴中心4008</li>
+                        <li class="orange">15738505738</li>
+                        <li>邮箱：xingyouxin2020@163.com</li>
+                        <li>地址：河南省郑州市华强云瓴中心4008室</li>
                     </ul>
                 </div>
             </div>
             <div class="bottom-r">
-                <div class="img"></div>
+                <div class="img">
+                    <img src="../assets/images/qrcode.jpg" alt="">
+                </div>
                 <p class="red">扫码关注公众号</p>
             </div>
         </div>

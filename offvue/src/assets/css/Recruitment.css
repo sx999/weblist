@@ -1,0 +1,202 @@
+.Recruitment-box {
+    width: 100%;
+}
+.Recruitment-box img{
+    width: 100%;
+    height: 100%;
+}
+.Recruitment-box p{
+    margin: 0 !important;
+}
+.Recruitment-box{
+    position: relative;
+    width: 100%;
+    height: 686px;
+    /* font-family: PingFang SC-Medium, PingFang SC; */
+}
+.Recruitment-box .posit{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+    width: 500px;
+    height: 166px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 64px;
+    font-weight: bold;
+    color: #FFFFFF;
+    color: #333333;
+    
+}
+.Recruitment-box .posit .posit-p2{
+    font-size: 36px;
+}
+.Recruitment-box-content{
+     margin: 0 auto;
+     margin-top: 60px;
+     width: 1024px;
+}
+.Recruitment-box-content .title{
+    width: 100%;
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    font-weight: 400;
+    color: #333333;
+}
+.Recruitment-box-content .title p{
+    margin: 0;
+    border-bottom:5px solid #EA862A;
+}
+.Recruitment-box-content .promote{
+    margin-top: 40px;
+    width: 100%;
+    /* height: 540px; */
+    /* background-color: #FFFFFF; */
+}
+.Recruitment-box-content .promote .top{
+    padding: 24px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: #FFFFFF;
+}
+.Recruitment-box-content .promote .top .t-l{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    background-color: #EA862A;
+}
+.Recruitment-box-content .promote .top .t-l img{
+    width: 52px;
+    height: 52px;
+}
+.Recruitment-box-content .promote .top .t-c{
+    padding: 0 20px;
+    width: 700px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-left: 1px solid #cccccc;
+}
+.Recruitment-box-content .promote .top .t-c p{ 
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333333;
+}
+.Recruitment-box-content .promote .top .t-c p:nth-child(2){ 
+    font-size: 14px;
+    color: #777777;
+}
+
+.Recruitment-box-content .promote .top .t-r{
+    width: 126px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+}
+.Recruitment-box-content .promote .top .t-r .look{
+    font-size: 16px;
+    background-color: #857a70;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.Recruitment-box-content .promote .top .t-r .look:hover{
+    background-color: #EA862A;
+}
+.Recruitment-box-content .promote .bottom{
+    padding: 30px 24px;
+    width: 100%;
+    height: 420px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #ccc;
+    font-size: 18px;
+    color: #333333;
+}
+.Recruitment-box-content .promote .bottom .title-p{ 
+    margin-bottom: 10px;
+}
+.Recruitment-box-content .promote .bottom .mar-l10{
+    margin-left:10px;
+}
+.Recruitment-box-content2{
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 1024px;
+}
+.Recruitment-box-content2 .title{
+    width: 100%;
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    font-weight: 400;
+    color: #333333;
+}
+.Recruitment-box-content2 .title p{
+    margin: 0;
+    border-bottom:5px solid #EA862A;
+}
+.Recruitment-box-content2 .formInput{
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+.Recruitment-box-content2 .formInput input{
+    width: 308px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 4px 4px 4px 4px;
+    border: none;
+    outline:none;
+    text-indent:6px;
+    font-size: 17px;
+}
+.Recruitment-box-content2 .formInput input::-webkit-input-placeholder{
+    position:relative;
+    left: 6px;
+}
+.Recruitment-box-content2 .formInput .textarea{
+    padding: 8px;
+    width: 100%;
+    height: 320px;
+    background: #FFFFFF;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 18px;
+    text-indent:6px;
+    border: none;
+    outline:none;
+    vertical-align: baseline;
+    caret-color:#EA862A;
+    overflow-x: hidden;
+}
+.Recruitment-box-content2 .formInput .textarea::-webkit-input-placeholder{
+    position:relative;
+    /* top: 6px; */
+    left: 10px;
+}
+.Recruitment-box-content2 .button{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+.Recruitment-box-content2 .button div{
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #EA862A;
+    color: #FFFFFF;
+}

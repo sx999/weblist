@@ -14,78 +14,30 @@
                             <input type="text" placeholder="关键词">
                         </div>
                     </div>
+                    <!-- 列表数据 -->
                     <div class="data-content">
-                        <div class="data-content-a">
+                        <div class="data-content-a" v-for="(item,index) in listData" :key="index">
                             <div class="data-content-l">
-                                <img src="../../assets/images/26.jpg" alt="">
+                                <img :src="item.consultPic" alt="">
                             </div>
                             <div class="data-content-r">
                                 <div class="data-content-r-1">
-                                    <span class="span1">25/</span>
-                                    <div class="data-content-r-2">
+                                    <div class="img"><img src="../../assets/images/date.png" alt=""></div>
+                                    <span class="span1">{{item.updateTime}}</span>
+                                    <!-- <div class="data-content-r-2">
                                         <span class="span2">10月</span>
                                         <span class="span2">2020年</span>
-                                    </div>
+                                    </div> -->
                                 </div>
-                                <p class="p1">行由心教育行由心教育行由心教育</p>
-                                <div class="div1">
-                                    河南独秀科技有限公司是依托国家教育部颁发的《教育信息化“十三 五”规划》、
-                                    《国家教育信息化建设2.0》等国家相关政策，自主研 发并提供安全校园、
-                                    专业智慧教育解决方案与集成服务的供应商
-                                </div>
-                                <div class="div2" @click="goDetail()">
+                                <p class="p1">{{item.consultTopic}}</p>
+                                <div class="div1" v-html="item.consultSynopsis"></div>
+                                <div class="div2" @click="goDetail(item.id)">
                                         阅读全文 
                                 </div>
                             </div>
                         </div>
-                        <div class="data-content-a">
-                            <div class="data-content-l">
-                                <img src="../../assets/images/26.jpg" alt="">
-                            </div>
-                            <div class="data-content-r">
-                                <div class="data-content-r-1">
-                                    <span class="span1">25/</span>
-                                    <div class="data-content-r-2">
-                                        <span class="span2">10月</span>
-                                        <span class="span2">2020年</span>
-                                    </div>
-                                </div>
-                                <p class="p1">行由心教育行由心教育行由心教育</p>
-                                <div class="div1">
-                                    河南独秀科技有限公司是依托国家教育部颁发的《教育信息化“十三 五”规划》、
-                                    《国家教育信息化建设2.0》等国家相关政策，自主研 发并提供安全校园、
-                                    专业智慧教育解决方案与集成服务的供应商
-                                </div>
-                                <div class="div2">
-                                    阅读全文
-                                </div>
-                            </div>
-                        </div>
-                        <div class="data-content-a">
-                            <div class="data-content-l">
-                                <img src="../../assets/images/26.jpg" alt="">
-                            </div>
-                            <div class="data-content-r">
-                                <div class="data-content-r-1">
-                                    <span class="span1">25/</span>
-                                    <div class="data-content-r-2">
-                                        <span class="span2">10月</span>
-                                        <span class="span2">2020年</span>
-                                    </div>
-                                </div>
-                                <p class="p1">行由心教育行由心教育行由心教育</p>
-                                <div class="div1">
-                                    河南独秀科技有限公司是依托国家教育部颁发的《教育信息化“十三 五”规划》、
-                                    《国家教育信息化建设2.0》等国家相关政策，自主研 发并提供安全校园、
-                                    专业智慧教育解决方案与集成服务的供应商
-                                </div>
-                                <div class="div2">
-                                    阅读全文
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="data-bottom">
+                    <div class="data-bottom" @click="Addpage()">
                         <p>加载更多</p>
                     </div>
                 </div>
@@ -98,16 +50,63 @@
 export default {
      data(){
         return{
-            id:"1"
+            listData:[],
+            page:1
         }
     },
     created(){
 
     },
+    mounted(){
+        this.Queryall()
+        
+    },
+    computed:{
+        //      Cutlist:function(){
+        //         return this.listData.slice(0,3)
+        //      },
+    },
     methods:{
-        goDetail(){
-            this.$router.push({path:'/journalism/journalismdetail',query:{id:this.id}})
+        // 时间格式化
+        Dateformatting(){
+            for(var i=0;i<this.listData.length;i++){
+                this.listData[i].updateTime = this.moment(this.listData[i].updateTime).format("YYYY-MM-DD")
+            }
+        },
+        Queryall(){
+            this.axios.post(this.$api_router.tradeNews+'list?currentPage='+this.page+'&limit=6')
+            .then(res=>{
+                console.log(res)
+                if(res.data.code == 200){
+						this.listData =  res.data.data.page.dataList	
+                        this. Dateformatting()
+                }else{
+                    return false
+                }
+            })
+        },
+        goDetail(id){
+            this.$router.push({path:'/journalism/journalismdetail',query:{id:id}})
             // console.log("1")
+        },
+        //加载更多
+        Addpage(){
+            this.page++
+            this.axios.post(this.$api_router.tradeNews+'list?currentPage='+this.page+'&limit=6')
+            .then(res=>{
+                console.log(res)
+                if(res.data.code == 200){
+						var list1 =  res.data.data.page.dataList
+                        console.log(list1)
+                        for(var i=0;i<list1.length;i++){
+                            this.listData.push(list1[i])
+                        }
+                        
+                        console.log(this.listData)
+                }else{
+                    return false
+                }
+            })
         }
     }
 }

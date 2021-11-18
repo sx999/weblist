@@ -56,10 +56,11 @@
  
     width: 300px;
 }
-.bottom-l .bottom-l-b ul li{  
+.bottom-l .bottom-l-b ul li{ 
+   cursor: pointer;
    margin-bottom: 18px;
 }
-.red{
+.orange{
     color: #EA862A;
 }
 #bottom .mar0 .bottom-r .img{
@@ -67,7 +68,10 @@
     height: 110px;
     background-color:#cccccc;
 }
- #bottom .mar0 .bottom-r p{
+#bottom .mar0 .bottom-r .img img{
+    width: 100%;
+}
+#bottom .mar0 .bottom-r p{
     text-align: center;
     margin-top: 5px;
     font-size: 16px;

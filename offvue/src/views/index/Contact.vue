@@ -5,10 +5,20 @@
             <img src="../../assets/images/eventimg.png" alt="">
             <div class="posit">   
                 <p class="posit-p1">联系我们</p>
-                <p class="posit-p2">Tile标题:联系我们</p>
             </div>
         </div>
-         <h1>内容</h1>
+        <div class="Contact-box-content">
+            <div class="title">联<p>系我</p>们</div>
+            <div class="data">
+                <div class="left"><img src="../../assets/images/map.png" alt=""> </div>
+                <div class="right">
+                    <p>服务热线:15738505738</p>
+                    <p>商务合作：xingyouxin2020@163.com</p>
+                    <p>工作时间：周一至周五、上午9点至下午5点半</p>
+                    <p>公司地点：河南省郑州市中原区华强云瓴中心 4008、4009室</p>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -21,18 +31,18 @@ export default {
 }
 </script>
 <style scoped>
+    .Contact-box{
+        position: relative;
+        width: 100%;
+        height: 686px;
+        /* font-family: PingFang SC-Medium, PingFang SC; */
+    }
     .Contact-box img{
         width: 100%;
         height: 100%;
     }
     .Contact-box p{
         margin: 0 !important;
-    }
-    .Contact-box{
-        position: relative;
-        width: 100%;
-        height: 686px;
-        /* font-family: PingFang SC-Medium, PingFang SC; */
     }
     .Contact-box .posit{
         position: absolute;
@@ -49,11 +59,47 @@ export default {
         align-items:center;
         font-size: 64px;
         font-weight: bold;
-        color: #FFFFFF;
-        color: #333333;
-        
+        color: #FF7A00;
     }
     .Contact-box .posit .posit-p2{
         font-size: 36px;
+    }
+    .Contact-box-content{
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 1024px;
+    }
+    .Contact-box-content .title{
+        width: 100%;
+        font-size: 30px;
+        justify-content: center;
+        display: flex;
+        font-weight: 400;
+        color: #333333;
+    }
+    .Contact-box-content .title p{
+        margin: 0;
+        border-bottom:5px solid #EA862A;
+    }
+    .Contact-box-content .data{
+        display: flex;
+        width: 1024px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    .Contact-box-content .data .left{
+        width: 598px;
+        height: 342px;
+    }
+    .Contact-box-content .data .left img{
+        width: 100%;
+    }
+    .Contact-box-content .data .right{
+        margin-left: 62px;
+        padding: 100px 0;
+        width: 360px;
+        font-size: 18px;
+        font-weight: 400;
+        color: #333333;
     }
 </style>
