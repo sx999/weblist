@@ -30,30 +30,30 @@ const routes = [
   // },
   {
     path:'/',
-    name:'Index',
+    // name:'Index',
     component:Index,
     children:[
       {path:"home",component:Home},
       {path:"",redirect:"home"},    //没有输入值时 重定向到home 页面
       {path:"about",component:About,children:[
         {path:"",redirect:"aboutdetail"},
-        {path:"aboutdata",name:"AboutData",component:AboutData},
-        {path:"aboutdetail",name:"AboutDetail",component:AboutDetail}
+        {path:"aboutdata",component:AboutData},
+        {path:"aboutdetail",component:AboutDetail}
       ]},
       {path:"events",component:Events,children:[
         {path:"",redirect:"eventsclass"},
-        {path:"eventsclass",name:"EventsClass",component:EventsClass},
-        {path:"eventsdetail",name:"EventsDetail",component:EventsDetail}
+        {path:"eventsclass",component:EventsClass},
+        {path:"eventsdetail",component:EventsDetail}
       ]},
       {path:"activity",component:Activity,children:[
         {path:"",redirect:"activityclass"},
-        {path:"activityclass",name:"ActivityClass",component:ActivityClass},
-        {path:"activitydetail",name:"ActivityDetail",component:ActivityDetail}
+        {path:"activityclass",component:ActivityClass},
+        {path:"activitydetail",component:ActivityDetail}
       ]},
       {path:"journalism",component:Journalism,children:[
         {path:"",redirect:"journalismclass"},
-        {path:"journalismclass",name:"JournalismClass",component:JournalismClass},
-        {path:"journalismdetail",name:"JournalismDetail",component:JournalismDetail}
+        {path:"journalismclass",component:JournalismClass},
+        {path:"journalismdetail",component:JournalismDetail}
       ]},
       {path:"expertadvisor",component:ExpertAdvisor},
       {path:"contact",component:Contact},
@@ -69,7 +69,7 @@ const routes = [
   // },
   {
     path: '/about',
-    name: 'About',
+    // name: 'About',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

@@ -167,12 +167,13 @@
             flex-wrap: wrap;
         }
         .content-c .content-c-1 .content-c-1-div2 .fordiv{
-            padding: 26px 23px;
+            padding: 26px 14px;
             display: flex;
             justify-content: space-between;
-            width: 296px;
+            /* width: 296px; */
             height: 177px;
             background: #FFFFFF;
+            border-radius: 5px;
             box-shadow: 0px 4px 4px 1px rgba(243, 243, 243, 0.25);
             cursor: pointer;
         }
@@ -181,7 +182,7 @@
             height: 100px;
             position:relative;
             margin-top: 14px;
-            margin-right: 16px;
+            margin-right: 18px;
         }
         .across{
             width: 100%;
@@ -226,11 +227,9 @@
             color: #EA862A ;
         }
         .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-a{
-            width: 100%;
+            width: 190px;
             display: flex;
             flex-direction: column;
-            
-           
             justify-content: space-between;
         }
         .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-a p{
@@ -239,7 +238,9 @@
           
         }
         .content-c .content-c-1 .content-c-1-div2 .fordiv .fordiv-a .p1{
-         
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
             font-size: 20px;
             font-weight: bold;
             color: #000000; 
@@ -292,6 +293,7 @@
             height: 150px;
             background-color: #FFFFFF;
             padding: 30px 0;
+            border-radius: 5px;
         }
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1:nth-child(2){
             margin: 20px 0;
@@ -328,15 +330,15 @@
         }
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1 .three1 .p1{
             font-size: 20px;
-            
             font-weight: bold;
             color: #333333;
-           
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
         }
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1 .three1 .p2{
             width: 176px;
             font-size: 16px;
-           
             font-weight: 500;
             color: #777777;
             word-wrap:break-word;

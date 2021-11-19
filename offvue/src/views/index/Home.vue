@@ -13,6 +13,7 @@
 import Banner from '@/components/HomeBanner.vue'
 import Center from '@/components/HomeCenter.vue'
 export default {
+    // name:'Home',
     data(){
         return{
            

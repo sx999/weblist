@@ -49,11 +49,11 @@
 </template>
 <script>
 export default {
+    // name:'Recruitment',
     data(){
         return{
             BannerData:[],
             ListData:[],
-         
             i:"",
             from:{
                 createTime:"",

@@ -3,10 +3,10 @@
            <!-- 头部轮播 -->
         <div class="About-box">
             <img :src="this.BannerData.rotationUrl" alt="00">
-            <!-- <div class="posit">   
-                <p class="posit-p1">行由心教育</p>
-                <p class="posit-p2">非学科教育领跑者</p>
-            </div> -->
+            <div class="posit">   
+                <!-- <p class="posit-p1">{{this.BannerData.rotationName}}</p> -->
+                <!-- <p class="posit-p2">非学科教育领跑者</p> -->
+            </div>
         </div>
 
          <router-view/>
@@ -14,6 +14,7 @@
 </template>
 <script>
     export default {
+    // name:'About',
     data(){
       return{
         BannerData:[]

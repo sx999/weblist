@@ -20,10 +20,10 @@
             <hr>
             <div class="text" v-html="this.list.competitionSynopsis"></div>
             <div class="bottom">
-              <div class="bottom-img">
+              <!-- <div class="bottom-img">
                   <img :src="this.list.competitionPic" alt="">
               </div>
-              <p>扫码参加赛事</p>
+              <p>扫码参加赛事</p> -->
             </div>
             <div class="bottom-text">
               <p>已加载全部内容</p>

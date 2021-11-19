@@ -257,7 +257,7 @@ export default({
         position: fixed;
         top: 0;
         z-index: 99;
-        border-bottom:1px solid rgba(200, 200, 200, 0.3);
+        border-bottom:1px solid rgba(248, 188, 23, 0.3);
         /* background-color: rgba(0, 0, 0, 0.7) !important; */
     }
     .is_back{

@@ -4,17 +4,18 @@
         <div class="Activity-box">
             <img :src="this.BannerData.rotationUrl" alt="研学活动">
             <div class="posit">   
-                <p class="posit-p1">研学活动</p>
-                <p class="posit-p2">{{this.BannerData.rotationName}}</p>
+                <!-- <p class="posit-p2">研学活动</p> -->
+                <p class="posit-p1">{{this.BannerData.rotationName}}</p>
             </div>
             
         </div>
-        
-         <router-view/>
+
+　　       <router-view ></router-view>
     </div>
 </template>
 <script>
 export default {
+    // name:'Activity',
     data(){
         return{
             BannerData:[]
@@ -69,7 +70,6 @@ export default {
         font-weight: bold;
         color: #FFFFFF;
         color: #333333;
-        
     }
     .Activity-box .posit .posit-p2{
         font-size: 36px;

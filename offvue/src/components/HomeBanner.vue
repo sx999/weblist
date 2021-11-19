@@ -38,7 +38,7 @@ export default {
         if(h<992){
             this.bannerHeight=260
         }else if(w >=992){
-            this.bannerHeight = 580
+            this.bannerHeight = 680
         }
     },
     computed:{

@@ -4,8 +4,8 @@
         <div class="Events-box">
             <img :src="this.BannerData.rotationUrl" alt="热门赛事">
             <div class="posit">   
-                <p class="posit-p1">热门赛事</p>
-                <p class="posit-p2">{{this.BannerData.rotationName}}</p>
+                <!-- <p class="posit-p2">热门赛事</p> -->
+                <p class="posit-p1">{{this.BannerData.rotationName}}</p>
             </div>
         </div>
          <router-view/>
@@ -13,6 +13,7 @@
 </template>
 <script>
 export default {
+    // name:'Events',
     data(){
         return{
             BannerData:[]
@@ -69,5 +70,8 @@ export default {
     }
     .Events-box .posit .posit-p2{
         font-size: 36px;
+    }
+    .ql-align-center{
+        text-align: center;
     }
 </style>
