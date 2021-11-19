@@ -27,9 +27,9 @@
                         <li><router-link to="/activity">研学活动</router-link></li> 
                     </ul>
                     <ul>
-                        <li class="orange">15738505738</li>
-                        <li>邮箱：xingyouxin2020@163.com</li>
-                        <li>地址：河南省郑州市华强云瓴中心4008室</li>
+                        <li class="orange pitch">15738505738</li>
+                        <li class="pitch">邮箱：xingyouxin2020@163.com</li>
+                        <li class="pitch">地址：河南省郑州市华强云瓴中心4008室</li>
                     </ul>
                 </div>
             </div>
@@ -120,6 +120,39 @@
     }
     #bottom a:hover{
         color: #EA862A;
+    }
+    #bottom a::selection {
+        background: #f88;
+        text-shadow: none;
+        color: #fff;
+        outline: 0;
+    }
+    #bottom a::-moz-selection {
+        background: #f88;
+        text-shadow: none;
+        color: #fff;
+        outline: 0;
+    }
+    #bottom a::-webkit-selection {
+        background: #f88;
+        text-shadow: none;
+        color: #fff;
+        outline: 0;
+    }
+    .pitch::selection {
+        background: #f88;
+        text-shadow: none;
+        color: #fff;
+    }
+    .pitch::-moz-selection {
+        background: #f88;
+        text-shadow: none;
+        color: #fff;
+    }
+    .pitch::-webkit-selection {
+        background: #f88;
+        text-shadow: none;
+        color: #fff;
     }
     @import '../assets/css/homeBottom.css';
 </style>

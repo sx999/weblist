@@ -148,6 +148,7 @@ export default({
             justify-content: space-between;
             align-items: center;
             width: 1024px;
+            height: 100%;
             margin:0 auto;
         }
         .logo-left-img{

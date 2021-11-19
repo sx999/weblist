@@ -39,7 +39,7 @@ export default {
     showMake(){
        setTimeout(() => {
           this.showblock = false
-        }, 1000);
+        }, 3000);
     }
     //  openFullScreen1() {
     //    const loading = this.$loading({
@@ -62,7 +62,8 @@ export default {
 		padding: 0;
 	}
   #app{
-      font-family:'ziti';
+      /* font-family:'ziti'; */
+      font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
      /* width:1920px; */
 		 background-color: #F8F8F8 !important;
      /* background-color: #F8F8F8 !important; */
