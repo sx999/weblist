@@ -31,9 +31,7 @@
         </el-header>
         <!-- h5 -->
         <!-- <header id="header-h5" class="hidden-lg">
-          
             <div class="logo-left-img-h5"> </div>
-           
             <div class="classButton" @click="isBarShow = !isBarShow"><i class="el-icon-s-operation"></i></div>
             
             <div  class="navbar-nav">

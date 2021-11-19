@@ -5,8 +5,6 @@
             <el-carousel-item v-for="(item,index) in BannerData" :key="index">
                 <div class="pic_item">
                      <img class="small" :src="item.rotationUrl" alt="">
-                <!-- <img src="item.src:require('@/assets/images/img1.png')," alt=""> -->
-                <!-- {{item.src}} -->
                     <div class="posit-element">
                         <p>行由心教育</p>
                         <p>{{item.rotationName}}</p>
@@ -30,10 +28,10 @@ export default {
         }
     },
     created(){
-      
+        this.Queryall()
     },
     mounted(){
-        this.Queryall()
+      
         var h= window.screen.height
         var w = window.screen.width
         console.log(h,w)

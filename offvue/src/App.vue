@@ -4,33 +4,25 @@
             <!-- <router-view/> -->
     <!-- </div> -->
     <div>
-
-       <router-view/>
+        <router-view/>
     </div>
-    <!-- 首屏动画 -->
-    <!-- <div class="spinner" v-if="showblock">
-      <div class="rect1"></div>
-      <div class="rect2"></div>
-      <div class="rect3"></div>
-      <div class="rect4"></div>
-      <div class="rect5"></div>
-    </div> -->
   </div>
 </template>
 <script>
 export default {
   data(){
     return{
-      // fullscreenLoading: false,
-      // showblock:true
+
     }
   },
   created(){
-     document.body.removeChild(document.getElementById('app1'))
+     
   },
   mounted(){
-    // this.openFullScreen1()
-    // this.showMake()
+    setTimeout(function(){
+      document.body.removeChild(document.getElementById('app1')) 
+      }, 3000);
+   
   },
   destroyed(){
     
@@ -39,23 +31,7 @@ export default {
     
   },
   methods:{
-    // showMake(){
-    //    setTimeout(() => {
-    //       this.showblock = false
-    //     }, 3000);
-    // }
-    //  openFullScreen1() {
-    //    const loading = this.$loading({
-    //       lock: true,
-    //       text: 'Loading',
-    //       customClass: 'create-isLoading',  // *这里设置他的class名称,这里最重要
-    //       spinner: 'el-icon-loading',
-    //       background: 'rgba(0, 0, 0,0.8)'
-    //     });
-    //     setTimeout(() => {
-    //       loading.close();
-    //     }, 4000);
-    //   },
+  
   }
 }
 </script>
@@ -69,7 +45,6 @@ export default {
       font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
      /* width:1920px; */
 		 background-color: #F8F8F8 !important;
-     /* background-color: #F8F8F8 !important; */
 	}
   a{
       color: #000000;
