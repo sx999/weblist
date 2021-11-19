@@ -68,11 +68,11 @@
     created(){ 
         var arr=[1,2,3,4,5,6,7,8];
 			var newArr = [];
-			console.log(arr);
+			// //console.log(arr);
 			for(var i=arr.length-1;i>=0;i--){
 				newArr.push(arr[i]);
 			}
-			console.log(newArr)
+			// console.log(newArr)
     },
     mounted(){
         this.Queryall()
@@ -92,7 +92,7 @@
         Queryall(){
             this.axios.post(this.$api_router.events+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=0')
             .then(res=>{
-                console.log(res)
+                // console.log(res)
                 if(res.data.code == 200){
                         this.listData =  res.data.data.page.dataList
                         this.maxdata = res.data.data.page.totalRecord
@@ -111,13 +111,13 @@
             }
            
             this.loading = true
-            console.log(this.listData)
+            // console.log(this.listData)
             if(this.maxdata == this.listData.length){
                 this.show = false
             }else{
                  this.axios.post(this.$api_router.events+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=0')
                 .then(res=>{
-                    console.log(res)
+                    // console.log(res)
                     if(res.data.code == 200){
                         var list1 =  res.data.data.page.dataList
                         this.listData.push(...list1)
@@ -137,7 +137,7 @@
             this.page = 1
             this.axios.post(this.$api_router.events+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=0')
                 .then(res=>{
-                    console.log(res)
+                    // console.log(res)
                     if(res.data.code == 200){
                         this.listData = res.data.data.page.dataList
                         this.maxdata = res.data.data.page.totalRecord

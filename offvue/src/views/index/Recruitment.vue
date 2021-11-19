@@ -84,7 +84,7 @@ export default {
         Queryall(){
             this.axios.post(this.$api_router.banner+'list?currentPage=1&limit=1&sort=7')
             .then(res=>{
-                console.log(res)
+                //console.log(res)
                 if(res.data.code == 200){
                         this.BannerData =  res.data.data.page.dataList[0]
                 }else{
@@ -95,7 +95,7 @@ export default {
         QueryallData(){
                 this.axios.post(this.$api_router.invite+'findAll')
                 .then(res=>{
-                    console.log(res)
+                    ////console.log(res)
                     if(res.data.code == 200){
                             this.ListData =  res.data.data
                             this.Dateformatting()
@@ -117,7 +117,7 @@ export default {
             }).then(()=>{
                 this.axios.post(this.$api_router.recruitment+'saveOne',this.from)
                 .then(res=>{
-                    console.log(res)
+                    //console.log(res)
                     if(res.data.code == 200){
                         this.$message({
                             message: '成功',

@@ -21,7 +21,7 @@ import './assets/css/font.css';
 
 //全局css
 import './assets/bootstrap-3.4.1-dist/css/bootstrap.min.css'
-import 'lib-flexible'
+// import 'lib-flexible'
 // fade/zoom 等
 import 'element-ui/lib/theme-chalk/base.css';
 // collapse 展开折叠

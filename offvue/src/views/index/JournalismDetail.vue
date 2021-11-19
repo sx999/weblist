@@ -26,7 +26,7 @@ export default {
     created(){
         let id=this.$route.query.id;
         this.id = id
-        console.log(id)
+        //console.log(id)
     },
     mounted(){
         this.Queryall()
@@ -35,7 +35,7 @@ export default {
         Queryall(){
             this.axios.post(this.$api_router.tradeNews+'findAllId?id='+this.id)
             .then(res=>{
-                console.log(res)
+                //console.log(res)
                 this.list = res.data.data
                 this.list.updateTime = this.moment(this.list.updateTime).format("YYYY年MM月DD日")
                 // this.Dateformatting()

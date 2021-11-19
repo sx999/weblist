@@ -82,7 +82,7 @@ export default {
         Queryall(){
             this.axios.post(this.$api_router.tradeNews+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6')
             .then(res=>{
-                console.log(res)
+                ////console.log(res)
                 if(res.data.code == 200){
 						this.listData =  res.data.data.page.dataList
                         this.maxdata = res.data.data.page.totalRecord
@@ -105,13 +105,13 @@ export default {
             }
            
             this.loading = true
-            console.log(this.listData)
+            //console.log(this.listData)
             if(this.maxdata == this.listData.length){
                 this.show = false
             }else{
                  this.axios.post(this.$api_router.tradeNews+'list?currentPage='+this.page+'&limit=6')
                 .then(res=>{
-                    console.log(res)
+                    //console.log(res)
                     if(res.data.code == 200){
                         var list1 =  res.data.data.page.dataList
                         this.listData.push(...list1)
@@ -127,7 +127,7 @@ export default {
             this.page = 1
             this.axios.post(this.$api_router.tradeNews+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6')
                 .then(res=>{
-                    console.log(res)
+                    //console.log(res)
                     if(res.data.code == 200){
                         // var list1 =  res.data.data.page.dataList
                         // this.listData.push(...list1)

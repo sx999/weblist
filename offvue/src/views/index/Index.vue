@@ -4,7 +4,7 @@
         <el-header id="header" class="hidden-xs" :class="{'is_fixed' : isFixed}">
             <div class="header-home">   
                  <div class="logo-left-img">
-                        <img  src="@/assets/images/logo.png" alt="">
+                        <img src="@/assets/images/logo.png" alt="Logo" @click="refresh()">
                  </div>
                 <el-menu 
                 :default-active="'/' +this.$route.path.split('/')[1]"
@@ -112,7 +112,7 @@ export default({
         handleScroll(e) {
             // 滚动操作监听
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-            // console.log(scrollTop)
+             //console.log(scrollTop)
             let offsetTop = 0
             try {
                 offsetTop = document.querySelector('.main').offsetTop
@@ -128,6 +128,9 @@ export default({
             } else {
                 this.isShowimg = false
             }
+        },
+        refresh(){
+            this.$router.push({path:'/'})
         }
   },
   destroyed(){
@@ -158,6 +161,7 @@ export default({
          .logo-left-img img{
              width: 100%;
              height: 100%;
+             cursor:pointer;
          }
         .el-menu.el-menu--horizontal{
             font-size: 16px !important;

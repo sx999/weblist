@@ -3,31 +3,34 @@
     <!-- <div v-loading.fullscreen.lock="fullscreenLoading"> -->
             <!-- <router-view/> -->
     <!-- </div> -->
-    <div v-if="!showblock">
+    <div>
 
        <router-view/>
     </div>
     <!-- 首屏动画 -->
-    <div class="spinner" v-if="showblock">
+    <!-- <div class="spinner" v-if="showblock">
       <div class="rect1"></div>
       <div class="rect2"></div>
       <div class="rect3"></div>
       <div class="rect4"></div>
       <div class="rect5"></div>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
 export default {
   data(){
     return{
-      fullscreenLoading: false,
-      showblock:true
+      // fullscreenLoading: false,
+      // showblock:true
     }
+  },
+  created(){
+     document.body.removeChild(document.getElementById('app1'))
   },
   mounted(){
     // this.openFullScreen1()
-    this.showMake()
+    // this.showMake()
   },
   destroyed(){
     
@@ -36,11 +39,11 @@ export default {
     
   },
   methods:{
-    showMake(){
-       setTimeout(() => {
-          this.showblock = false
-        }, 3000);
-    }
+    // showMake(){
+    //    setTimeout(() => {
+    //       this.showblock = false
+    //     }, 3000);
+    // }
     //  openFullScreen1() {
     //    const loading = this.$loading({
     //       lock: true,

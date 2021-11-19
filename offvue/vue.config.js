@@ -15,17 +15,22 @@ module.exports = {
     //         },
     //     }
     // },
-    css: {
-        loaderOptions: {
-            css: {},
-                postcss: {
-                    plugins: [
-                        require('postcss-px2rem')({
-                        remUnit: 192
-                    })
-                ]
-            }
-        }
-    },
+    // css: {
+    //     loaderOptions: {
+    //         css: {},
+    //             postcss: {
+    //                 plugins: [
+    //                     require('postcss-px2rem')({
+    //                     remUnit: 192
+    //                 })
+    //             ]
+    //         }
+    //     }
+    // },
+    // configureWebpack: (config)=>{
+    //     if(process.env.NODE_ENV === 'production'){
+    //       config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
+    //     }
+    //   }
    }
    

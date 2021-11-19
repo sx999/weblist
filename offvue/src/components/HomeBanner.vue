@@ -50,7 +50,7 @@ export default {
         Queryall(){
             this.axios.post(this.$api_router.banner+'list?currentPage=1&limit=3&sort=1')
             .then(res=>{
-                console.log(res)
+                // console.log(res)
                 if(res.data.code == 200){
                         this.BannerData =  res.data.data.page.dataList
                 }else{

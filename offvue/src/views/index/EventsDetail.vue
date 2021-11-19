@@ -7,10 +7,10 @@
                     <span>主办方:</span>
                     <span class="red">行由心教育</span>
                 </div>
-                <div class="date">
+                <!-- <div class="date">
                     <span>地点:</span>
                     <span class="red">郑州市航海西路小学</span>
-                </div>
+                </div> -->
                 <div class="date">
                     <span>时间:</span>  
                     <span>{{this.list.updateTime}}</span>  
@@ -41,7 +41,7 @@
         created(){
             let id=this.$route.query.id;
             this.id = id
-            console.log("接收参数:",id)
+            // console.log("接收参数:",id)
         },
         mounted(){
             this.Queryall()
@@ -50,7 +50,7 @@
             Queryall(){
                 this.axios.post(this.$api_router.events+'findAllId?id='+this.id)
                 .then(res=>{
-                    console.log(res)
+                    // console.log(res)
                     this.list = res.data.data
                     this.list.updateTime = this.moment(this.list.updateTime).format("YYYY年MM月DD日")
                     // this.Dateformatting()

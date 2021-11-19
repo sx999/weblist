@@ -43,7 +43,7 @@
     created(){
         let id=this.$route.query.id;
         this.id = id
-        console.log("接收参数:",id)
+        //console.log("接收参数:",id)
     },
     mounted(){
         this.Queryall()
@@ -52,7 +52,7 @@
         Queryall(){
             this.axios.post(this.$api_router.events+'findAllId?id='+this.id)
             .then(res=>{
-                console.log(res)
+                //console.log(res)
                 this.list = res.data.data
                 this.list.updateTime = this.moment(this.list.updateTime).format("YYYY年MM月DD日")
                 // this.Dateformatting()
