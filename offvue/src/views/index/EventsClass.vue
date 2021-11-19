@@ -31,8 +31,8 @@
                                 <div class="list-b-c">
                                     <p class="p1">{{item.competitionName}}</p>
                                     <p class="p2" v-html="item.competitionSynopsis"></p>
-                                    <p class="p3 stateback">正在进行</p>
-                                    <p class="p3 stateback-h">已结束</p>
+                                    <p class="p3 stateback" v-if="item.classify==0">正在进行</p>
+                                    <p class="p3 stateback-h" v-if="item.classify==1">已结束</p>
                                 </div>
                                 <div class="list-b-r" @click="GoDetail(item.id)">
                                     <p>阅读更多</p>
@@ -93,7 +93,7 @@
         Queryall(){
             this.axios.post(this.$api_router.events+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=0')
             .then(res=>{
-                // console.log(res)
+                console.log(res)
                 if(res.data.code == 200){
                         this.listData =  res.data.data.page.dataList
                         this.maxdata = res.data.data.page.totalRecord
