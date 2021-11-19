@@ -19,7 +19,7 @@
                         <p>更新时间:{{item.updateTime}}</p>
                     </div>
                     <div class="t-r">
-                        <div class="look" @click="isBarShow(index)">查看详情</div>
+                        <div class="look" :class="index ==i ?'activebook' :''" @click="isBarShow(index)">查看详情</div>
                     </div>
                 </div>
                 <el-collapse-transition >
@@ -33,9 +33,9 @@
         <div class="Recruitment-box-content2">
             <div class="title">加<p>入我</p>们</div>
             <div class="formInput">
-                <input type="text" v-model="from.name" placeholder="您的姓名">
-                <input type="text" v-model="from.phone" placeholder="联系电话"> 
-                <input type="text" v-model="from.email" placeholder="电子邮箱">
+                <input type="text" v-model="from.name" @blur="nameBlur()" placeholder="您的姓名">
+                <input type="number" v-model="from.phone" @blur="phoneBlur()" placeholder="联系电话"> 
+                <input type="text" v-model="from.email" @blur="emailBlur()" placeholder="电子邮箱">
             </div>
             <div class="formInput">
                 <textarea class="textarea" type="textarea" v-model="from.personal" placeholder="请留下您的个人介绍:....."></textarea>
@@ -110,7 +110,8 @@ export default {
                 }
         },
         Submit(){
-            this.$confirm("确定发送, 是否继续?", "提示", {
+            if(this.from.name != "" && this.from.phone != "" &&this.from.email != ""){
+                this.$confirm("确定发送, 是否继续?", "提示", {
                 confirmButtonText: "确定",
                 cancelButtonText: "取消",
                 type: "warning",
@@ -135,10 +136,49 @@ export default {
                     }
                 })
             })
+            }else{
+                alert("出错了！");
+            }
+            
         },
         isBarShow(index){
             this.i = index
-        }
+        },
+        nameBlur(){
+            var reg = /^[\u4e00-\u9fa5]{2,9}$/;
+            // console.log(this.from.name)
+            if(this.from.name == ""){
+                alert("请输入姓名！");
+            }else{
+                 if(!reg.test(this.from.name)){
+                    alert("姓名格式错误！");
+                }
+            }
+           
+        },
+        phoneBlur(){
+            var reg = /^[1][3,4,5,7,8][0-9]{9}$/; 
+            // console.log(this.from.phone)
+            if(this.from.phone == ""){
+                 alert("请输入手机号！");
+            }else{
+                 if(!reg.test(this.from.phone)){
+                 alert("手机号格式错误！");
+                }
+            }
+           
+        },
+        emailBlur(){
+            var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+            // console.log(this.from.email)
+            if(this.from.email == ""){
+                 alert("请输入邮箱！");
+            }else{
+                 if(!reg.test(this.from.email)){
+                    alert("邮箱格式错误！");
+                }
+            }
+        },
     }
 }
 </script>

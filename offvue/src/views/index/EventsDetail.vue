@@ -65,13 +65,14 @@
   .box{
       width: 1000px;
       margin: 0 auto;
-      font-family: PingFang SC-Medium, PingFang SC;
+      margin-top: 80px;
+      /* font-family: PingFang SC-Medium, PingFang SC; */
   }
   .box .title{
       margin-bottom: 10px;
       width: 100%;
       white-space:wrap;
-      font-size: 40px;
+      font-size: 36px;
       font-weight: 500;
       color: #333333;
   }
@@ -81,7 +82,7 @@
   .box .date{
       display: flex;
       flex-direction: column;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 500;
       color: #777777;
   }

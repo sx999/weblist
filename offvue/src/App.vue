@@ -24,7 +24,7 @@ export default {
   mounted(){
     setTimeout(function(){
       document.body.removeChild(document.getElementById('app1')) 
-      }, 10000);
+      }, 1000);
    
   },
   destroyed(){

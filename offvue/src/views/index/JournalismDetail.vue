@@ -7,10 +7,9 @@
             <div class="text">
                 <p v-html="this.list.consultSynopsis"></p>
             </div>
-            <div class="image">   
-                <!-- <img src="../../assets/images/unsplash_YRMWVcdymI.png" alt=""> -->
+            <!-- <div class="image">   
                 <img :src="this.list.consultPic" alt="">
-            </div>
+            </div> -->
         </div>
         
     </div>
@@ -49,18 +48,19 @@ export default {
     .box{
         width: 1000px;
         margin: 0 auto;
+        margin-top: 70px;
         /* font-family: PingFang SC-Medium, PingFang SC; */
     }
     .box .title{
         margin-bottom: 10px;
         width: 100%;
         white-space:wrap;
-        font-size: 40px;
+        font-size: 32px;
         font-weight: 500;
         color: #333333;
     }
     .box .date{
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 500;
         color: #777777;
     }
@@ -77,14 +77,19 @@ export default {
     }
  
     .box .text{
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 500;
         color: #5B5B5B;
+        text-align: center;
     }
-    .box .image{
+    .box .text p .ql-align-center{
+        display: flex !important;
+        justify-content: center !important;
+    }
+    /* .box .image{
         width: 100%;
         margin-top: 50px;
-    }
+    } */
     /* .box .image img{
         width: 100%;
        

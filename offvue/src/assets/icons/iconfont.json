@@ -41,6 +41,13 @@
       "unicode_decimal": 59317
     },
     {
+      "icon_id": "15429890",
+      "name": "活动管理 marketing/turntable/activityManage",
+      "font_class": "marketingturntableactivityManage",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
       "icon_id": "22232290",
       "name": "学校",
       "font_class": "xuexiao",

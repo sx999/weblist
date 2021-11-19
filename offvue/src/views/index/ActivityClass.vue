@@ -27,12 +27,13 @@
                                 <div class="list-b-l">
                                     <div class="across"></div>
                                     <div class="vertical"></div>
-                                    <div class="list-b-l-date">{{item.updateTime}}</div>
+                                    <div class="list-b-l-date"><span class="iconfont icon-gistuceng"></span></div>
                                 </div>
                                 <div class="list-b-c">
                                     <p class="p1">{{item.competitionName}}</p>
                                     <p class="p2" v-html="item.competitionSynopsis"></p>
-                                    <p class="p3">活动</p>
+                                    <p class="p3 stateback">正在进行</p>
+                                    <p class="p3 stateback-h">已结束</p>
                                 </div>
                                 <div class="list-b-r" @click="GoDetail(item.id)">
                                     <p>阅读更多</p>

@@ -4,7 +4,7 @@
         <div class="Contact-box">
             <img :src="this.BannerData.rotationUrl" alt="联系我们">
             <div class="posit">   
-                <!-- <p class="posit-p1">联系我们</p> -->
+                <p class="posit-p1">联系我们</p>
             </div>
         </div>
         <div class="Contact-box-content">
@@ -76,7 +76,8 @@ export default {
         align-items:center;
         font-size: 64px;
         font-weight: bold;
-        color: #FF7A00;
+        /* color: #FF7A00; */
+        color: #333333;
     }
     .Contact-box .posit .posit-p2{
         font-size: 36px;

@@ -8,12 +8,12 @@
                 <div class="data">
                     <div class="data-header">
                         <div class="data-header-l">
-                            <span  class="active">赛事</span>
+                            
                             <!-- <span class='active' @click="Block"></span> -->
                         </div>
                         <div class="data-header-r">
                             <img src="../../assets/images/search.png" alt="无法显示" @click="Search()"> 
-                            <input type="text" placeholder="关键词"  >
+                            <input type="text" v-model="keyword" placeholder="关键词"  >
                         </div>
                     </div>
                     <!-- 赛事内容 start-->
@@ -26,12 +26,13 @@
                                 <div class="list-b-l">
                                     <div class="across"></div>
                                     <div class="vertical"></div>
-                                    <div class="list-b-l-date">{{item.updateTime}}</div>
+                                    <div class="list-b-l-date"><span class="iconfont icon-marketingturntableactivityManage"></span></div>
                                 </div>
                                 <div class="list-b-c">
                                     <p class="p1">{{item.competitionName}}</p>
                                     <p class="p2" v-html="item.competitionSynopsis"></p>
-                                    <p class="p3">赛事</p>
+                                    <p class="p3 stateback">正在进行</p>
+                                    <p class="p3 stateback-h">已结束</p>
                                 </div>
                                 <div class="list-b-r" @click="GoDetail(item.id)">
                                     <p>阅读更多</p>
@@ -137,7 +138,7 @@
             this.page = 1
             this.axios.post(this.$api_router.events+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=0')
                 .then(res=>{
-                    // console.log(res)
+                    console.log(res)
                     if(res.data.code == 200){
                         this.listData = res.data.data.page.dataList
                         this.maxdata = res.data.data.page.totalRecord
@@ -159,5 +160,6 @@
 </script>
 
 <style>
+    
     @import '../../assets/css/EventsStyle.css';
 </style>

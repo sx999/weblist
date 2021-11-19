@@ -286,13 +286,13 @@ export default({
         bottom: 80px;
         right:100px;
         background-color:#ffffff;
-        box-shadow: 8px 8px 3px rgba(200, 200, 200, 0.3);
+        box-shadow: 0px 0px 8px rgba(138, 134, 134, 0.3);
     }
     .scollTop img{
         width: 30px;
         height: 30px; 
     }
     .scollTop:hover{
-        background-color:rgba(230, 230, 230, 0.3);
+        background-color:rgba(211, 207, 207, 0.5);
     }
 </style>

@@ -99,10 +99,9 @@
     background-color: #FFFFFF;
 }
 .data-list .list-b .list-b-l{
-    width: 90px;
+    width: 80px;
     height: 100%;
     position:relative;
-    
 }
 .across{
     width: 100%;
@@ -136,6 +135,10 @@
     font-weight: bold;
     color: #333333;
 }
+.list-b-l-date span{
+    color: #5f5d5d;
+    font-size: 30px;
+}
 .data-list .list-b .list-b-c{
     padding-left: 10px;
     width: 264px;
@@ -162,7 +165,7 @@
     /* margin: 0; */
 }
 .data-list .list-b .list-b-c .p3{
-    width: 46px;
+    /* width: 46px; */
     height: 20px;
     border-radius: 0px 10px 0px 10px;
     text-align: center;
@@ -170,8 +173,17 @@
     font-size: 12px;
     font-weight: 400;
     color: #333333;
-    background-color: #F2C723;
+    /* background-color: #F2C723; */
     margin: 0;
+}
+.stateback{
+    width: 66px;
+    color: #fff;
+    background-color: #F2C723;
+}
+.stateback-h{
+    width: 46px;
+    background-color: #ccc;;
 }
 .data-list .list-b .list-b-c .bor-r{
     color: #ffffff;
