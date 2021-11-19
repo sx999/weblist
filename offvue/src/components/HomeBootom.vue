@@ -15,16 +15,16 @@
                 </div>
                 <div class="bottom-l-b">
                     <ul>
-                        <li>公司简介</li>
-                        <li>联系我们</li>
-                        <li>招贤纳士</li>
+                        <li><router-link to="/about"> 公司简介</router-link></li>
+                        <li><router-link to="/contact">联系我们</router-link></li>
+                        <li><router-link to="/recruitment">招贤纳士</router-link></li>
                     </ul>
                     <ul>
-                        <li>最新新闻</li>
+                        <li><router-link to="/journalism">最新新闻</router-link></li>
                     </ul>
                     <ul>
-                        <li>热门赛事</li>
-                        <li>研学活动</li>
+                        <li><router-link to="/events">热门赛事</router-link></li>
+                        <li><router-link to="/activity">研学活动</router-link></li> 
                     </ul>
                     <ul>
                         <li class="orange">15738505738</li>
@@ -114,5 +114,12 @@
     }
 </script>
 <style scoped>
+    #bottom a{
+         color: #555555;
+         text-decoration: none;
+    }
+    #bottom a:hover{
+        color: #EA862A;
+    }
     @import '../assets/css/homeBottom.css';
 </style>

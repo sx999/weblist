@@ -1,44 +1,48 @@
 <template>
     <!-- 内容start -->
     <div class="content">
-        <div class="content-a">   
-            <div class="content-a-1">
-               <div>公<p>司使</p>命</div> 
-            </div>
-            <div class="content-a-2">
-                <div class="div1">
-                    <div class="div1-1">
-                        <span class="iconfont icon-xuexiao"></span>
+        <div class="content-a">
+            <div class="mar0h102">   
+                <div class="content-a-1">
+                    <div>公<p>司使</p>命</div> 
+                </div>
+                <div class="content-a-2">
+                    <div class="div1">
+                        <div class="div1-1">
+                            <span class="iconfont icon-xuexiao"></span>
+                        </div>
+                        <div class="div2">
+                            <p>安全</p>
+                            <p>让学校变的安全</p>
+                        </div>
+                 </div>
+                    <div class="div1">  
+                        <div class="div1-1"> 
+                            <span class="iconfont icon-zhuanjiaketang-jihuo" ></span>
+                        </div>
+                        <div class="div2">
+                            <p>便捷</p>
+                            <p>让学习变的简单</p>
+                        </div>
                     </div>
-                    <div class="div2">
-                        <p>安全</p>
-                        <p>让学校变的安全</p>
+                    <div class="div1"  >
+                        <div class="div1-1">
+                            <span class="iconfont icon-kongzhongketangnormal"></span>
+                        </div>
+                        <div class="div2">
+                            <p>技术</p>
+                            <p>让教育不受限制</p>
+                        </div>
                     </div>
                 </div>
-                <div class="div1">  
-                    <div class="div1-1"> 
-                        <span class="iconfont icon-zhuanjiaketang-jihuo" ></span>
-                    </div>
-                    <div class="div2">
-                        <p>便捷</p>
-                        <p>让学习变的简单</p>
-                    </div>
-                </div>
-                <div class="div1"  >
-                    <div class="div1-1">
-                        <span class="iconfont icon-kongzhongketangnormal"></span>
-                    </div>
-                    <div class="div2">
-                        <p>技术</p>
-                        <p>让教育不受限制</p>
-                    </div>
-                </div>
-            </div>
+            </div>  
+            
         </div>  
         <!-- <div class="content-b">
             <img src="@/assets/images/content.png" alt="">
         </div> -->
         <div class="content-c">
+            <div class="mar0h102">
             <div class="content-c-1">
                 <div class="title">热<p>门赛</p>事</div>
                 <div class="content-c-1-div">
@@ -102,19 +106,23 @@
                     </div>
                 </div>
             </div>
+            </div>
+            
         </div>
         <div class="content-d">
+            <img src="../assets/images/about-img.png" alt="">
             <!-- <img src="@/assets/images/mp4back.png" alt=""> -->
-            <div class="title">在线视频服务</div>
+            <!-- <div class="title">在线视频服务</div>
             <div class="video">
                 <video src="../assets/images/fuwu.mp4" ref="movie"></video>、
                 <i v-show="isplay" class="el-icon-video-play" @click="handlePlay()"></i>
                 <i v-show="!isplay" class="el-icon-video-pause" @click="handlePause()"></i>
-            </div>
+            </div> -->
             
         </div>
         <div class="content-e">
-            <!-- <div class="content-e-e">
+            <div class="mar0h102">
+                 <!-- <div class="content-e-e">
                 <div class="title">专<p>家顾</p>问</div>
                 <div class="threediv">
                     <div class="div" v-for="(item,index) in dataList3" :key="index">
@@ -143,7 +151,7 @@
                 <div class="threediv2">
                     <div class="divleft">
                         <img class="leftimg" src="@/assets/images/19.jpg" alt="">
-                        <div class="divleft-title">关注青少年健康00000000</div>
+                        <div class="divleft-title">关注青少年健康</div>
                     </div>
                     <div class="divright">
                         <div class="div1" v-for="(item,index) in  dataList4" :key="index" @click="GoTradeNews(item.id)">
@@ -201,22 +209,24 @@
                     </div>
                 </div>
             </div>
+            </div>
+           
         </div>
     </div>
     <!-- 内容end -->
 </template>
 <script>
-    import pic11 from '@/assets/images/559.jpg'
-    import pic22 from '@/assets/images/560.jpg'
-    import pic33 from '@/assets/images/562.jpg'
+    // import pic11 from '@/assets/images/559.jpg'
+    // import pic22 from '@/assets/images/560.jpg'
+    // import pic33 from '@/assets/images/562.jpg'
     export default {
         data(){
             return{
-                imgs:[
-                    {src:pic11},
-                    {src:pic22},
-                    {src:pic33},
-                ],
+                // imgs:[
+                //     {src:pic11},
+                //     {src:pic22},
+                //     {src:pic33},
+                // ],
                 //项目
                 contentC1:[],
                 //赛事活动
@@ -227,15 +237,15 @@
                 contentE2:[],
                 //联系方式
                 contentE3:[],
-                loading:false,
-                isplay:true,
+                // loading:false,
+                // isplay:true,
             }
         },
         mounted(){
             this.Queryall()  //查询全部活动
             //音频控件获取ref
-            this.$refs.movie.addEventListener('play',this.handlePlay)
-            this.$refs.movie.addEventListener('pause',this.handlePause)
+            // this.$refs.movie.addEventListener('play',this.handlePlay)
+            // this.$refs.movie.addEventListener('pause',this.handlePause)
         },
         computed:{
              dataList1:function(){
@@ -327,16 +337,16 @@
             },
             // textHidden,
             //音频控件
-            handlePlay(){
-                console.log("播放")
-                this.$refs.movie.play()
-                this.isplay = false;
-            },
-            handlePause(){
-                 console.log("暂停")
-                this.$refs.movie.pause()
-                this.isplay = true;
-            }
+            // handlePlay(){
+            //     console.log("播放")
+            //     this.$refs.movie.play()
+            //     this.isplay = false;
+            // },
+            // handlePause(){
+            //      console.log("暂停")
+            //     this.$refs.movie.pause()
+            //     this.isplay = true;
+            // }
         }
     }
 </script>

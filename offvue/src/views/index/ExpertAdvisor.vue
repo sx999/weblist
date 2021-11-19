@@ -1,16 +1,16 @@
 <template>
     <div>
          <!-- 头部轮播 -->
-        <div class="ExpertAdvisort-box">
+        <!-- <div class="ExpertAdvisort-box">
             <img src="../../assets/images/expert.png" alt="">
             <div class="posit">   
                 <p class="posit-p1">专家顾问</p>
                 <p class="posit-p2">专业教育学家提供服务支持</p>
             </div>
             
-        </div>
+        </div> -->
         <!-- 内容 -->
-        <div class="ExpertAdvisor-content">
+        <!-- <div class="ExpertAdvisor-content">
             <div class="title">专<p>家团</p>队</div> 
             <div class="ExpertAdvisor-list">
                 <div class="list-l">
@@ -32,7 +32,7 @@
                     <div class="botm-h1"></div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
@@ -45,5 +45,5 @@ export default {
 }
 </script>
 <style scoped>
-     @import '../../assets/css/ExpertAdvisorStyle.css';
+     /* @import '../../assets/css/ExpertAdvisorStyle.css'; */
 </style>

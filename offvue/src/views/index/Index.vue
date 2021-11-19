@@ -2,37 +2,40 @@
     <el-container>
         <!-- pc -->
         <el-header id="header" class="hidden-xs" :class="{'is_fixed' : isFixed}">
-            <div class="logo-left-img">
-                <img  src="@/assets/images/logo.png" alt="">
+            <div class="header-home">   
+                 <div class="logo-left-img">
+                        <img  src="@/assets/images/logo.png" alt="">
+                 </div>
+                <el-menu 
+                :default-active="'/' +this.$route.path.split('/')[1]"
+                class="el-menu-demo navt"
+                :class="{'is_back' : isFixed}"
+                mode="horizontal" 
+                text-color="#333333"
+                active-text-color="#E8910D "
+                :router="true"
+                >
+                    <el-menu-item index="/home">首页</el-menu-item>
+                    <el-menu-item index="/about">公司概况</el-menu-item>
+                    <el-menu-item index="/journalism">行业新闻</el-menu-item>
+                    <el-menu-item index="/events">热门赛事</el-menu-item>
+                    <el-menu-item index="/activity">研学活动</el-menu-item>
+                    <el-menu-item index="/contact">联系我们</el-menu-item>
+                    <el-menu-item index="/recruitment">招贤纳士</el-menu-item>
+                    <!-- <el-menu-item index="/expertadvisor">专家顾问</el-menu-item> -->
+                    <!-- <el-menu-item index="/111">文创商城</el-menu-item> -->
+                    
+                </el-menu>
             </div>
-            <el-menu 
-            :default-active="'/' +this.$route.path.split('/')[1]"
-            class="el-menu-demo navt"
-            :class="{'is_back' : isFixed}"
-            mode="horizontal" 
-            text-color="#333333"
-            active-text-color="#E8910D "
-            :router="true"
-            >
-                <el-menu-item index="/home">首页</el-menu-item>
-                <el-menu-item index="/about">公司概况</el-menu-item>
-                <el-menu-item index="/journalism">行业新闻</el-menu-item>
-                <el-menu-item index="/events">热门赛事</el-menu-item>
-                <el-menu-item index="/activity">研学活动</el-menu-item>
-                <el-menu-item index="/contact">联系我们</el-menu-item>
-                <el-menu-item index="/recruitment">招贤纳士</el-menu-item>
-                <!-- <el-menu-item index="/expertadvisor">专家顾问</el-menu-item> -->
-                <!-- <el-menu-item index="/111">文创商城</el-menu-item> -->
-                
-            </el-menu>
+           
         </el-header>
         <!-- h5 -->
-        <header id="header-h5" class="hidden-lg">
-            <!-- logo -->
+        <!-- <header id="header-h5" class="hidden-lg">
+          
             <div class="logo-left-img-h5"> </div>
-            <!-- 按钮 -->
+           
             <div class="classButton" @click="isBarShow = !isBarShow"><i class="el-icon-s-operation"></i></div>
-            <!-- 展开/收起 -->
+            
             <div  class="navbar-nav">
             <el-collapse-transition>
                 <div v-show="isBarShow" >
@@ -47,7 +50,7 @@
                 </div>
             </el-collapse-transition>
             </div>
-        </header>
+        </header> -->
 
         <el-main id="conter">
            <router-view/>
@@ -134,20 +137,22 @@ export default({
 </script>
 
 <style scoped>
-    @media screen and  (max-width: 1920px){
+    /* @media screen and  (max-width: 1920px){ */
         #header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             width: 100%;
             background-color: #FFFFFF;
             height: 88px !important;
-            padding:0 455px 0 448px;
+        }
+        .header-home{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1024px;
+            margin:0 auto;
         }
         .logo-left-img{
             width: 175px;
             height: 72px;
-            /* background-color: rgb(255, 187, 0); */
         }
          .logo-left-img img{
              width: 100%;
@@ -169,16 +174,14 @@ export default({
             padding: 0;
         }
       
-    }
-    @media screen and (max-width: 767px){
+    /* } */
+    /* @media screen and (max-width: 767px){
         #header-h5{
             display: flex;
             justify-content: space-between;
-            /* align-items:center; */
             width: 100%;
             background-color: #FFFFFF;
             height: 1.6rem !important;
-            /* padding:0 24px; */
             position: relative;
         }
         .logo-left-img-h5{
@@ -246,7 +249,7 @@ export default({
         #header{
             padding: 0 300px;
         }
-    } 
+    }  */
     .is_fixed{
         position: fixed;
         top: 0;

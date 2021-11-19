@@ -80,11 +80,11 @@ export default {
         width: 100%;
         height:100%;
     } */
-    @media (max-width: 768px){
+    /* @media (max-width: 768px){
          .banner{
              height: 260px;
          }
-    }
+    } */
     /* @media (max-width: 1920px){ */
          .banner{
              height: 100%;
