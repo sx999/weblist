@@ -145,8 +145,9 @@
     line-height: 30px;
     font-size: 14px;
     font-weight: bold;
-    color: #333333;
+    color: #7C7C7C;
     border: 1px solid #DFDFDF;
+    border-radius: 5px;
 }
 .data-content .data-content-r .div2:hover{
     background-color: #EA862A ;  

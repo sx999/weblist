@@ -26,7 +26,7 @@
                                 <div class="list-b-l">
                                     <div class="across"></div>
                                     <div class="vertical"></div>
-                                    <div class="list-b-l-date"><span class="iconfont icon-marketingturntableactivityManage"></span></div>
+                                    <div class="list-b-l-date"><span class="iconfont icon-gistuceng"></span></div>
                                 </div>
                                 <div class="list-b-c">
                                     <p class="p1">{{item.competitionName}}</p>
@@ -164,6 +164,5 @@
 </script>
 
 <style>
-    
     @import '../../assets/css/EventsStyle.css';
 </style>

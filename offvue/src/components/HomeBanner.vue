@@ -7,7 +7,7 @@
                      <img class="small" :src="item.rotationUrl" alt="">
                     <div class="posit-element">
                         <p>行由心教育</p>
-                        <p>{{item.rotationName}}</p>
+                        <!-- <p>{{item.rotationName}}</p> -->
                         <div class="yello-d">
                             <span>了解更多</span> 
                             <!-- <span class="iconfont icon-tuxing"></span> -->
@@ -22,7 +22,7 @@
     
 </template>
 <script>
-import Transition from '@/components/Transition.vue'
+// import Transition from '@/components/Transition.vue'
 export default {
     data(){
         return{
@@ -32,7 +32,7 @@ export default {
         }
     },
     components:{
-        Transition,
+        // Transition,
     },
     created(){
         this.Queryall()
@@ -126,9 +126,10 @@ export default {
             bottom: 0;
             margin:auto;
             width: 448px;
-            height: 300px;
+            height: 200px;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             align-items: center;
             /* color: #FFFFFF; */
             /* color: #000; */

@@ -27,8 +27,8 @@
                         <li><router-link to="/activity">研学活动</router-link></li> 
                     </ul>
                     <ul>
-                        <li class="orange pitch">15738505738</li>
-                        <li class="pitch">邮箱：xingyouxin2020@163.com</li>
+                        <li class="orange pitch">联系方式：{{this.contentE3.phone}}</li>
+                        <li class="pitch">邮箱：{{this.contentE3.mailbox}}</li>
                         <li class="pitch">地址：河南省郑州市华强云瓴中心4008室</li>
                     </ul>
                 </div>
@@ -108,7 +108,30 @@
     export default {
         data(){
             return{
-                
+                contentE3:[]
+            }
+        },
+        mounted(){
+            this.Queryall()
+        },
+        computed:{
+        //       dataList5:function(){
+        //         return this.contentE3.slice(0,1)
+        //      }
+        },
+        methods:{
+             //开局查询
+            Queryall(){
+                this.axios.post(this.$api_router.contact+'findAll')
+                .then(res=>{
+                    console.log(res)
+                        if(res.data.code == 200){
+                                this.contentE3 =  res.data.data[0]
+                                // this.Dateformatting()
+                        }else{
+                            return false
+                        }
+                })
             }
         }
     }

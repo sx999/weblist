@@ -38,7 +38,7 @@
                 <input type="text" v-model="from.email" @blur="emailBlur()" placeholder="电子邮箱">
             </div>
             <div class="formInput">
-                <textarea class="textarea" type="textarea" v-model="from.personal" placeholder="请留下您的个人介绍:....."></textarea>
+                <textarea class="textarea" type="textarea" v-model="from.personal"  placeholder="请留下您的个人介绍:....."></textarea>
             </div>
             <div class="button">
                 <div @click="Submit()">发送</div> 
@@ -110,7 +110,7 @@ export default {
                 }
         },
         Submit(){
-            if(this.from.name != "" && this.from.phone != "" &&this.from.email != ""){
+            if(this.from.name != "" && this.from.phone != "" &&this.from.email != "" &&this.from.personal != ""){
                 this.$confirm("确定发送, 是否继续?", "提示", {
                 confirmButtonText: "确定",
                 cancelButtonText: "取消",
@@ -137,7 +137,10 @@ export default {
                 })
             })
             }else{
-                alert("出错了！");
+               this.$message({
+                    message: '内容填写不完整',
+                    type: 'warning'
+                });
             }
             
         },
@@ -147,36 +150,31 @@ export default {
         nameBlur(){
             var reg = /^[\u4e00-\u9fa5]{2,9}$/;
             // console.log(this.from.name)
-            if(this.from.name == ""){
-                alert("请输入姓名！");
+            if(!reg.test(this.from.name)){
+                alert("姓名格式错误！");
             }else{
-                 if(!reg.test(this.from.name)){
-                    alert("姓名格式错误！");
-                }
+                return true
             }
+          
            
         },
         phoneBlur(){
             var reg = /^[1][3,4,5,7,8][0-9]{9}$/; 
             // console.log(this.from.phone)
-            if(this.from.phone == ""){
-                 alert("请输入手机号！");
-            }else{
-                 if(!reg.test(this.from.phone)){
+            if(!reg.test(this.from.phone)){
                  alert("手机号格式错误！");
-                }
+            }else{
+                return true
             }
            
         },
         emailBlur(){
             var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
             // console.log(this.from.email)
-            if(this.from.email == ""){
-                 alert("请输入邮箱！");
-            }else{
-                 if(!reg.test(this.from.email)){
+            if(!reg.test(this.from.email)){
                     alert("邮箱格式错误！");
-                }
+            }else{
+                return true
             }
         },
     }

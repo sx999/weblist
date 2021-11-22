@@ -27,7 +27,7 @@
                                 <div class="list-b-l">
                                     <div class="across"></div>
                                     <div class="vertical"></div>
-                                    <div class="list-b-l-date"><span class="iconfont icon-gistuceng"></span></div>
+                                    <div class="list-b-l-date"><span class="iconfont icon-huodong"></span></div>
                                 </div>
                                 <div class="list-b-c">
                                     <p class="p1">{{item.competitionName}}</p>
@@ -68,12 +68,12 @@
       }
     },
     created(){ 
-        var arr=[1,2,3,4,5,6,7,8];
-			var newArr = [];
-			////console.log(arr);
-			for(var i=arr.length-1;i>=0;i--){
-				newArr.push(arr[i]);
-			}
+        // var arr=[1,2,3,4,5,6,7,8];
+		// 	var newArr = [];
+		// 	////console.log(arr);
+		// 	for(var i=arr.length-1;i>=0;i--){
+		// 		newArr.push(arr[i]);
+		// 	}
 			////console.log(newArr);S
     },
     mounted(){
@@ -95,7 +95,7 @@
         Queryall(){
             this.axios.post(this.$api_router.events+'list?competitionName='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=1')
             .then(res=>{
-                console.log(res)
+                // console.log(res)
                 if(res.data.code == 200){
                         this.listData =  res.data.data.page.dataList
                         this.maxdata = res.data.data.page.totalRecord
@@ -166,5 +166,14 @@
 </script>
 
 <style>
+    .stateback{
+        width: 66px;
+        color: #fff;
+        background-color: #EA862A;
+    }
+    .stateback-h{
+        width: 46px;
+        background-color: #ccc;;
+    }
     @import '../../assets/css/EventsStyle.css';
 </style>

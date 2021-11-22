@@ -72,22 +72,24 @@
                 </div>
             </div>
             <div class="content-c-2">
-                <div class="title">科<p>研活</p>动</div>
+                <div class="title">研<p>学活</p>动</div>
                 <div class="content-c-2-div">
                     <div class="content-c-2-div-left">
-                        <div class="div1" v-for="(item,index) in dataList2" :key="index">
+                        <div class="div1" v-for="(item,index) in dataList2" :key="index"  @click="GoEventsH(item.id)">
                             <div class="three">
                                 <div class="across"></div>
                                 <div class='vertical'></div>
-                                <div class="image"><span>{{item.updateTime}}</span></div>
+                                <div class="image"><span class="iconfont icon-huodong"></span></div>
                             </div>
                             <div class="three1">
                                 <p class="p1">{{item.competitionName}}</p>
                                 <p class="p2" v-html="item.competitionSynopsis"></p>
                                 <!-- <p class="p3" v-if="item.sort == 0">赛事</p> -->
-                                <p class="p3">活动</p>
+                                <!-- <p class="p3">活动</p> -->
+                                <p class="p3 stateback" v-if="item.classify==0">正在进行</p>
+                                <p class="p3 stateback-h" v-if="item.classify==1">已结束</p>
                             </div>
-                            <div class="three2" @click="GoEventsH(item.id)"><p>阅读更多</p><span class="iconfont icon-single_arrow"></span></div>
+                            <div class="three2"><p>阅读更多</p><span class="iconfont icon-single_arrow"></span></div>
                         </div>
                     </div>
                     <div class="content-c-2-div-right">
@@ -173,20 +175,20 @@
                         <div class="front">
                             <div><img src="@/assets/images/phone1.png" alt=""></div>
                             <div>联系电话</div>
-                            <div>15738505738</div>
+                            <div>{{this.contentE3.phone}}</div>
                         </div>
                         <!-- <div class="back" :style="{'background':'url('+imgs[0].src+')'}">
                             
                         </div> -->
                         <div class="back" style="background-color:#FFF">
-
+                            
                         </div>
                     </div>
                     <div class="div2">
                         <div class="front">
                             <div><img src="@/assets/images/email1.png" alt=""></div>
                             <div>邮件地址</div>
-                            <div>xingyouxin2020@163.com</div>
+                            <div>{{this.contentE3.mailbox}}</div>
                         </div>
                         <!-- <div class="back" :style="{'background':'url('+imgs[1].src+')'}">
 
@@ -262,7 +264,7 @@
                 return this.contentE2.slice(0,2)
              },
              dataList5:function(){
-                return this.contentE3.slice(0,3)
+                return this.contentE3.slice(0,1)
              }
         },
         methods:{
@@ -315,9 +317,10 @@
                 })
                 this.axios.post(this.$api_router.contact+'findAll')
                 .then(res=>{
+                    console.log(res)
                         if(res.data.code == 200){
-                                this.contentE3 =  res.data.data
-                                this.Dateformatting()
+                                this.contentE3 =  res.data.data[0]
+                                // this.Dateformatting()
                         }else{
                             return false
                         }

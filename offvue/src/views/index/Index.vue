@@ -128,7 +128,7 @@ export default({
             }
         },
         refresh(){
-            this.$router.push({path:'/'})
+            this.$router.go(0);
         }
   },
   destroyed(){

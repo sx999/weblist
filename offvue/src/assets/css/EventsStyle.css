@@ -118,9 +118,9 @@
     left:50%;
 }
 .list-b-l-date{
-    width: 50px;
-    height: 30px;
-    line-height: 30px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
     position: absolute;
     top: 0;
     left: 0;
@@ -130,14 +130,14 @@
     z-index: 98;
     text-align: center;
     background-color: #FFFFFF;
-    font-size: 16px;
+    /* font-size: 36px; */
     /* font-family: PingFang SC-Bold, PingFang SC; */
     font-weight: bold;
     color: #333333;
 }
 .list-b-l-date span{
     color: #5f5d5d;
-    font-size: 30px;
+    font-size: 34px;
 }
 .data-list .list-b .list-b-c{
     padding-left: 10px;
@@ -172,14 +172,14 @@
     line-height: 20px;
     font-size: 12px;
     font-weight: 400;
-    color: #333333;
+    color: #ffffff;
     /* background-color: #F2C723; */
     margin: 0;
 }
 .stateback{
     width: 66px;
     color: #fff;
-    background-color: #F2C723;
+    background-color: #EA862A;
 }
 .stateback-h{
     width: 46px;

@@ -12,7 +12,7 @@
             <div class="data">
                 <div class="left"><img src="../../assets/images/map.png" alt=""> </div>
                 <div class="right">
-                    <p>服务热线:15738505738</p>
+                    <p>服务热线：15738505738</p>
                     <p>商务合作：xingyouxin2020@163.com</p>
                     <p>工作时间：周一至周五、上午9点至下午5点半</p>
                     <p>公司地点：河南省郑州市中原区华强云瓴中心 4008、4009室</p>
@@ -115,7 +115,7 @@ export default {
     .Contact-box-content .data .right{
         margin-left: 62px;
         padding: 100px 0;
-        width: 360px;
+        width: 365px;
         font-size: 18px;
         font-weight: 400;
         color: #333333;

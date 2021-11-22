@@ -20,6 +20,13 @@
       "unicode_decimal": 58915
     },
     {
+      "icon_id": "5661132",
+      "name": "活动",
+      "font_class": "huodong",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
       "icon_id": "9189023",
       "name": "专家课堂-激活",
       "font_class": "zhuanjiaketang-jihuo",
@@ -46,6 +53,13 @@
       "font_class": "marketingturntableactivityManage",
       "unicode": "e672",
       "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "21061560",
+      "name": "活动",
+      "font_class": "huodong1",
+      "unicode": "f47a",
+      "unicode_decimal": 62586
     },
     {
       "icon_id": "22232290",

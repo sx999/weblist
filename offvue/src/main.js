@@ -29,7 +29,10 @@ import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
 Vue.component(CollapseTransition.name, CollapseTransition)
 
 
-
+//页面跳转显示在顶部
+router.afterEach((to,from,next) => {
+  window.scrollTo(0,0);
+})
 
 new Vue({
   router,
