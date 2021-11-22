@@ -59,8 +59,8 @@
             <Bootom></Bootom>
             <!-- 底部end -->
         </el-footer>
-        <div class="scollTop" id="imgscoll" v-show="isShowimg">
-            <img src="@/assets/images/inTop.png" alt="" @click="goTop">
+        <div class="scollTop" id="imgscoll" v-show="isShowimg"  @click="goTop">
+            <img src="@/assets/images/inTop.png" alt="">
         </div>
     </el-container>
 </template>

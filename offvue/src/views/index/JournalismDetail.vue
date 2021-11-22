@@ -44,7 +44,7 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style>
     .box{
         width: 1000px;
         margin: 0 auto;
@@ -53,6 +53,7 @@ export default {
     }
     .box .title{
         margin-bottom: 10px;
+        text-align: center;
         width: 100%;
         white-space:wrap;
         font-size: 32px;
@@ -80,12 +81,17 @@ export default {
         font-size: 16px;
         font-weight: 500;
         color: #5B5B5B;
-        text-align: center;
+        text-align:left;
+        line-height: 30px;
+        margin: 0;
     }
     .box .text p .ql-align-center{
-        display: flex !important;
-        justify-content: center !important;
+        text-align:center;
     }
+    .box .text p .ql-align-right{
+        text-align:right;
+    }
+    
     /* .box .image{
         width: 100%;
         margin-top: 50px;

@@ -1,6 +1,6 @@
 <template>
     <div class="banner">
-        <el-carousel :height="bannerHeight+'px'" arrow="always">
+        <el-carousel :height="bannerHeight+'px'" arrow="always" >
             <!-- <el-carousel height="780px"> -->
             <el-carousel-item v-for="(item,index) in BannerData" :key="index">
                 <div class="pic_item">
@@ -17,21 +17,27 @@
                 </div>
             </el-carousel-item>
         </el-carousel>
-  </div>
+        
+    </div>
+    
 </template>
 <script>
+import Transition from '@/components/Transition.vue'
 export default {
     data(){
         return{
             BannerData:[],
             bannerHeight:"",
+            show:true
         }
+    },
+    components:{
+        Transition,
     },
     created(){
         this.Queryall()
     },
     mounted(){
-      
         var h= window.screen.height
         var w = window.screen.width
         console.log(h,w)
@@ -51,7 +57,9 @@ export default {
                 // console.log(res)
                 if(res.data.code == 200){
                         this.BannerData =  res.data.data.page.dataList
+                        this.show=false
                 }else{
+                    this.show=true
                     return false
                 }
             })

@@ -57,6 +57,7 @@
   .box{
       width: 1000px;
       margin: 0 auto;
+      margin-top: 70px;
       /* font-family: PingFang SC-Medium, PingFang SC; */
   }
   .box .title{
@@ -68,7 +69,7 @@
       color: #333333;
   }
   .box .text{
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 500;
       color: #5B5B5B;
   }

@@ -19,7 +19,7 @@
             
             <hr>
             <div class="text" v-html="this.list.competitionSynopsis"></div>
-            <div class="bottom">
+            <div class="active-bottom">
               <!-- <div class="bottom-img">
                   <img :src="this.list.competitionPic" alt="">
               </div>
@@ -61,23 +61,25 @@
   }
 </script>
 
-<style scoped>
+<style>
   .box{
       width: 1000px;
       margin: 0 auto;
-      margin-top: 80px;
+      margin-top: 70px;
       /* font-family: PingFang SC-Medium, PingFang SC; */
   }
   .box .title{
-      margin-bottom: 10px;
-      width: 100%;
-      white-space:wrap;
-      font-size: 36px;
-      font-weight: 500;
-      color: #333333;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+        white-space:wrap;
+        font-size: 32px;
+        font-weight: 500;
+        color: #333333;
   }
   .box .detail{
       display: flex;
+      margin: 30px 0;
   }
   .box .date{
       display: flex;
@@ -96,11 +98,14 @@
   }
 
   .box .text{
-      font-size: 20px;
-      font-weight: 500;
-      color: #5B5B5B;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5B5B5B;
+    text-align:left;
+    line-height: 30px;
+    margin: 0;
   }
-  .bottom{
+   /* .active-bottom{
       margin-top: 56px;
   }
   .bottom-img{
@@ -112,14 +117,14 @@
       width: 100%;
       height: 100%;
   }
-  .bottom p{
+  .active-bottom p{
       margin: 0;
       margin-top:5px;
       text-align: center;
       font-size: 20px;
       font-weight: 600;
       color: #000000;
-  }
+  } */
   .bottom-text{
       margin-top: 80px;
       width: 100%;
@@ -135,5 +140,14 @@
       font-size: 14px;
       font-weight: bold;
       color: #333333;
-  }
+  } 
+   .ql-align-center{
+        text-align: center;
+    }
+    .ql-align-left{
+        text-align: left;
+    }
+    .ql-align-right{
+        text-align: right;
+    }
 </style>

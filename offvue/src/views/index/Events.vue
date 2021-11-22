@@ -48,7 +48,7 @@ export default {
     .Events-box{
         position: relative;
         width: 100%;
-        height: 580px;
+        height: 500px;
     }
     .Events-box .posit{
         position: absolute;
@@ -70,14 +70,5 @@ export default {
     }
     .Events-box .posit .posit-p2{
         font-size: 36px;
-    }
-    .ql-align-center{
-        text-align: center;
-    }
-    .ql-align-left{
-        text-align: left;
-    }
-    .ql-align-right{
-        text-align: right;
     }
 </style>

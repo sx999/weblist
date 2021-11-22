@@ -38,7 +38,7 @@ export default {
 <style scoped>
    .Journalism-box{
         width: 100%;
-        height: 580px;
+        height: 500px;
         position: relative;
     }
     .Journalism-box img{

@@ -64,6 +64,7 @@
         keyword:"", //关键词
         loading:false,
         show:true,
+
       }
     },
     created(){ 
@@ -73,10 +74,11 @@
 			for(var i=arr.length-1;i>=0;i--){
 				newArr.push(arr[i]);
 			}
-			////console.log(newArr);
+			////console.log(newArr);S
     },
     mounted(){
-        this.Queryall()  
+        this.Queryall() 
+
     },
     computed:{
         dataSource:function(){
@@ -131,7 +133,7 @@
             }
         },
         GoDetail(id){
-              this.$router.push({path:'/events/eventsdetail',query:{id:id}})
+              this.$router.push({path:'/activity/activitydetail',query:{id:id}})
         },
         //精确查询
         Search(){

@@ -76,8 +76,8 @@ export default {
         align-items:center;
         font-size: 64px;
         font-weight: bold;
-        /* color: #FF7A00; */
-        color: #333333;
+        color: #FF7A00;
+        /* color: #333333; */
     }
     .Contact-box .posit .posit-p2{
         font-size: 36px;

@@ -50,7 +50,7 @@ export default {
     .Activity-box{
         position: relative;
         width: 100%;
-        height: 580px;
+        height: 500px;
         /* font-family: PingFang SC-Medium, PingFang SC; */
     }
     .Activity-box .posit{

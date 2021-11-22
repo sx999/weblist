@@ -7,10 +7,10 @@
                     <span>主办方:</span>
                     <span class="red">行由心教育</span>
                 </div>
-                <div class="date">
+                <!-- <div class="date">
                     <span>地点:</span>
                     <span class="red">郑州市航海西路小学</span>
-                </div>
+                </div> -->
                 <div class="date">
                     <span>时间:</span>  
                     <span>{{this.list.updateTime}}</span>  
@@ -21,7 +21,7 @@
             <div class="text" v-html="this.list.competitionSynopsis">
                
             </div>
-            <div class="bottom">
+            <div class="event-bottom">
               <!-- <div class="bottom-img">
                    <img :src="this.list.competitionPic" alt="">
               </div>
@@ -63,11 +63,11 @@
   }
 </script>
 
-<style scoped>
+<style>
   .box{
       width: 1000px;
       margin: 0 auto;
-      font-family: PingFang SC-Medium, PingFang SC;
+      margin-top: 70px;
   }
   .box .title{
       margin-bottom: 10px;
@@ -97,30 +97,33 @@
   }
 
   .box .text{
-      font-size: 20px;
-      font-weight: 500;
-      color: #5B5B5B;
+        font-size: 16px;
+        font-weight: 500;
+        color: #5B5B5B;
+        text-align: left;
+        line-height: 30px;
+        margin: 0;
   }
-  .bottom{
+  /* .event-bottom{
       margin-top: 56px;
   }
-  .bottom-img{
+  .event-bottomm-img{
       margin: 0 auto;
       width: 222px;
       height: 204px;
   }
-  .bottom-img img{
+  .event-bottom-img img{
       width: 100%;
       height: 100%;
   }
-  .bottom p{
+  .event-bottom p{
       margin: 0;
       margin-top:5px;
       text-align: center;
       font-size: 20px;
       font-weight: 600;
       color: #000000;
-  }
+  } */
   .bottom-text{
       margin-top: 80px;
       width: 100%;
@@ -136,5 +139,8 @@
       font-size: 14px;
       font-weight: bold;
       color: #333333;
+  } 
+  .ql-align-right{
+      text-align: right;
   }
 </style>

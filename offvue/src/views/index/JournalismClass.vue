@@ -148,6 +148,6 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style>
     @import '../../assets/css/JournalismStyle.css';
 </style>
