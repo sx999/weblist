@@ -93,7 +93,7 @@
             }
         },
         Queryall(){
-            this.axios.post(this.$api_router.events+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=1')
+            this.axios.post(this.$api_router.events+'list?competitionName='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=1')
             .then(res=>{
                 console.log(res)
                 if(res.data.code == 200){
@@ -138,9 +138,9 @@
         //精确查询
         Search(){
             this.page = 1
-            this.axios.post(this.$api_router.events+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=1')
+            this.axios.post(this.$api_router.events+'list?competitionName='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=1')
                 .then(res=>{
-                    console.log(res)
+                    // console.log(res)
                     if(res.data.code == 200){
                         this.listData = res.data.data.page.dataList
                         this.maxdata = res.data.data.page.totalRecord
@@ -152,6 +152,10 @@
                         this.maxpage = res.data.data.page.totalPage
                         this.Dateformatting()
                     }else{
+                         this.$message({
+                            message: "没有该名称的活动",
+                            type: 'warning'
+                        });
                         return false
                     }
             })
