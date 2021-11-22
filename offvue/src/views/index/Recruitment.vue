@@ -151,7 +151,10 @@ export default {
             var reg = /^[\u4e00-\u9fa5]{2,9}$/;
             // console.log(this.from.name)
             if(!reg.test(this.from.name)){
-                alert("姓名格式错误！");
+                this.$message({
+                    message: '姓名格式错误！',
+                    type: 'warning'
+                });
             }else{
                 return true
             }
@@ -162,7 +165,10 @@ export default {
             var reg = /^[1][3,4,5,7,8][0-9]{9}$/; 
             // console.log(this.from.phone)
             if(!reg.test(this.from.phone)){
-                 alert("手机号格式错误！");
+                this.$message({
+                    message: '手机号格式错误！',
+                    type: 'warning'
+                });
             }else{
                 return true
             }
@@ -172,7 +178,10 @@ export default {
             var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
             // console.log(this.from.email)
             if(!reg.test(this.from.email)){
-                    alert("邮箱格式错误！");
+                this.$message({
+                    message: '邮箱格式错误！',
+                    type: 'warning'
+                });
             }else{
                 return true
             }

@@ -12,8 +12,8 @@
                             <!-- <span class='active' @click="Block"></span> -->
                         </div>
                         <div class="data-header-r">
-                            <img src="../../assets/images/search.png" alt="无法显示" @click="Search()"> 
-                            <input type="text" v-model="keyword" placeholder="关键词"  >
+                            <img src="../../assets/images/search.png" alt="无法显示" @click="Search()" @keyup.enter="Search()"> 
+                            <input type="text" v-model="keyword" placeholder="关键词" >
                         </div>
                     </div>
                     <!-- 赛事内容 start-->
@@ -77,6 +77,12 @@
     },
     mounted(){
         this.Queryall()
+        // 绑定监听事件
+        window.addEventListener("keydown", this.keyDown);
+    },
+    destroyed() {
+        // 销毁事件
+        window.removeEventListener("keydown", this.keyDown, false);
     },
     computed:{
         dataSource:function(){
@@ -93,7 +99,7 @@
         Queryall(){
             this.axios.post(this.$api_router.events+'list?competitionName='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=0')
             .then(res=>{
-                console.log(res)
+                // console.log(res)
                 if(res.data.code == 200){
                         this.listData =  res.data.data.page.dataList
                         this.maxdata = res.data.data.page.totalRecord
@@ -133,7 +139,7 @@
         GoDetail(id){
               this.$router.push({path:'/events/eventsdetail',query:{id:id}})
         },
-       //精确查询
+        //精确查询
         Search(){
             this.page = 1
             this.axios.post(this.$api_router.events+'list?competitionName='+this.keyword+'&currentPage='+this.page+'&limit=6&sort=0')
@@ -157,7 +163,13 @@
                         return false
                     }
             })
-        }
+        },
+        keyDown(e){
+        // 回车则执行登录方法 enter键的ASCII是13	
+            if (e.keyCode === 13) {
+                this.Search(); // 定义的登录方法
+            }
+        },
     }
 
   }

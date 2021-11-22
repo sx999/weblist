@@ -27,7 +27,7 @@
                         <li><router-link to="/activity">研学活动</router-link></li> 
                     </ul>
                     <ul>
-                        <li class="orange pitch">联系方式：{{this.contentE3.phone}}</li>
+                        <li class="orange pitch">电话：{{this.contentE3.phone}}</li>
                         <li class="pitch">邮箱：{{this.contentE3.mailbox}}</li>
                         <li class="pitch">地址：河南省郑州市华强云瓴中心4008室</li>
                     </ul>
@@ -124,7 +124,7 @@
             Queryall(){
                 this.axios.post(this.$api_router.contact+'findAll')
                 .then(res=>{
-                    console.log(res)
+                    // console.log(res)
                         if(res.data.code == 200){
                                 this.contentE3 =  res.data.data[0]
                                 // this.Dateformatting()

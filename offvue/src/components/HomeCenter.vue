@@ -101,7 +101,7 @@
                             </div>
                         </div>
                         <div class='bottom'>
-                            <p>duxiukeji@163.com</p>
+                            <p>xingyouxin2020@163.com</p>
                             <hr/>
                             <div>关注我们</div>
                         </div>
@@ -317,7 +317,7 @@
                 })
                 this.axios.post(this.$api_router.contact+'findAll')
                 .then(res=>{
-                    console.log(res)
+                    // console.log(res)
                         if(res.data.code == 200){
                                 this.contentE3 =  res.data.data[0]
                                 // this.Dateformatting()

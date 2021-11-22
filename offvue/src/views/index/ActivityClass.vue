@@ -13,7 +13,7 @@
                            <span class='active'>活动</span>
                         </div>
                         <div class="data-header-r">
-                            <img src="../../assets/images/search.png" alt="无法显示" @click="Search()"> 
+                            <img src="../../assets/images/search.png" alt="无法显示" @click="Search()" @keyup.enter="Search()"> 
                             <input type="text" placeholder="关键词" v-model="keyword">
                         </div>
                     </div>
@@ -78,8 +78,13 @@
     },
     mounted(){
         this.Queryall() 
-
+        // 绑定监听事件
+		window.addEventListener("keydown", this.keyDown);
     },
+    destroyed() {
+		    // 销毁事件
+		    window.removeEventListener("keydown", this.keyDown, false);
+		},
     computed:{
         dataSource:function(){
             return this.listData.filter(item=>item.sort == 1)
@@ -159,7 +164,13 @@
                         return false
                     }
             })
-        }
+        },
+        keyDown(e){
+            // 回车则执行登录方法 enter键的ASCII是13	
+                if (e.keyCode === 13) {
+                    this.Search(); // 定义的登录方法
+                }
+        },
     }
 
   }
