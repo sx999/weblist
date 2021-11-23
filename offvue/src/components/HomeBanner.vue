@@ -6,14 +6,19 @@
                 <div class="pic_item">
                      <img class="small" :src="item.rotationUrl" alt="">
                     <div class="posit-element">
-                        <p>行由心教育</p>
+                        <p class="z-title">行由心教育</p>
                         <!-- <p>{{item.rotationName}}</p> -->
-                        <div class="yello-d">
-                            <span>了解更多</span> 
+                        <!-- <div class="yello-d">
+                            <span>了解更多</span>  -->
                             <!-- <span class="iconfont icon-tuxing"></span> -->
                             <!-- <img src="../assets/images/arrows.png" alt=""> -->
-                        </div>
+                        <!-- </div> -->
                     </div>
+                     <div class="posit-element-right">
+                        <p class="z-title">美育教育</p>
+                        <p class="z-title indent1">体育教育</p>
+                        <p class="z-title indent2">中华优秀传统文化</p>
+                     </div>
                 </div>
             </el-carousel-item>
         </el-carousel>
@@ -120,9 +125,9 @@ export default {
 
          .pic_item .posit-element{
             position: absolute;
-            top:0;
+            top:16px;
             left: 0;
-            right: 0;
+            right: 16%;
             bottom: 0;
             margin:auto;
             width: 448px;
@@ -134,11 +139,37 @@ export default {
             /* color: #FFFFFF; */
             /* color: #000; */
             color: #EA862A;
+            letter-spacing:20px;
             /* font-family: PingFang SC-Bold, PingFang SC; */
         }
+        .z-title{
+             font-family:'ziti1';
+        }
+        .indent1{
+            text-indent: 40px;
+        }
+        .indent2{
+            text-indent: 80px;
+        }
+        .pic_item .posit-element-right{
+            position: absolute;
+            top:0;
+            left: 52%;
+            right: 0;
+            bottom: 0;
+            margin:auto;
+            width: 448px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            color: #EA862A;
+            font-size: 34px;
+            letter-spacing:6px;
+        }
+
         .pic_item .posit-element p:nth-child(1){
-            font-size: 64px;
-            font-weight: 800;
+            font-size: 76px;
+            /* font-weight: 800; */
             margin: 0;
         }
         .pic_item .posit-element p:nth-child(2){
