@@ -84,7 +84,7 @@
     destroyed() {
 		    // 销毁事件
 		    window.removeEventListener("keydown", this.keyDown, false);
-		},
+	},
     computed:{
         dataSource:function(){
             return this.listData.filter(item=>item.sort == 1)

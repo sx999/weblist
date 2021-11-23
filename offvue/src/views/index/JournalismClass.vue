@@ -64,9 +64,15 @@ export default {
     created(){
 
     },
-    mounted(){
-        this.Queryall()
+     mounted(){
+        this.Queryall() 
+        // 绑定监听事件
+		window.addEventListener("keydown", this.keyDown);
     },
+    destroyed() {
+		    // 销毁事件
+		    window.removeEventListener("keydown", this.keyDown, false);
+		},
     computed:{
         //      Cutlist:function(){
         //         return this.listData.slice(0,3)
@@ -141,10 +147,20 @@ export default {
                         this.maxpage = res.data.data.page.totalPage
                         this.Dateformatting()
                     }else{
+                         this.$message({
+                            message: "没有该名称的新闻",
+                            type: 'warning'
+                        });
                         return false
                     }
             })
-        }
+        },
+        keyDown(e){
+            // 回车则执行登录方法 enter键的ASCII是13	
+            if (e.keyCode === 13) {
+                this.Search(); // 定义的登录方法
+            }
+        },
     }
 }
 </script>

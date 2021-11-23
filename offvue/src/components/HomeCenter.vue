@@ -96,14 +96,43 @@
                         <div class="header">
                             <img src="@/assets/images/Rectangle45.png" alt="">
                             <div class="back">
-                                <img src="@/assets/images/guanzhu.png" alt="">
-                                <p>关注我们获取更多信息</p>
+                                <transition name="fade">
+                                    <div v-show="Smash" class="img1" >
+                                        <img src="@/assets/images/guanzhu.png" alt="">
+                                        <!-- <p>关注我们获取更多信息</p> -->
+                                    </div>
+                                </transition>
+                                  <div class="mar-b10">关注我们获取更多信息</div>
+                                 <transition name="fadetrue">
+                                     <div v-show="!Smash" class="img2">
+                                        <img src="@/assets/images/qrcode.jpg" alt="">
+                                    </div>
+                                </transition>
+                                    <!-- <el-popover
+                                         placement="top-start"
+                                        title="标题"
+                                        width="200"
+                                        trigger="click"
+                                        >
+                                        <img :src="src" alt="">
+                                        <el-button slot="reference">click 激活</el-button>
+                                    </el-popover> -->
                             </div>
+                              
                         </div>
                         <div class='bottom'>
                             <p>xingyouxin2020@163.com</p>
                             <hr/>
-                            <div>关注我们</div>
+                            <el-popover
+                                placement="top-start"
+                                width="100"
+                                trigger="hover"
+                                offset=-100
+                                content="点击关注我们">
+                               <!-- <div >关注我们</div> -->
+                               <div @click="Smash = !Smash" slot="reference" class="bottom-div">关注我们</div>
+                            </el-popover>
+                            
                         </div>
                     </div>
                 </div>
@@ -180,8 +209,10 @@
                         <!-- <div class="back" :style="{'background':'url('+imgs[0].src+')'}">
                             
                         </div> -->
-                        <div class="back" style="background-color:#FFF">
-                            
+                        <div class="back front" style="background-color:#FFF">
+                            <div><img src="@/assets/images/phone1.png" alt=""></div>
+                            <div>联系电话</div>
+                            <div>{{this.contentE3.phone}}</div>
                         </div>
                     </div>
                     <div class="div2">
@@ -193,8 +224,10 @@
                         <!-- <div class="back" :style="{'background':'url('+imgs[1].src+')'}">
 
                         </div> -->
-                         <div class="back" style="background-color:#FFF">
-
+                         <div class="back front" style="background-color:#FFF">
+                            <div><img src="@/assets/images/email1.png" alt=""></div>
+                            <div>邮件地址</div>
+                            <div>{{this.contentE3.mailbox}}</div>
                         </div>
                     </div>
                     <div class="div2">
@@ -205,14 +238,15 @@
                         </div>
                         <!-- <div class="back" :style="{'background':'url('+imgs[2].src+')'}">
                         </div> -->
-                         <div class="back" style="background-color:#FFF">
-
+                         <div class="back front" style="background-color:#FFF">
+                            <div><img src="@/assets/images/time1.png" alt=""></div>
+                            <div>工作时间</div>
+                            <div>09：00~17：30</div>
                         </div>
                     </div>
                 </div>
             </div>
             </div>
-           
         </div>
     </div>
     <!-- 内容end -->
@@ -221,9 +255,11 @@
     // import pic11 from '@/assets/images/559.jpg'
     // import pic22 from '@/assets/images/560.jpg'
     // import pic33 from '@/assets/images/562.jpg'
+    import imger from '@/assets/images/qrcode.jpg'
     export default {
         data(){
             return{
+                src:imger,
                 // imgs:[
                 //     {src:pic11},
                 //     {src:pic22},
@@ -239,6 +275,7 @@
                 contentE2:[],
                 //联系方式
                 contentE3:[],
+                Smash:true,  //二维码show
                 // loading:false,
                 // isplay:true,
             }
@@ -355,5 +392,26 @@
 </script>
 
 <style scoped='scoped'>
+    .fade-enter-active, .fade-leave-active{
+        transition: all 0.5s ease;
+    }
+   .fade-enter, .fade-leave-active{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    .fadetrue-enter-active,.fadetrue-leave-active{
+        transition: all 0.5s ease;
+        opacity: 0.1;
+    }
+    .fadetrue-enter,.fadetrue-leave-active{
+        transition: all 1s ease;
+        opacity: 0;
+        transform: translateY(30px);
+         /* transform: translateY(-30px); */
+    }
+    .popoverClass{
+        color:#EA862A;
+        background-color: #EA862A
+    }
     @import '../assets/css/homeCenter.css';
 </style>

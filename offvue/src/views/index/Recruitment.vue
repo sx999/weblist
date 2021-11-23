@@ -137,9 +137,11 @@ export default {
                 })
             })
             }else{
-               this.$message({
-                    message: '内容填写不完整',
-                    type: 'warning'
+               
+                 this.$message({
+                    message: '您的信息没有填完整',
+                    type: 'warning',
+                    offset:100
                 });
             }
             
