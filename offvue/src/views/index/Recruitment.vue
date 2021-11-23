@@ -34,7 +34,7 @@
             <div class="title">加<p>入我</p>们</div>
             <div class="formInput">
                 <input type="text" v-model="from.name" @blur="nameBlur()" placeholder="您的姓名">
-                <input type="number" v-model="from.phone" @blur="phoneBlur()" placeholder="联系电话"> 
+                <input type="text" v-model="from.phone" @blur="phoneBlur()" placeholder="联系电话"> 
                 <input type="text" v-model="from.email" @blur="emailBlur()" placeholder="电子邮箱">
             </div>
             <div class="formInput">
@@ -141,7 +141,7 @@ export default {
                  this.$message({
                     message: '您的信息没有填完整',
                     type: 'warning',
-                    offset:100
+                    offset:110
                 });
             }
             
@@ -155,7 +155,8 @@ export default {
             if(!reg.test(this.from.name)){
                 this.$message({
                     message: '姓名格式错误！',
-                    type: 'warning'
+                    type: 'warning',
+                    offset:110
                 });
             }else{
                 return true
@@ -169,7 +170,8 @@ export default {
             if(!reg.test(this.from.phone)){
                 this.$message({
                     message: '手机号格式错误！',
-                    type: 'warning'
+                    type: 'warning',
+                    offset:110
                 });
             }else{
                 return true
@@ -182,7 +184,8 @@ export default {
             if(!reg.test(this.from.email)){
                 this.$message({
                     message: '邮箱格式错误！',
-                    type: 'warning'
+                    type: 'warning',
+                    offset:110
                 });
             }else{
                 return true

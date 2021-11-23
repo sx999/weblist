@@ -64,7 +64,7 @@
                             </div>
                             <div class="fordiv-a">
                                 <p class="p1">{{item.competitionName}}</p>
-                                <p class="p2" v-html="item.competitionSynopsis"></p>
+                                <!-- <p class="p2" v-html="item.competitionSynopsis"></p> -->
                                 <p class="p3">阅读更多 <span class="iconfont icon-single_arrow"></span></p>
                             </div>
                         </div>
@@ -94,8 +94,8 @@
                     </div>
                     <div class="content-c-2-div-right">
                         <div class="header">
-                            <img src="@/assets/images/Rectangle45.png" alt="">
-                            <div class="back">
+                            <img src="@/assets/images/Rectangle45.png"   alt="">
+                            <div class="back" @click="Smash = !Smash">
                                 <transition name="fade">
                                     <div v-show="Smash" class="img1" >
                                         <img src="@/assets/images/guanzhu.png" alt="">
@@ -121,17 +121,11 @@
                               
                         </div>
                         <div class='bottom'>
-                            <p>xingyouxin2020@163.com</p>
+                            <!-- <p>xingyouxin2020@163.com</p> -->
                             <hr/>
-                            <el-popover
-                                placement="top-start"
-                                width="100"
-                                trigger="hover"
-                                offset=-100
-                                content="点击关注我们">
-                               <!-- <div >关注我们</div> -->
-                               <div @click="Smash = !Smash" slot="reference" class="bottom-div">关注我们</div>
-                            </el-popover>
+                            
+                            <div @click="Smash = !Smash" class="bottom-div">关注我们</div>
+                         
                             
                         </div>
                     </div>
