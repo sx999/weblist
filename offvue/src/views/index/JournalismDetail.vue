@@ -1,8 +1,10 @@
 <template>
     <div>
-        <div class="box">
+        <div class="JournalismDetail-box">
             <div class="title">{{this.list.consultTopic}}</div>
-            <p class="date"><span class="iconfont icon-naozhong"></span>{{this.list.updateTime}}</p>
+            <p class="date">
+                <span class="iconfont icon-naozhong"></span>{{this.list.updateTime}}
+            </p>
             <hr>
             <div class="text">
                 <p v-html="this.list.consultSynopsis"></p>
@@ -45,13 +47,13 @@ export default {
 }
 </script>
 <style>
-    .box{
+    .JournalismDetail-box{
         width: 1000px;
         margin: 0 auto;
         margin-top: 70px;
         /* font-family: PingFang SC-Medium, PingFang SC; */
     }
-    .box .title{
+    .JournalismDetail-box .title{
         margin-bottom: 10px;
         text-align: center;
         width: 100%;
@@ -60,24 +62,24 @@ export default {
         font-weight: 500;
         color: #333333;
     }
-    .box .date{
+    .JournalismDetail-box .date{
         font-size: 16px;
         font-weight: 500;
         color: #777777;
     }
-     .box .date span{
+     .JournalismDetail-box .date span{
         margin-right: 10px;
         font-size:22px;
         color:#EA862A;
        
     }
-    .box hr{
+    .JournalismDetail-box hr{
         width: 100%;
         height: 1px;
         background: #E8E8E8;    
     }
  
-    .box .text{
+    .JournalismDetail-box .text{
         font-size: 16px;
         font-weight: 500;
         color: #5B5B5B;
@@ -85,10 +87,13 @@ export default {
         line-height: 30px;
         margin: 0;
     }
-    .box .text p .ql-align-center{
+    .JournalismDetail-box .text p{
+        margin: 0;
+    }
+    .JournalismDetail-box .text p .ql-align-center{
         text-align:center;
     }
-    .box .text p .ql-align-right{
+    .JournalismDetail-box .text p .ql-align-right{
         text-align:right;
     }
     

@@ -140,9 +140,9 @@
     font-size: 34px;
 }
 .data-list .list-b .list-b-c{
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; */
+    justify-content: space-between;
     padding-left: 10px;
     width: 264px;
     height: 100%;
