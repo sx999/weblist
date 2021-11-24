@@ -29,8 +29,8 @@
                                     <div class="list-b-l-date"><span class="iconfont icon-gistuceng"></span></div>
                                 </div>
                                 <div class="list-b-c">
-                                    <p class="p1">{{item.competitionName}}</p>
-                                    <p class="p2" v-html="item.competitionSynopsis"></p>
+                                    <p class="p1 p1-1">{{item.competitionName}}</p>
+                                    <!-- <p class="p2" v-html="item.competitionSynopsis"></p> -->
                                     <p class="p3 stateback" v-if="item.classify==0">正在进行</p>
                                     <p class="p3 stateback-h" v-if="item.classify==1">已结束</p>
                                 </div>
