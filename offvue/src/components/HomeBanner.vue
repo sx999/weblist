@@ -110,10 +110,11 @@ export default {
     }
     .onebox{
         width: 100%;
-        height: 680px;
+        height: 580px;
         position: relative;
     }
     .onebox img{
+        /* width: 1920px; */
         width: 100%;
         height: 100%;
     }

@@ -1,6 +1,7 @@
 <template>
     <!-- 内容start -->
     <div class="content">
+        <!-- 使命 -->
         <div class="content-a">
             <div class="mar0h102">   
                 <div class="content-a-1">
@@ -41,8 +42,68 @@
         <!-- <div class="content-b">
             <img src="@/assets/images/content.png" alt="">
         </div> -->
-        <div class="content-c">
+        <!-- 新闻 -->
+        <div class="content-c"> 
             <div class="mar0h102">
+                <div class="content-e-e">
+                    <div class="title">行<p>业新</p>闻</div>
+                    <div class="threediv2">
+                        <div class="divleft">
+                            <img class="leftimg" src="@/assets/images/19.jpg" alt="">
+                            <div class="divleft-title">关注青少年健康</div>
+                        </div>
+                        <div class="divright">
+                            <div class="div1" v-for="(item,index) in  dataList4" :key="index" @click="GoTradeNews(item.id)">
+                                <div class="time">{{item.updateTime}}</div>
+                                <div class="img">
+                                    <img :src="item.consultPic" alt="无法加载">
+                                </div>
+                                <div class="bold">{{item.consultTopic}}</div>
+                                <div class="bold5" v-html="item.consultSynopsis"></div>
+                                <div class="font16">阅读全文</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="content-d">
+            <img src="../assets/images/about-img.png" alt="">
+            <!-- <img src="@/assets/images/mp4back.png" alt=""> -->
+            <!-- <div class="title">在线视频服务</div>
+            <div class="video">
+                <video src="../assets/images/fuwu.mp4" ref="movie"></video>、
+                <i v-show="isplay" class="el-icon-video-play" @click="handlePlay()"></i>
+                <i v-show="!isplay" class="el-icon-video-pause" @click="handlePause()"></i>
+            </div> -->
+            
+        </div>
+        <div class="content-e">
+            <div class="mar0h102">
+                 <!-- <div class="content-e-e">
+                <div class="title">专<p>家顾</p>问</div>
+                <div class="threediv">
+                    <div class="div" v-for="(item,index) in dataList3" :key="index">
+                        <div class="divtop">
+                            <img class="he_slideCaptionDown_img" :src="item.expertPic" alt="">
+                            <div class="he_slideCaptionDown_caption">
+                                <img src="@/assets/images/demail.png" alt="">
+                                <p>联系我</p>
+                                <hr>
+                                <p>{{item.expertPhone}}</p>
+                                <p>{{item.expertMailbox}}</p>
+                                <a class="he_slideCaptionDown_caption_a" href="javascript:void(0);"></a>
+                            </div>
+                        </div>
+                        <div class="divbottom">
+                            <div>
+                                <p>{{item.expertName}}</p>
+                                <p>{{item.expertTitle}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
             <div class="content-c-1">
                 <div class="title">热<p>门赛</p>事</div>
                 <div class="content-c-1-div">
@@ -127,66 +188,6 @@
                             <div @click="Smash = !Smash" class="bottom-div">关注我们</div>
                          
                             
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            
-        </div>
-        <div class="content-d">
-            <img src="../assets/images/about-img.png" alt="">
-            <!-- <img src="@/assets/images/mp4back.png" alt=""> -->
-            <!-- <div class="title">在线视频服务</div>
-            <div class="video">
-                <video src="../assets/images/fuwu.mp4" ref="movie"></video>、
-                <i v-show="isplay" class="el-icon-video-play" @click="handlePlay()"></i>
-                <i v-show="!isplay" class="el-icon-video-pause" @click="handlePause()"></i>
-            </div> -->
-            
-        </div>
-        <div class="content-e">
-            <div class="mar0h102">
-                 <!-- <div class="content-e-e">
-                <div class="title">专<p>家顾</p>问</div>
-                <div class="threediv">
-                    <div class="div" v-for="(item,index) in dataList3" :key="index">
-                        <div class="divtop">
-                            <img class="he_slideCaptionDown_img" :src="item.expertPic" alt="">
-                            <div class="he_slideCaptionDown_caption">
-                                <img src="@/assets/images/demail.png" alt="">
-                                <p>联系我</p>
-                                <hr>
-                                <p>{{item.expertPhone}}</p>
-                                <p>{{item.expertMailbox}}</p>
-                                <a class="he_slideCaptionDown_caption_a" href="javascript:void(0);"></a>
-                            </div>
-                        </div>
-                        <div class="divbottom">
-                            <div>
-                                <p>{{item.expertName}}</p>
-                                <p>{{item.expertTitle}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <div class="content-e-e">
-                <div class="title">行<p>业新</p>闻</div>
-                <div class="threediv2">
-                    <div class="divleft">
-                        <img class="leftimg" src="@/assets/images/19.jpg" alt="">
-                        <div class="divleft-title">关注青少年健康</div>
-                    </div>
-                    <div class="divright">
-                        <div class="div1" v-for="(item,index) in  dataList4" :key="index" @click="GoTradeNews(item.id)">
-                            <div class="time">{{item.updateTime}}</div>
-                            <div class="img">
-                                <img :src="item.consultPic" alt="无法加载">
-                            </div>
-                            <div class="bold">{{item.consultTopic}}</div>
-                            <div class="bold5" v-html="item.consultSynopsis"></div>
-                            <div class="font16">阅读全文</div>
                         </div>
                     </div>
                 </div>
