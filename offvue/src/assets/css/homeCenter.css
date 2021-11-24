@@ -339,7 +339,7 @@
             word-wrap:break-word;
             display: -webkit-box;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2; 
+            -webkit-line-clamp: 1; 
             overflow: hidden;
         }
         .content-c-2 .content-c-2-div .content-c-2-div-left .div1 .three1 .p3{
