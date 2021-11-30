@@ -3,18 +3,18 @@
        <div class="box">
             <div class="title">{{this.list.competitionName}}</div>
             <div class="detail">
-                <div class="date">
+                <!-- <div class="date">
                     <span>主办方:</span>
                     <span class="red">行由心教育</span>
-                </div>
+                </div> -->
                 <!-- <div class="date">
                     <span>地点:</span>
                     <span class="red">郑州市航海西路小学</span>
                 </div> -->
-                <div class="date">
+                <!-- <div class="date">
                     <span>时间:</span>  
                     <span>{{this.list.updateTime}}</span>  
-                </div>
+                </div> -->
             </div>
             
             <hr>

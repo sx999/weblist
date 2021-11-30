@@ -97,6 +97,10 @@
     width: 100%;
     height: 132px;
     background-color: #FFFFFF;
+    cursor: pointer;
+}
+.data-list .list-b:hover .list-b-r p{
+    color: #EA862A;
 }
 .data-list .list-b .list-b-l{
     width: 80px;

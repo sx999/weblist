@@ -32,6 +32,10 @@
                         <li class="pitch">地址：河南省郑州市华强云瓴中心4008室</li>
                     </ul>
                 </div>
+                <div class="bottom-l-bb">
+                    <p>Copyright O 2017-2021河南独秀科技有限公司</p>
+                    <p><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=ICP18038316" target="_blank">版权所有豫ICP18038316号</a></p>   
+                </div>
             </div>
             <div class="bottom-r">
                 <div class="img">
@@ -40,67 +44,6 @@
                 <p class="red">扫码关注公众号</p>
             </div>
         </div>
-       
-        <!-- <div class="bottom-t">
-            <div class="bottom-t-l">
-               <ul>
-                   <ol>公司概况</ol>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-               </ul>
-               <ul>
-                   <ol>公司概况</ol>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-               </ul>
-                <ul>
-                   <ol>公司概况</ol>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-               </ul>
-                <ul>
-                   <ol>公司概况</ol>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-               </ul>
-               <ul>
-                   <ol>公司概况</ol>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-                   <li>公司概况</li>
-               </ul>
-            </div>
-            <div class="bottom-t-r">
-                <div class="w260"></div>
-                <div class="box">
-                    <div class="bimg"></div>
-                    <div class="smgz">扫码关注官方公众号</div>
-                </div>
-                
-            </div>
-        </div>
-        <div class="bottom-b">
-            <div class="bottom-b-left">
-                <a href="" class="mar0"><img src="@/assets/images/qq.png" class="mar0" alt=""></a> 
-                <a href=""><img src="@/assets/images/wx.png" alt=""></a> 
-                <a href=""><img src="@/assets/images/wb.png" alt=""></a>  
-            </div>
-            <div>最终解释权归行由心教育有限公司所有</div>
-        </div> -->
     </div>
     <!-- 底部end -->
 </template>
