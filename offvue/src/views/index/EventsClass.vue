@@ -36,7 +36,8 @@
                                 </div>
                                 <div class="list-b-r" @click="GoDetail(item.id)">
                                     <p>阅读更多</p>
-                                    <img src="../../assets/images/left-arraws.png" alt="">
+                                    <span class="iconfont icon-tuxing"></span>
+                                    <!-- <img src="../../assets/images/left-arraws.png" alt=""> -->
                                 </div>
                             </div>
                         </div>

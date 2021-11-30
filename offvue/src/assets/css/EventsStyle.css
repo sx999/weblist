@@ -99,8 +99,13 @@
     background-color: #FFFFFF;
     cursor: pointer;
 }
-.data-list .list-b:hover .list-b-r p{
+.data-list .list-b:hover .list-b-r,
+.data-list .list-b:hover .list-b-l-date span{
     color: #EA862A;
+}
+.data-list .list-b:hover .across,
+.data-list .list-b:hover .vertical {
+    background-color: #EA862A;
 }
 .data-list .list-b .list-b-l{
     width: 80px;
@@ -142,6 +147,7 @@
 .list-b-l-date span{
     color: #5f5d5d;
     font-size: 34px;
+    font-weight: 500;
 }
 .data-list .list-b .list-b-c{
     display: flex;
@@ -205,7 +211,7 @@
     background-color:#D63328;
 }
 .data-list .list-b .list-b-r{
-    padding-left:30px;
+    padding:0 10px 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -213,6 +219,7 @@
     height: 100%;
     border-left: 1px solid #D6D6D6;
     cursor: pointer;
+    color: #333333;
 }
 .data-list .list-b .list-b-r p{
     width: 50px;
@@ -220,11 +227,10 @@
     font-size: 12px;
     /* font-family: PingFang SC-Bold, PingFang SC; */
     font-weight: bold;
-    color: #333333;
+    
 }
-.data-list .list-b .list-b-r img{
-    width: 22px;
-    height: 22px;
+.data-list .list-b .list-b-r span{
+    font-size: 24px;
 }
 .data-bottom{
     width: 100%;

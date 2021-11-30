@@ -48,7 +48,7 @@ export default {
 	}
   #app{
       /* font-family:'ziti'; */
-      font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+     font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
 		 background-color: #F8F8F8 !important;
 	}
   a{
