@@ -93,10 +93,14 @@ export default {
                 let t2 = new Date(Date.parse(b.startTime.replace(/-/g,"/")))
                 return t2.getTime()-t1.getTime()
                 })
-                // console.log(obj)
+                
+                //修改 / 为 年月日
                 for(var i=0;i<this.listData.length;i++){
-                    this.listData[i].startTime = this.moment(this.listData[i].startTime).format("YYYY年MM月DD日")
+                    var newstr="";
+                    newstr=this.listData[i].startTime.split("/");
+                    this.listData[i].startTime=newstr[0]+"年"+newstr[1]+"月"+newstr[2]+"日";
                 }
+                // console.log(this.listData)
             return obj
             
         },

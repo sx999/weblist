@@ -33,8 +33,9 @@
                     </ul>
                 </div>
                 <div class="bottom-l-bb">
-                    <p>Copyright &copy; 2021-2022河南行由心教育科技有限公司</p>
-                    <p><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=ICP18038316" target="_blank">版权所有豫ICP18038316号</a></p>   
+                    <p>Copyright &copy; 2021-2022 河南行由心教育科技有限公司</p>
+
+                    <p><span>版权所有</span> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=ICP18038316" target="_blank">  豫ICP18038316号</a></p>   
                 </div>
             </div>
             <div class="bottom-r">
