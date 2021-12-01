@@ -3,7 +3,7 @@
         <div class="JournalismDetail-box">
             <div class="title">{{this.list.consultTopic}}</div>
             <p class="date">
-                <span class="iconfont icon-naozhong"></span>{{this.list.updateTime}}
+                <span class="iconfont icon-naozhong"></span>{{this.list.startTime}}
             </p>
             <hr>
             <div class="text">
@@ -38,7 +38,8 @@ export default {
             .then(res=>{
                 //console.log(res)
                 this.list = res.data.data
-                this.list.updateTime = this.moment(this.list.updateTime).format("YYYY年MM月DD日")
+                // this.list.updateTime = this.moment(this.list.updateTime).format("YYYY年MM月DD日")
+                this.list.startTime = this.moment(this.list.startTime).format("YYYY年MM月DD日")
                 // this.Dateformatting()
             })
         }

@@ -23,7 +23,7 @@
                             <div class="data-content-r">
                                 <div class="data-content-r-1">
                                     <div class="img"><img src="../../assets/images/date.png" alt=""></div>
-                                    <span class="span1">{{item.updateTime}}</span>
+                                    <span class="span1">{{item.startTime}}</span>
                                     <!-- <div class="data-content-r-2">
                                         <span class="span2">10月</span>
                                         <span class="span2">2020年</span>
@@ -79,11 +79,26 @@ export default {
         //      },
     },
     methods:{
+
         // 时间格式化
         Dateformatting(){
             for(var i=0;i<this.listData.length;i++){
-                this.listData[i].updateTime = this.moment(this.listData[i].updateTime).format("YYYY年MM月DD日")
+                this.listData[i].startTime = this.moment(this.listData[i].startTime).format("YYYY/MM/DD")
             }
+            this.MsgSort(this.listData)
+        },
+        MsgSort(obj){
+                obj.sort((a,b)=>{
+                let t1 = new Date(Date.parse(a.startTime.replace(/-/g,"/")))
+                let t2 = new Date(Date.parse(b.startTime.replace(/-/g,"/")))
+                return t2.getTime()-t1.getTime()
+                })
+                // console.log(obj)
+                for(var i=0;i<this.listData.length;i++){
+                    this.listData[i].startTime = this.moment(this.listData[i].startTime).format("YYYY年MM月DD日")
+                }
+            return obj
+            
         },
         Queryall(){
             this.axios.post(this.$api_router.tradeNews+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6')

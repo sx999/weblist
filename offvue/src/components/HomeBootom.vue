@@ -33,7 +33,7 @@
                     </ul>
                 </div>
                 <div class="bottom-l-bb">
-                    <p>Copyright O 2017-2021河南独秀科技有限公司</p>
+                    <p>Copyright &copy; 2021-2022河南行由心教育科技有限公司</p>
                     <p><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=ICP18038316" target="_blank">版权所有豫ICP18038316号</a></p>   
                 </div>
             </div>
