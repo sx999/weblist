@@ -33,9 +33,15 @@
                     </ul>
                 </div>
                 <div class="bottom-l-bb">
-                    <p>Copyright &copy; 2021-2022 河南行由心教育科技有限公司</p>
-
-                    <p><span>版权所有</span> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=ICP18038316" target="_blank">  豫ICP18038316号</a></p>   
+                    
+                    
+                    
+                    <div style="width:310px;margin:0 auto; padding:20px 0;">
+                        <p>Copyright &copy; 2021-2022 河南行由心教育科技有限公司</p>
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41019702003062" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">
+                     <img src="../assets/images/xxx.png" alt=""> 豫公网安备 41019702003062号</p></a>
+		 	</div>
+                    <!-- <p><span>版权所有</span> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=ICP18038316" target="_blank">  豫ICP18038316号</a></p>    -->
                 </div>
             </div>
             <div class="bottom-r">
