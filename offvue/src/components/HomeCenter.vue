@@ -59,7 +59,8 @@
                                     <img :src="item.consultPic" alt="无法加载">
                                 </div>
                                 <div class="bold">{{item.consultTopic}}</div>
-                                <div class="bold5" v-html="item.consultSynopsis"></div>
+                                <!-- <div class="bold5" v-html="item.consultSynopsis"></div> -->
+                                <div class="bold5">{{item.synopsis}}</div>
                                 <div class="font16">阅读全文</div>
                             </div>
                         </div>

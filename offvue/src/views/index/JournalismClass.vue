@@ -7,7 +7,7 @@
                 <div class="data">
                     <div class="data-header">
                         <div class="data-header-l">
-                            <span>新闻</span>
+                            <!-- <span>新闻</span> -->
                         </div>
                         <div class="data-header-r">
                             <img src="../../assets/images/search.png" alt="无法显示" @click="Search()"> 
@@ -30,7 +30,8 @@
                                     </div> -->
                                 </div>
                                 <p class="p1">{{item.consultTopic}}</p>
-                                <div class="div1" v-html="item.consultSynopsis"></div>
+                                <!-- <div class="div1" v-html="item.consultSynopsis"></div> -->
+                                <div class="div1">{{item.synopsis}}</div>
                                 <div class="div2" @click="goDetail(item.id)">
                                         阅读全文 
                                 </div>
@@ -128,7 +129,6 @@ export default {
             }else{
                 this.page++
             }
-           
             this.loading = true
             //console.log(this.listData)
             if(this.maxdata == this.listData.length){
@@ -139,7 +139,24 @@ export default {
                     //console.log(res)
                     if(res.data.code == 200){
                         var list1 =  res.data.data.page.dataList
+                        for(var i=0;i<list1.length;i++){
+                            list1[i].startTime = this.moment(list1[i].startTime).format("YYYY/MM/DD")
+                        }
+                        list1.sort((a,b)=>{
+                        let t1 = new Date(Date.parse(a.startTime.replace(/-/g,"/")))
+                        let t2 = new Date(Date.parse(b.startTime.replace(/-/g,"/")))
+                        return t2.getTime()-t1.getTime()
+                        })
+                         //修改 / 为 年月日
+                        for(var i=0;i<list1.length;i++){
+                            var newstr1="";
+                            newstr1=list1[i].startTime.split("/");
+                            list1[i].startTime=newstr1[0]+"年"+newstr1[1]+"月"+newstr1[2]+"日";
+                        }
+                        
+                        // console.log(list1)
                         this.listData.push(...list1)
+                        // console.log(this.listData)
                         this.loading = false
                     }else{
                         return false
