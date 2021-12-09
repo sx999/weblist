@@ -17,7 +17,7 @@
                     </div>
                     <!-- 列表数据 -->
                     <div class="data-content">
-                        <div class="data-content-a" v-for="(item,index) in listData" :key="index">
+                        <div class="data-content-a" v-for="(item,index) in countData" :key="index">
                             <div class="data-content-l">
                                 <img :src="item.consultPic" alt="">
                             </div>
@@ -39,7 +39,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="data-bottom" @click="Addpage()" v-show="show">
+                    <div class="data-bottom" @click="Addpages()" v-show="show">
                         <p ><span v-show="loading" class="el-icon-loading"></span> 加载更多</p>
                     </div>
                     <div class="data-bottom" v-show="!show">
@@ -61,24 +61,52 @@ export default {
             keyword:"", //关键词
             loading:false,
             show:true,
+            //默认显示条数
+            cou: 5,
+            timepage:null
         }
     },
     created(){
-
+        this.loading = true
     },
-     mounted(){
-        this.Queryall() 
+    mounted(){
+        this.Queryalls() 
         // 绑定监听事件
 		window.addEventListener("keydown", this.keyDown);
     },
     destroyed() {
 		    // 销毁事件
 		    window.removeEventListener("keydown", this.keyDown, false);
+           
 		},
     computed:{
+        noMore() {
+            	// 判断加载条数是否大于列表数据长度
+                return this.cou > this.listData.length;
+        },
+        countData() {  // 计算属性使用切片生成新数组
+                this.loading = true
+                let data = [];
+               	// 大于三条，使用切片，返回新数组
+                if (this.listData.length > 5) {
+                    data = this.listData.slice(0, this.cou);
+                    this.loading = false
+                    return data;
+                } else {
+                	// 否则使用原来数组，不进行切片处理
+                    data = this.listData
+                    return data;
+                }
+
+        },
         //      Cutlist:function(){
         //         return this.listData.slice(0,3)
         //      },
+        // "rowData":function(){	
+        //         return  this.listData.sort((b,a) => {
+        //             Date.parse(a.startTime) - Date.parse(b.startTime);//时间正序
+        //         });	
+        // }
     },
     methods:{
 
@@ -107,7 +135,7 @@ export default {
             
         },
         Queryall(){
-            this.axios.post(this.$api_router.tradeNews+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=6')
+            this.axios.post(this.$api_router.tradeNews+'list?consultTopic='+this.keyword+'&currentPage='+this.page+'&limit=10')
             .then(res=>{
                 ////console.log(res)
                 if(res.data.code == 200){
@@ -119,9 +147,31 @@ export default {
                 }
             })
         },
+        Queryalls(){
+            this.axios.post(this.$api_router.tradeNews+'findAll')
+            .then(res=>{
+                console.log(res)
+                if(res.data.code == 200){
+						this.listData =  res.data.data
+                        
+                        // this.maxdata = res.data.data.page.totalRecord
+                        this.Dateformatting()
+                        this.loading = false
+                //          return  this.listData.sort((b,a) => {
+                //     Date.parse(a.startTime) - Date.parse(b.startTime);//时间正序
+                // });	
+                }else{
+                    return false
+                }
+            })
+        },
         goDetail(id){
             this.$router.push({path:'/journalism/journalismdetail',query:{id:id}})
             // console.log("1")
+        },
+        Addpages(){
+            this.cou += 5;
+            this.loading = false   
         },
         //加载更多
         Addpage(){
